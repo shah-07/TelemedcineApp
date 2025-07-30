@@ -24,7 +24,7 @@ public abstract class User {
         return id;
     }
 
-
+    /*
     public static boolean verifyLogin(String enteredId, String enteredPassword) {
         int id = Integer.parseInt(enteredId);
         return database.getPassword.equals(enteredPassword) && database.getId() == id;
@@ -36,5 +36,5 @@ public abstract class User {
         } else {
             return null;
         }
-    }
+    }*/
 }

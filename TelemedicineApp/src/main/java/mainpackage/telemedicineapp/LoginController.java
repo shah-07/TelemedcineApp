@@ -18,7 +18,7 @@ public class LoginController
     @javafx.fxml.FXML
     public void initialize() {
     }
-
+/*
     @javafx.fxml.FXML
     public void loginButtonOA(ActionEvent actionEvent) {
         if (User.verifyLogin(userIdTF.getText(), passwordTF.getText())){
@@ -29,4 +29,5 @@ public class LoginController
             loggedInFailMessageLabel.setText("Login Failed");
         }
     }
+ */
 }
