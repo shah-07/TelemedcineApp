@@ -2,9 +2,9 @@ package mainpackage.telemedicineapp;
 
 import java.time.LocalDate;
 public abstract class User {
-    protected final String name;
-    protected final int id;
-    protected final LocalDate dateOfBirth;
+    private final String name;
+    private final int id;
+    private final LocalDate dateOfBirth;
 
     public User(String name, int id, LocalDate dateOfBirth) {
         this.name = name;
@@ -24,7 +24,6 @@ public abstract class User {
         return id;
     }
 
-    protected abstract boolean updateProfile();
 
     public static boolean verifyLogin(String enteredId, String enteredPassword) {
         int id = Integer.parseInt(enteredId);
