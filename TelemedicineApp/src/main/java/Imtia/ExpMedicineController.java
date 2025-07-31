@@ -2,17 +2,18 @@ package Imtia;
 
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
-public class CompletedConsultation
+public class ExpMedicineController
 {
     @javafx.fxml.FXML
-    private TableView viewPrescriptionTV;
+    private TextField medicineNameTF;
     @javafx.fxml.FXML
-    private TableColumn consultsTC;
+    private TableView checkTV;
     @javafx.fxml.FXML
-    private TableColumn downloadTC;
+    private TableColumn medicineTC;
     @javafx.fxml.FXML
-    private TableColumn prescriptionTC;
+    private TableColumn expTC;
 
     @javafx.fxml.FXML
     public void initialize() {

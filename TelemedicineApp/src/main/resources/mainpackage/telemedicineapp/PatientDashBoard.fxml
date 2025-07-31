@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="mainpackage.telemedicineapp.PatientDashBoardController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientDashBoardController">
+   <children>
+      <Label layoutX="320.0" layoutY="25.0" text="Patient DashBoard">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameL" layoutX="632.0" layoutY="63.0" prefHeight="18.0" prefWidth="70.0" text="Name " textAlignment="CENTER">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="idL" layoutX="632.0" layoutY="98.0" prefHeight="18.0" prefWidth="58.0" text="ID">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="paymentButton" layoutX="17.0" layoutY="136.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: transparent;" text="Payment">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="bookTextButton" layoutX="28.0" layoutY="359.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: transparent;" text="Book a Test">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="orderMedicineButton" layoutX="18.0" layoutY="325.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="134.0" style="-fx-background-color: transparent;" text="Order Medicines">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="faqButton" layoutX="28.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: transparent;" text="FAQ / Help">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="consultNowButton" layoutX="14.0" layoutY="248.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="123.0" style="-fx-background-color: transparent;" text="Consult Now">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="completedConsultationButton" layoutX="18.0" layoutY="211.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="186.0" style="-fx-background-color: transparent;" text="Completed Consultations">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="viewDoctorButton" layoutX="29.0" layoutY="178.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: transparent;" text="View Doctor">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="getLatestButton" layoutX="24.0" layoutY="394.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: transparent;" text="Get latest health campaign info">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
