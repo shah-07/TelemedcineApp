@@ -7,4 +7,6 @@ module mainpackage.telemedicineapp {
     exports mainpackage.telemedicineapp;
     exports Poran_2420181;
     opens Poran_2420181 to javafx.fxml;
+    exports Imtia;
+    opens Imtia to javafx.fxml;
 }
