@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientBookTestController">
+   <children>
+      <Label layoutX="324.0" layoutY="34.0" text="Book a Test">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="testTypeCB" layoutX="221.0" layoutY="104.0" prefWidth="150.0" />
+      <Label layoutX="43.0" layoutY="108.0" text="Test Type" />
+      <ComboBox fx:id="selectTimeSlotCB" layoutX="221.0" layoutY="262.0" prefWidth="150.0" />
+      <Label layoutX="43.0" layoutY="266.0" text="Select TimeSlot" />
+      <Button layoutX="515.0" layoutY="312.0" mnemonicParsing="false" onAction="#confirmOA" prefHeight="26.0" prefWidth="94.0" text="Confirm" />
+      <Label layoutX="114.0" layoutY="384.0" prefHeight="45.0" prefWidth="514.0" style="-fx-background-color: lavender;" />
+   </children>
+</AnchorPane>

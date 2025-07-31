@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientHealthCampaignInfoController">
+   <children>
+      <TableView fx:id="healthTV" layoutX="48.0" layoutY="104.0" prefHeight="200.0" prefWidth="702.0">
+        <columns>
+          <TableColumn fx:id="newHealthTC" prefWidth="368.79998779296875" text="New  health campaign" />
+          <TableColumn fx:id="dateTC" prefWidth="332.800048828125" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
