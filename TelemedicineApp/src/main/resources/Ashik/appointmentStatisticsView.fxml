@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="486.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.AppointmentStatisticsViewController">
+   <children>
+      <Label layoutX="206.0" layoutY="21.0" text="Appointment Statistics">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="80.0" text="View Stats" />
+      <ComboBox layoutX="107.0" layoutY="76.0" prefWidth="150.0" />
+      <Label layoutX="28.0" layoutY="129.0" text="Total Appointments" />
+      <TextField layoutX="157.0" layoutY="125.0" />
+      <PieChart layoutX="40.0" layoutY="177.0" prefHeight="179.0" prefWidth="290.0" title="Daily appointments distribution" />
+      <BarChart layoutX="343.0" layoutY="207.0" prefHeight="229.0" prefWidth="290.0" title="Weekly Comparison Chart ">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="18.0" layoutY="428.0" prefHeight="30.0" prefWidth="349.0" text="Successfull message" />
+   </children>
+</AnchorPane>

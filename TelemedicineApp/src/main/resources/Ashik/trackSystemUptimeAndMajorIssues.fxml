@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="553.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.TrackSystemUptimeAndMajorIssuesController">
+   <children>
+      <Label layoutX="209.0" layoutY="22.0" text="Syetem Uptime and Major Issues">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="80.0" text="Uptime Percentage" />
+      <TextField layoutX="170.0" layoutY="76.0" />
+      <Label layoutX="48.0" layoutY="143.0" text="Major Issues Reported" />
+      <ListView layoutX="142.0" layoutY="177.0" prefHeight="200.0" prefWidth="331.0" />
+   </children>
+</AnchorPane>
