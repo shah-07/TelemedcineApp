@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="487.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tasfia.SearchDoctorController">
+   <children>
+      <Label layoutX="226.0" layoutY="14.0" prefHeight="35.0" prefWidth="185.0" text="Search Doctor">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="74.0" layoutY="99.0" prefHeight="25.0" prefWidth="185.0" promptText="Enter doctor name /department" />
+      <Button layoutX="101.0" layoutY="153.0" mnemonicParsing="false" text="view doctor profile" />
+      <Button layoutX="368.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="book now" />
+      <ComboBox layoutX="326.0" layoutY="93.0" prefWidth="150.0" promptText="choose depertment" />
+      <TableView layoutX="111.0" layoutY="244.0" prefHeight="200.0" prefWidth="412.0">
+        <columns>
+          <TableColumn prefWidth="127.0" text="show doctor list" />
+            <TableColumn prefWidth="102.0" text="Department" />
+            <TableColumn prefWidth="78.0" text="Fee" />
+            <TableColumn prefWidth="104.0" text="time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
