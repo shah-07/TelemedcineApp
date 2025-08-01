@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.ManageUserAccountStatusView">
+   <children>
+      <Label layoutX="226.0" layoutY="21.0" prefHeight="32.0" prefWidth="107.0" text="User Management " />
+      <Button layoutX="23.0" layoutY="66.0" mnemonicParsing="false" text="Online Doctor" />
+      <Button layoutX="137.0" layoutY="66.0" mnemonicParsing="false" text="Patient" />
+      <Button layoutX="224.0" layoutY="66.0" mnemonicParsing="false" text="Pharmacist" />
+      <Button layoutX="323.0" layoutY="66.0" mnemonicParsing="false" text="Lab Technician" />
+      <Button layoutX="431.0" layoutY="66.0" mnemonicParsing="false" text="Accountant" />
+      <Button layoutX="525.0" layoutY="66.0" mnemonicParsing="false" text="IT Admin" />
+   </children>
+</AnchorPane>
