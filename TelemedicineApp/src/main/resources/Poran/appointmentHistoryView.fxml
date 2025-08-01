@@ -21,7 +21,7 @@
       <Label layoutX="361.0" layoutY="71.0" text="From:" />
       <TextField fx:id="fromDateOfPendAppointmentTF" layoutX="402.0" layoutY="67.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
       <Button layoutX="248.0" layoutY="142.0" mnemonicParsing="false" onAction="#loadPreviousAppointmentsButtonOA" text="Load Appointments" />
-      <TableView fx:id="pendingAppointmentsTableView" layoutX="8.0" layoutY="182.0" prefHeight="218.0" prefWidth="586.0">
+      <TableView fx:id="pendingAppointmentsTableView" layoutX="8.0" layoutY="177.0" prefHeight="218.0" prefWidth="586.0">
          <columns>
             <TableColumn fx:id="nameTCOfPendingAppointments" prefWidth="211.0" text="Name" />
             <TableColumn fx:id="ageTCOfPendingAppointments" prefWidth="53.0" text="Age" />
