@@ -1,4 +1,4 @@
-package Poran_2420181;
+package Poran;
 
 import Imtia.Appointment;
 import javafx.event.ActionEvent;
@@ -33,7 +33,11 @@ public class PendingAppointmentsController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void loadPendingAppointmentsOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void loadPendingAppointmentsButtonOA(ActionEvent actionEvent) {
     }
 }

@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran_2420181.CancelAppointment2Controller">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.CancelAppointment2Controller">
    <children>
-      <TextArea layoutX="19.0" layoutY="115.0" prefHeight="200.0" prefWidth="563.0" />
-      <Label layoutX="28.0" layoutY="75.0" text="Enter Reason for Cancelling within 200 words: ">
+      <TextArea fx:id="reasonTA" layoutX="19.0" layoutY="162.0" prefHeight="200.0" prefWidth="563.0" />
+      <Label layoutX="28.0" layoutY="122.0" text="Enter Reason for Cancelling within 200 words: ">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <Label fx:id="errorMessageLabelForReason" alignment="CENTER_RIGHT" layoutX="265.0" layoutY="7.0" prefHeight="17.0" prefWidth="332.0" textFill="#ff0000" />
       <Label fx:id="successMessageLabelForReason" alignment="CENTER_RIGHT" layoutX="265.0" layoutY="6.0" prefHeight="17.0" prefWidth="332.0" textFill="#00ff00" />
-      <Button layoutX="466.0" layoutY="336.0" mnemonicParsing="false" onAction="#confirmCancelButtonOA" prefHeight="34.0" prefWidth="116.0" text="Confirm Cancel" />
+      <Button layoutX="470.0" layoutY="435.0" mnemonicParsing="false" onAction="#confirmCancelButtonOA" prefHeight="34.0" prefWidth="116.0" text="Confirm Cancel" />
    </children>
 </AnchorPane>

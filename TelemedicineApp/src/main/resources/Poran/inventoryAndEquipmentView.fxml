@@ -9,32 +9,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.InventoryAndEquipmentController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.InventoryAndEquipmentController">
    <children>
-      <Label layoutX="197.0" layoutY="19.0" text="Inventory &amp; Equipment">
+      <Label layoutX="197.0" layoutY="35.0" text="Inventory &amp; Equipment">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <Label layoutX="21.0" layoutY="71.0" text="Name: " />
-      <TextField layoutX="59.0" layoutY="67.0" prefHeight="26.0" prefWidth="138.0" />
-      <ComboBox layoutX="249.0" layoutY="67.0" prefWidth="150.0" />
-      <Label layoutX="217.0" layoutY="71.0" text="Type: " />
-      <Button layoutX="430.0" layoutY="60.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="111.0" text="Search" />
-      <TableView layoutX="10.0" layoutY="114.0" prefHeight="142.0" prefWidth="582.0">
+      <TextField fx:id="nameTF" layoutX="59.0" layoutY="79.0" prefHeight="26.0" prefWidth="138.0" />
+      <ComboBox fx:id="typeCB" layoutX="424.0" layoutY="79.0" prefWidth="150.0" />
+      <Label layoutX="392.0" layoutY="83.0" text="Type: " />
+      <Button layoutX="244.0" layoutY="116.0" mnemonicParsing="false" onAction="#searchButtonOA" prefHeight="38.0" prefWidth="111.0" text="Search" />
+      <TableView fx:id="inventoryTV" layoutX="9.0" layoutY="166.0" prefHeight="142.0" prefWidth="582.0">
         <columns>
-          <TableColumn prefWidth="245.5999755859375" text="Name" />
-          <TableColumn prefWidth="183.20001220703125" text="ID" />
-            <TableColumn prefWidth="155.20001220703125" text="Quantity" />
+          <TableColumn fx:id="nameTC" prefWidth="245.5999755859375" text="Name" />
+          <TableColumn fx:id="idTC" prefWidth="183.20001220703125" text="ID" />
+            <TableColumn fx:id="quantityTC" prefWidth="155.20001220703125" text="Quantity" />
         </columns>
       </TableView>
-      <Label layoutX="21.0" layoutY="271.0" text="Updated Quantity: " />
-      <TextField layoutX="21.0" layoutY="289.0" prefHeight="26.0" prefWidth="138.0" />
-      <Label layoutX="199.0" layoutY="271.0" text="Status:" />
-      <ComboBox layoutX="197.0" layoutY="290.0" prefWidth="150.0" />
-      <Label layoutX="392.0" layoutY="268.0" text="Conditon:" />
-      <ComboBox layoutX="390.0" layoutY="287.0" prefWidth="150.0" />
-      <Button layoutX="471.0" layoutY="339.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="111.0" text="Save" />
-      <Label layoutX="415.0" layoutY="5.0" prefHeight="18.0" prefWidth="186.0" text="MessageLabel" />
+      <Label layoutX="21.0" layoutY="323.0" text="Updated Quantity: " />
+      <TextField fx:id="updatedQuantityTF" layoutX="21.0" layoutY="348.0" prefHeight="26.0" prefWidth="138.0" />
+      <Label layoutX="199.0" layoutY="323.0" text="Status:" />
+      <ComboBox fx:id="statusCB" layoutX="197.0" layoutY="349.0" prefWidth="150.0" />
+      <Label layoutX="392.0" layoutY="320.0" text="Conditon:" />
+      <ComboBox fx:id="conditionCB" layoutX="390.0" layoutY="346.0" prefWidth="150.0" />
+      <Button layoutX="471.0" layoutY="394.0" mnemonicParsing="false" onAction="#saveButtonOA" prefHeight="46.0" prefWidth="111.0" text="Save" />
+      <Label fx:id="successMessageLabel" layoutX="376.0" layoutY="8.0" prefHeight="18.0" prefWidth="222.0" textFill="#0aff2b" />
+      <Label fx:id="errorMessageLabel" layoutX="376.0" layoutY="9.0" prefHeight="18.0" prefWidth="222.0" textFill="#ff250a" />
    </children>
 </AnchorPane>

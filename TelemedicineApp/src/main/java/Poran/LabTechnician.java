@@ -1,4 +1,4 @@
-package Poran_2420181;
+package Poran;
 
 import mainpackage.telemedicineapp.User;
 

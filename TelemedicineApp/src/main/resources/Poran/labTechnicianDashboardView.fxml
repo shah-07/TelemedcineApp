@@ -22,42 +22,42 @@
       </Label>
       <VBox layoutX="28.0" layoutY="147.0" prefHeight="246.0" prefWidth="174.0">
          <children>
-            <Button fx:id="dashBoardButton" alignment="TOP_LEFT" mnemonicParsing="false" onMouseEntered="#dashBoardButtonOMEntered" onMouseExited="#dashBoardButtonOMExited" prefHeight="28.0" prefWidth="158.0" style="-fx-text-fill: black; -fx-background-color: transparent;" text="⧈ DashBoard" textFill="#2e2929">
+            <Button fx:id="dashBoardButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="28.0" prefWidth="158.0" style="-fx-text-fill: black; -fx-background-color: transparent;" text="⧈ DashBoard" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="pendingAppointmentsButton" alignment="TOP_LEFT" mnemonicParsing="false" onMouseEntered="#pendingAppointmentsButtonOMEntered" onMouseExited="#pendingAppointmentsButtonOMExited" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⏳ Lab Test Requests" textFill="#2e2929">
+            <Button fx:id="pendingAppointmentsButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⏳ Lab Test Requests" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="appointmentHistoryButton" alignment="TOP_LEFT" mnemonicParsing="false" onMouseEntered="#appointmentHistoryButtonOMEntered" onMouseExited="#appointmentHistoryButtonOMExited" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📜 Completed Lab Tests" textFill="#2e2929">
+            <Button fx:id="appointmentHistoryButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📜 Completed Lab Tests" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="cancelAppointmentButton" alignment="TOP_LEFT" mnemonicParsing="false" onMouseEntered="#cancelAppointmentButtonOMEntered" onMouseExited="#cancelAppointmentButtonOMExited" prefHeight="31.0" prefWidth="154.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⬆ Upload Reports" textFill="#2e2929">
+            <Button fx:id="cancelAppointmentButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="154.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⬆ Upload Reports" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="rescheduleAppointmentButton" alignment="TOP_LEFT" mnemonicParsing="false" onMouseEntered="#rescheduleAppointmentButtonOMEntered" onMouseExited="#rescheduleAppointmentButtonOMExited" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📦 Inventory &amp; Equipments" textFill="#2e2929">
+            <Button fx:id="rescheduleAppointmentButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📦 Inventory &amp; Equipments" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="startAnAppointmentButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="132.0" mnemonicParsing="false" onMouseEntered="#startAnAppointmentButtonOMEntered" onMouseExited="#startAnAppointmentButtonOMExited" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: null; -fx-text-fill: black;" text="✏ Mange Booking" textFill="#2e2929">
+            <Button fx:id="startAnAppointmentButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="132.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: null; -fx-text-fill: black;" text="✏ Mange Booking" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="patientsSeenButton" alignment="TOP_LEFT" mnemonicParsing="false" onMouseEntered="#patientsSeenButtonOMEntered" onMouseExited="#patientsSeenButtonOMExited" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⚠ Report Issue" textFill="#2e2929">
+            <Button fx:id="patientsSeenButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⚠ Report Issue" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="labReportsButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="225.0" mnemonicParsing="false" onMouseEntered="#labReportButtonOMEntered" onMouseExited="#labReportButtonOMExited" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📊 Generate Report" textFill="#2e2929">
+            <Button fx:id="labReportsButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="225.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📊 Generate Report" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

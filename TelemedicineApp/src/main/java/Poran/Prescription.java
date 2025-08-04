@@ -1,4 +1,4 @@
-package Poran_2420181;
+package Poran;
 
 public class Prescription {
     private final String name, gender;

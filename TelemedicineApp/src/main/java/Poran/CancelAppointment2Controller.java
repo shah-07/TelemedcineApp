@@ -1,7 +1,8 @@
-package Poran_2420181;
+package Poran;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 public class CancelAppointment2Controller
 {
@@ -9,12 +10,15 @@ public class CancelAppointment2Controller
     private Label errorMessageLabelForReason;
     @javafx.fxml.FXML
     private Label successMessageLabelForReason;
+    @javafx.fxml.FXML
+    private TextArea reasonTA;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
+
     @javafx.fxml.FXML
-    public void sendRequestForCancellationButtonOA(ActionEvent actionEvent) {
+    public void confirmCancelButtonOA(ActionEvent actionEvent) {
     }
 }

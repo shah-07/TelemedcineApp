@@ -1,5 +1,8 @@
 package Imtia;
 
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class CompletedConsultation
 {
     @javafx.fxml.FXML
