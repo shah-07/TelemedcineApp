@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="425.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tasfia.ShareAppLinkController">
+   <children>
+      <Label layoutX="225.0" layoutY="14.0" prefHeight="35.0" prefWidth="174.0" text="Share app link ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="76.0" layoutY="97.0" promptText="display app link" />
+      <ComboBox layoutX="356.0" layoutY="97.0" prefHeight="25.0" prefWidth="174.0" promptText="Select sharing method" />
+      <Button layoutX="390.0" layoutY="143.0" mnemonicParsing="false" text="Share now" />
+      <Button layoutX="109.0" layoutY="149.0" mnemonicParsing="false" text="copy link" />
+   </children>
+</AnchorPane>
