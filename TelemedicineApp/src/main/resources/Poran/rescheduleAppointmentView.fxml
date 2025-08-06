@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.RescheduleAppointmentController">
+<AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.RescheduleAppointmentController">
    <children>
       <Label layoutX="188.0" layoutY="14.0" text="Reschedule Appointment">
          <font>
@@ -33,6 +32,6 @@
       </TableView>
       <TextField fx:id="toDateOfAppointmentTF" layoutX="422.0" layoutY="96.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
       <Label layoutX="381.0" layoutY="100.0" text="To: " />
-      <Button layoutX="412.0" layoutY="371.0" mnemonicParsing="false" onAction="#requestForReschedulingOfAppointmentButtonOA" prefHeight="25.0" prefWidth="181.0" text="Request For Rescheduling" />
+      <Button layoutX="401.0" layoutY="383.0" mnemonicParsing="false" onAction="#requestForReschedulingOfAppointmentButtonOA" prefHeight="52.0" prefWidth="190.0" text="Request For Rescheduling" />
    </children>
 </AnchorPane>

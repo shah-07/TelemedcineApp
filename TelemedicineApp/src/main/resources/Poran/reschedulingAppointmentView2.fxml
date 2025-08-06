@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.ReschedulingAppointmentController2">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.ReschedulingAppointmentController2">
    <children>
       <Label layoutX="37.0" layoutY="43.0" text="Propose New Date and Time For Rescheduling">
          <font>
@@ -20,7 +19,7 @@
       <Label layoutX="53.0" layoutY="84.0" text="Pick a New Date: " />
       <Label layoutX="332.0" layoutY="84.0" text="Pick a New Time:" />
       <TextField layoutX="332.0" layoutY="109.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter a time in 24 hrs format" />
-      <TextArea layoutX="44.0" layoutY="186.0" prefHeight="151.0" prefWidth="544.0" />
+      <TextArea layoutX="43.0" layoutY="186.0" prefHeight="163.0" prefWidth="534.0" />
       <Label layoutX="37.0" layoutY="155.0" text="Reason for Rescheduling (No more than 200 words)">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -28,6 +27,6 @@
       </Label>
       <Label fx:id="errorMessageForReschedulingLabel" alignment="CENTER_RIGHT" layoutX="369.0" layoutY="5.0" prefHeight="17.0" prefWidth="228.0" textFill="RED" />
       <Label fx:id="successMessageForReschedulingLabel" alignment="CENTER_RIGHT" layoutX="369.0" layoutY="5.0" prefHeight="17.0" prefWidth="228.0" textFill="#00ff1d" />
-      <Button layoutX="450.0" layoutY="346.0" mnemonicParsing="false" onAction="#confirmRescheduleButtonOA" prefHeight="31.0" prefWidth="138.0" text="Confirm Reschedule" />
+      <Button layoutX="438.0" layoutY="379.0" mnemonicParsing="false" onAction="#confirmRescheduleButtonOA" prefHeight="31.0" prefWidth="138.0" text="Confirm Reschedule" />
    </children>
 </AnchorPane>

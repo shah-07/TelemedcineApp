@@ -2,10 +2,13 @@ package Poran;
 
 import Imtia.Appointment;
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import mainpackage.telemedicineapp.MainApplicationClass;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -31,14 +34,19 @@ public class CancelAppointment
     private TextField toTimeTF;
     @javafx.fxml.FXML
     private TextField fromTimeTF;
+    @javafx.fxml.FXML
+    private Button requestForCancellationButton;
+    @javafx.fxml.FXML
+    private AnchorPane anchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void requestForCancellationOfAppointmentButtonOA (ActionEvent actionEvent) throws IOException {
-
+    public void requestForCancellationOfAppointmentButtonOA (ActionEvent actionEvent) throws IOException{
+        Node node = FXMLLoader.load(getClass().getResource("/Poran/cancelAppointmentView2.fxml"));
+        anchorPane.getChildren().setAll(node);
     }
 
     @javafx.fxml.FXML
