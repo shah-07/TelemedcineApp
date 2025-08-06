@@ -5,8 +5,10 @@ module mainpackage.telemedicineapp {
 
     opens mainpackage.telemedicineapp to javafx.fxml;
     exports mainpackage.telemedicineapp;
-    exports Poran;
-    opens Poran to javafx.fxml;
     exports Imtia;
     opens Imtia to javafx.fxml;
+    exports Poran.Doctor;
+    opens Poran.Doctor to javafx.fxml;
+    exports Poran.LabTechnician;
+    opens Poran.LabTechnician to javafx.fxml;
 }
