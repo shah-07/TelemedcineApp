@@ -11,4 +11,5 @@ public class ConsultNow
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+}

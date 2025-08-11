@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PharmacistCommunicationController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PharmacistCommunicationController">
    <children>
       <Button layoutX="57.0" layoutY="71.0" mnemonicParsing="false" onAction="#startChatOA" prefHeight="26.0" prefWidth="106.0" text="Start Chat" />
       <Button layoutX="57.0" layoutY="132.0" mnemonicParsing="false" onAction="#videoCallOA" prefHeight="26.0" prefWidth="98.0" text="Video Call" />
