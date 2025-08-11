@@ -5,9 +5,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PharmacistGetPaymentController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PharmacistGetPaymentController">
    <children>
-      <Label fx:id="pendingBillL" layoutX="79.0" layoutY="66.0" prefHeight="196.0" prefWidth="564.0" style="-fx-background-color: lavender;" />
+      <Label fx:id="pendingBillL" layoutX="79.0" layoutY="66.0" prefHeight="196.0" prefWidth="460.0" style="-fx-background-color: lavender;" />
       <Button layoutX="386.0" layoutY="338.0" mnemonicParsing="false" onAction="#sendOA" prefHeight="26.0" prefWidth="184.0" text="Send" />
       <Label layoutX="79.0" layoutY="296.0" text="Enter Text" />
       <TextField fx:id="textTF" layoutX="154.0" layoutY="292.0" />

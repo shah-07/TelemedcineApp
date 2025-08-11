@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PharmacistManageInventoryController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PharmacistManageInventoryController">
    <children>
       <Label layoutX="48.0" layoutY="83.0" text="Medicine Name" />
       <Label layoutX="48.0" layoutY="119.0" text="Medicine Quantity" />
@@ -16,11 +16,11 @@
       <TextField fx:id="medicineNameTF" layoutX="146.0" layoutY="79.0" />
       <TextField fx:id="medicineQuantityTF" layoutX="158.0" layoutY="115.0" />
       <TextField fx:id="expTF" layoutX="132.0" layoutY="157.0" />
-      <TableView fx:id="medicineExpTV" layoutX="29.0" layoutY="217.0" prefHeight="142.0" prefWidth="662.0">
+      <TableView fx:id="medicineExpTV" layoutX="14.0" layoutY="218.0" prefHeight="142.0" prefWidth="573.0">
         <columns>
           <TableColumn fx:id="medicineNameTC" prefWidth="220.800048828125" text="Medicine Name" />
-          <TableColumn fx:id="quantityTC" prefWidth="224.79998779296875" text="Quantity" />
-            <TableColumn fx:id="expTC" prefWidth="224.79998779296875" text="EXP" />
+          <TableColumn fx:id="quantityTC" prefWidth="171.20001220703125" text="Quantity" />
+            <TableColumn fx:id="expTC" prefWidth="179.19997558593752" text="EXP" />
         </columns>
       </TableView>
       <Button layoutX="354.0" layoutY="121.0" mnemonicParsing="false" onAction="#updateOA" prefHeight="62.0" prefWidth="134.0" text="Update">
@@ -28,6 +28,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label fx:id="successL" layoutX="474.0" layoutY="387.0" prefHeight="18.0" prefWidth="142.0" style="-fx-background-color: lavender;" />
+      <Label fx:id="successL" layoutX="289.0" layoutY="391.0" prefHeight="37.0" prefWidth="142.0" style="-fx-background-color: lavender;" />
    </children>
 </AnchorPane>

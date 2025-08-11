@@ -1,9 +1,13 @@
 package Imtia;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class PatientController
 {
@@ -23,7 +27,8 @@ public class PatientController
     }
 
     @javafx.fxml.FXML
-    public void bookAppointmentOA(ActionEvent actionEvent) {
+    public void bookAppointmentOA(ActionEvent actionEvent) throws IOException {
+
     }
 
     @javafx.fxml.FXML

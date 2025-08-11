@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.telemedicineapp.PatientOrderMedicineController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientOrderMedicineController">
    <children>
       <Button layoutX="69.0" layoutY="52.0" mnemonicParsing="false" onAction="#uploadPrescriptionOA" style="-fx-background-color: lavender; -fx-border-color: black;" text="Upload Prescription" />
       <Label layoutX="69.0" layoutY="115.0" text="Input Medicine Name" />
