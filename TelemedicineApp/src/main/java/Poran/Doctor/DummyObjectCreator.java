@@ -9,8 +9,8 @@ import java.time.LocalDate;
 public class DummyObjectCreator {
     public void createDoctors(){
         try {
-            Doctor doc1 = new Doctor("Dr. Alice Smith", 1001, "123456", LocalDate.of(1980, 5, 14), "Cardiology");
-            Doctor doc2 = new Doctor("Dr. Bob Johnson", 1002, "234567", LocalDate.of(1975, 9, 22),"Neurology");
+            Doctor doc1 = new Doctor("Dr. Alice Smith", 1001, "123456", LocalDate.of(1980, 5, 14), "Cardiologist");
+            Doctor doc2 = new Doctor("Dr. Bob Johnson", 1002, "234567", LocalDate.of(1975, 9, 22),"Neurologist");
 
             LabTechnician lab1 = new LabTechnician("Mr. Anis", 10001, "123456", LocalDate.of(1995, 4, 24), "Manager");
             LabTechnician lab2 = new LabTechnician("Ms. Samira", 10002, "234567",LocalDate.of(1998, 4, 24), "Cashier");

@@ -146,7 +146,7 @@ public class LabTechnicianDashboardController
     @javafx.fxml.FXML
     public void logOutButtonOA(ActionEvent actionEvent) throws IOException{
 
-        Node node = FXMLLoader.load(getClass().getResource("/mainpackage/telemedicineapp/loginView.fxml"));
+        Node node = FXMLLoader.load(getClass().getResource("/mainpackage.telemedicineapp/loginView.fxml"));
         dashBoardAnchorPane.getChildren().setAll(node);
 
     }

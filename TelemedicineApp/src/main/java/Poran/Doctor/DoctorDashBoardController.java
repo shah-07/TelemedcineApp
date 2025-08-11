@@ -76,9 +76,9 @@ public class DoctorDashBoardController {
         );
     }
 
-    public void setDoctorNameAndID (String str, int id){
-        doctorNameLabel.setText(str);
-        doctorIdLabel.setText(Integer.toString(id));
+    public void setDoctorNameAndID (String name, String specialized){
+        doctorNameLabel.setText(name);
+        doctorIdLabel.setText(specialized);
     }
 
     @javafx.fxml.FXML
@@ -132,7 +132,7 @@ public class DoctorDashBoardController {
 
     @javafx.fxml.FXML
     public void logOutButtonOA(ActionEvent actionEvent) throws IOException {
-        Node node = FXMLLoader.load(getClass().getResource("/mainpackage/telemedicineapp/loginView.fxml"));
+        Node node = FXMLLoader.load(getClass().getResource("/mainpackage.telemedicineapp/loginView.fxml"));
         dashBoardAnchorPane.getChildren().setAll(node);
     }
 }

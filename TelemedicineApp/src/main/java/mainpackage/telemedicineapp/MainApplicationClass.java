@@ -11,11 +11,7 @@ import java.io.IOException;
 public class MainApplicationClass extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-<<<<<<< HEAD
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplicationClass.class.getResource("loginView.fxml"));
-=======
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplicationClass.class.getResource("/Imtia/PatientDashBoard.fxml"));
->>>>>>> 3dd83f01c10ba8edd438b797916d1ab4a665a423
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplicationClass.class.getResource("/mainpackage.telemedicineapp/loginView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Telemedicine App");
         stage.setScene(scene);
