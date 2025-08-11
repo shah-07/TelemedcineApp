@@ -2,10 +2,7 @@ package Poran.Doctor;
 
 import Imtia.Appointment;
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -30,6 +27,10 @@ public class AppointmentHistoryController
     private TextField toDateOfPendAppointmentTF;
     @javafx.fxml.FXML
     private TableView<Appointment> pendingAppointmentsTableView;
+    @javafx.fxml.FXML
+    private Label successMeassageLabel;
+    @javafx.fxml.FXML
+    private Label errorMeassageLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -11,17 +11,17 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.Doctor.AppointmentHistoryController">
    <children>
-      <Label layoutX="208.0" layoutY="23.0" text="Appointments History">
+      <Label layoutX="208.0" layoutY="56.0" text="Appointments History">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <DatePicker fx:id="dateOfThePendingAppointmentDP" layoutX="108.0" layoutY="83.0" prefHeight="26.0" prefWidth="121.0" />
-      <Label layoutX="33.0" layoutY="87.0" text="Choose Date:" />
-      <Label layoutX="361.0" layoutY="71.0" text="From:" />
-      <TextField fx:id="fromDateOfPendAppointmentTF" layoutX="402.0" layoutY="67.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Button layoutX="248.0" layoutY="142.0" mnemonicParsing="false" onAction="#loadPreviousAppointmentsButtonOA" text="Load Appointments" />
-      <TableView fx:id="pendingAppointmentsTableView" layoutX="8.0" layoutY="177.0" prefHeight="218.0" prefWidth="586.0">
+      <DatePicker fx:id="dateOfThePendingAppointmentDP" layoutX="108.0" layoutY="116.0" prefHeight="26.0" prefWidth="121.0" />
+      <Label layoutX="33.0" layoutY="120.0" text="Choose Date:" />
+      <Label layoutX="361.0" layoutY="104.0" text="From:" />
+      <TextField fx:id="fromDateOfPendAppointmentTF" layoutX="402.0" layoutY="100.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Button layoutX="248.0" layoutY="175.0" mnemonicParsing="false" onAction="#loadPreviousAppointmentsButtonOA" text="Load Appointments" />
+      <TableView fx:id="pendingAppointmentsTableView" layoutX="8.0" layoutY="210.0" prefHeight="218.0" prefWidth="586.0">
          <columns>
             <TableColumn fx:id="nameTCOfPendingAppointments" prefWidth="211.0" text="Name" />
             <TableColumn fx:id="ageTCOfPendingAppointments" prefWidth="53.0" text="Age" />
@@ -30,7 +30,9 @@
             <TableColumn fx:id="timeTCOfPendingAppointments1" prefWidth="114.0" text="Diagnosis" />
          </columns>
       </TableView>
-      <TextField fx:id="toDateOfPendAppointmentTF" layoutX="402.0" layoutY="102.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Label layoutX="361.0" layoutY="106.0" text="To: " />
+      <TextField fx:id="toDateOfPendAppointmentTF" layoutX="402.0" layoutY="135.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Label layoutX="361.0" layoutY="139.0" text="To: " />
+      <Label fx:id="successMeassageLabel" alignment="CENTER_RIGHT" layoutX="360.0" layoutY="5.0" prefHeight="18.0" prefWidth="236.0" textAlignment="CENTER" textFill="#00ff32" />
+      <Label fx:id="errorMeassageLabel" alignment="CENTER_RIGHT" layoutX="360.0" layoutY="5.0" prefHeight="18.0" prefWidth="236.0" textAlignment="CENTER" textFill="RED" />
    </children>
 </AnchorPane>

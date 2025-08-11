@@ -2,13 +2,15 @@ package Poran.Doctor;
 
 import Imtia.Appointment;
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class PendingAppointmentsController
 {
@@ -23,21 +25,52 @@ public class PendingAppointmentsController
     @javafx.fxml.FXML
     private DatePicker dateOfThePendingAppointmentDP;
     @javafx.fxml.FXML
-    private TextField fromDateOfPendAppointmentTF;
-    @javafx.fxml.FXML
-    private TextField toDateOfPendAppointmentTF;
-    @javafx.fxml.FXML
     private TableView<Appointment> pendingAppointmentsTableView;
+    @javafx.fxml.FXML
+    private Label errorMessageLabel;
+    @javafx.fxml.FXML
+    private Label successMessageLabel;
+    @javafx.fxml.FXML
+    private TextField fromTimeOfAppointment;
+    @javafx.fxml.FXML
+    private TextField toTimeOfAppointment;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @Deprecated
-    public void loadPendingAppointmentsOA(ActionEvent actionEvent) {
+        nameTCOfPendingAppointments.setCellValueFactory(new PropertyValueFactory<>("name"));
+        timeTCOfPendingAppointments.setCellValueFactory(new PropertyValueFactory<>("timeOfAppointment"));
+        dateTCOfPendingAppointments.setCellValueFactory(new PropertyValueFactory<>("dateOfAppointment"));
+        ageTCOfPendingAppointments.setCellValueFactory(new PropertyValueFactory<>("age"));
     }
 
     @javafx.fxml.FXML
     public void loadPendingAppointmentsButtonOA(ActionEvent actionEvent) {
+        ArrayList<Appointment> appointmentList = new ArrayList<>();
+        LocalTime fromTime = LocalTime.parse(fromTimeOfAppointment.getText());
+        LocalTime toTime = LocalTime.parse(toTimeOfAppointment.getText());
+        try{
+            FileInputStream fis = new FileInputStream("Appointment.bin");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            while (true){
+                Appointment s = (Appointment) ois.readObject();
+                if (dateOfThePendingAppointmentDP.getValue().equals(s.getDateOfAppointment()) && ((s.getTimeOfAppointment().equals(fromTime) || s.getTimeOfAppointment().isAfter(fromTime)) && (s.getTimeOfAppointment().equals(toTime) || s.getTimeOfAppointment().isBefore(toTime)))) {
+                    appointmentList.add(s);
+                }
+            }
+        }
+        catch (EOFException eof) {
+            if (!appointmentList.isEmpty()){
+                pendingAppointmentsTableView.getItems().addAll(appointmentList);
+                successMessageLabel.setText("Appointments Loaded");
+            }
+            else{
+                errorMessageLabel.setText("No appointments to show");
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace(); // Helpful for debugging
+            errorMessageLabel.setText("Error reading appointment file.");
+        }
     }
 }

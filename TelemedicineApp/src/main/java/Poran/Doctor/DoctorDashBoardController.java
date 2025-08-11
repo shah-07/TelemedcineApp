@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class DoctorProfileController {
+public class DoctorDashBoardController {
 
     @javafx.fxml.FXML
     private ImageView doctorProfileImage;
@@ -39,6 +39,12 @@ public class DoctorProfileController {
     @javafx.fxml.FXML
     private AnchorPane anchorPaneForPartialWindows;
     @javafx.fxml.FXML
+    private Button logOutButton;
+    @javafx.fxml.FXML
+    private Label welcomeDoctorLabel;
+    @javafx.fxml.FXML
+    private Label appointmentTextLabel;
+    @javafx.fxml.FXML
     private Label appointmentNumberLabel;
 
     @javafx.fxml.FXML
@@ -52,6 +58,8 @@ public class DoctorProfileController {
         setupHoverEffect(startAnAppointmentButton);
         setupHoverEffect(patientsSeenButton);
         setupHoverEffect(rescheduleAppointmentButton);
+        setupHoverEffect(logOutButton);
+
     }
 
     private void setupHoverEffect(Button button) {
@@ -66,6 +74,11 @@ public class DoctorProfileController {
         button.setOnMouseExited(e ->
                 button.setStyle("-fx-background-color: transparent; -fx-text-fill: black;")
         );
+    }
+
+    public void setDoctorNameAndID (String str, int id){
+        doctorNameLabel.setText(str);
+        doctorIdLabel.setText(Integer.toString(id));
     }
 
     @javafx.fxml.FXML
@@ -112,8 +125,14 @@ public class DoctorProfileController {
     }
 
     @javafx.fxml.FXML
-    public void dashBoardButtonOA(ActionEvent actionEvent) throws IOException{
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/Doctor/doctorDashBoardView.fxml"));
-        anchorPaneForPartialWindows.getChildren().setAll(node);
+    public void dashBoardButtonOA(ActionEvent actionEvent){
+
+        anchorPaneForPartialWindows.getChildren().setAll(welcomeDoctorLabel, appointmentTextLabel, appointmentNumberLabel);
+    }
+
+    @javafx.fxml.FXML
+    public void logOutButtonOA(ActionEvent actionEvent) throws IOException {
+        Node node = FXMLLoader.load(getClass().getResource("/mainpackage/telemedicineapp/loginView.fxml"));
+        dashBoardAnchorPane.getChildren().setAll(node);
     }
 }
