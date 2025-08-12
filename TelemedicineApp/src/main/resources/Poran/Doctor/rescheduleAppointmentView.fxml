@@ -11,17 +11,17 @@
 
 <AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.Doctor.RescheduleAppointmentController">
    <children>
-      <Label layoutX="188.0" layoutY="14.0" text="Reschedule Appointment">
+      <Label layoutX="188.0" layoutY="39.0" text="Reschedule Appointment">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <DatePicker fx:id="dateOfTheAppointmentToShowDP" layoutX="128.0" layoutY="77.0" prefHeight="26.0" prefWidth="121.0" />
-      <Label layoutX="53.0" layoutY="81.0" text="Choose Date:" />
-      <Label layoutX="381.0" layoutY="65.0" text="From:" />
-      <TextField fx:id="fromDateOfAppointmentTF" layoutX="422.0" layoutY="61.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Button layoutX="268.0" layoutY="136.0" mnemonicParsing="false" onAction="#loadAppointmentsButtonOA" text="Load Appointments" />
-      <TableView fx:id="appointmentsTableView" layoutX="6.0" layoutY="176.0" prefHeight="187.0" prefWidth="586.0">
+      <DatePicker fx:id="chooseDateDP" layoutX="128.0" layoutY="102.0" prefHeight="26.0" prefWidth="121.0" />
+      <Label layoutX="53.0" layoutY="106.0" text="Choose Date:" />
+      <Label layoutX="381.0" layoutY="90.0" text="From:" />
+      <TextField fx:id="fromTimeTF" layoutX="422.0" layoutY="86.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Button layoutX="268.0" layoutY="161.0" mnemonicParsing="false" onAction="#loadAppointmentsButtonOA" text="Load Appointments" />
+      <TableView fx:id="appointmentsTableView" layoutX="6.0" layoutY="201.0" prefHeight="181.0" prefWidth="586.0">
          <columns>
             <TableColumn fx:id="nameTCOfCancelAppointments" prefWidth="211.0" text="Name" />
             <TableColumn fx:id="ageTCOfCancelAppointments" prefWidth="53.0" text="Age" />
@@ -30,8 +30,13 @@
             <TableColumn fx:id="timeTCOfCancelAppointments" prefWidth="107.0" text="Time" />
          </columns>
       </TableView>
-      <TextField fx:id="toDateOfAppointmentTF" layoutX="422.0" layoutY="96.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Label layoutX="381.0" layoutY="100.0" text="To: " />
-      <Button layoutX="401.0" layoutY="383.0" mnemonicParsing="false" onAction="#requestForReschedulingOfAppointmentButtonOA" prefHeight="52.0" prefWidth="190.0" text="Request For Rescheduling" />
+      <TextField fx:id="toTimeTF" layoutX="422.0" layoutY="121.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Label layoutX="381.0" layoutY="125.0" text="To: " />
+      <Button layoutX="401.0" layoutY="393.0" mnemonicParsing="false" onAction="#requestForReschedulingOfAppointmentButtonOA" prefHeight="52.0" prefWidth="190.0" text="Go To Reason &amp; Confirm Reschedule" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="386.0" layoutY="5.0" prefHeight="18.0" prefWidth="210.0" textFill="RED" />
+      <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="386.0" layoutY="5.0" prefHeight="18.0" prefWidth="210.0" textFill="#00ff1f" />
    </children>
 </AnchorPane>

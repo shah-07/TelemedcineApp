@@ -31,7 +31,7 @@
       </TableView>
       <TextField fx:id="toTimeOfAppointment" layoutX="392.0" layoutY="141.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
       <Label layoutX="351.0" layoutY="145.0" text="To: " />
-      <Label fx:id="successMessageLabel" layoutX="336.0" layoutY="7.0" prefHeight="18.0" prefWidth="258.0" textFill="#00ff00" />
-      <Label fx:id="errorMessageLabel" layoutX="336.0" layoutY="7.0" prefHeight="18.0" prefWidth="258.0" textFill="RED" />
+      <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="336.0" layoutY="7.0" prefHeight="18.0" prefWidth="258.0" textFill="#00ff00" />
+      <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="336.0" layoutY="7.0" prefHeight="18.0" prefWidth="258.0" textFill="RED" />
    </children>
 </AnchorPane>

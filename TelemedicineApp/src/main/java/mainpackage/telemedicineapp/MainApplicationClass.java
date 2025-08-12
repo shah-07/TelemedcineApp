@@ -17,7 +17,7 @@ public class MainApplicationClass extends Application {
         stage.setScene(scene);
         stage.show();
         DummyObjectCreator a = new DummyObjectCreator();
-        a.createDoctors();
+        //a.createDummyObjects();
     }
 
     public static void main(String[] args) {

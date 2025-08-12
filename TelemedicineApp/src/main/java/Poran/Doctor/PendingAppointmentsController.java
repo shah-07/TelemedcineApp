@@ -45,9 +45,13 @@ public class PendingAppointmentsController
 
     @javafx.fxml.FXML
     public void loadPendingAppointmentsButtonOA(ActionEvent actionEvent) {
-        ArrayList<Appointment> appointmentList = new ArrayList<>();
+        successMessageLabel.setText("");
+        errorMessageLabel.setText("");
+        pendingAppointmentsTableView.getItems().clear();
+        boolean found = false;
         LocalTime fromTime = LocalTime.parse(fromTimeOfAppointment.getText());
         LocalTime toTime = LocalTime.parse(toTimeOfAppointment.getText());
+
         try{
             FileInputStream fis = new FileInputStream("Appointment.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -55,16 +59,17 @@ public class PendingAppointmentsController
             while (true){
                 Appointment s = (Appointment) ois.readObject();
                 if (dateOfThePendingAppointmentDP.getValue().equals(s.getDateOfAppointment()) && ((s.getTimeOfAppointment().equals(fromTime) || s.getTimeOfAppointment().isAfter(fromTime)) && (s.getTimeOfAppointment().equals(toTime) || s.getTimeOfAppointment().isBefore(toTime)))) {
-                    appointmentList.add(s);
+                    pendingAppointmentsTableView.getItems().add(s);
+                    found = true;
                 }
             }
         }
+
         catch (EOFException eof) {
-            if (!appointmentList.isEmpty()){
-                pendingAppointmentsTableView.getItems().addAll(appointmentList);
-                successMessageLabel.setText("Appointments Loaded");
+            if (found){
+                successMessageLabel.setText("Appointment Loaded");
             }
-            else{
+            else {
                 errorMessageLabel.setText("No appointments to show");
             }
         }
@@ -72,5 +77,6 @@ public class PendingAppointmentsController
             e.printStackTrace(); // Helpful for debugging
             errorMessageLabel.setText("Error reading appointment file.");
         }
+
     }
 }
