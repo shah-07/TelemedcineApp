@@ -10,9 +10,9 @@
    <children>
       <TableView fx:id="viewPrescriptionTV" layoutX="14.0" layoutY="103.0" prefHeight="200.0" prefWidth="742.0">
         <columns>
-          <TableColumn fx:id="consultsTC" prefWidth="278.3999938964844" text="Consults" />
-          <TableColumn fx:id="prescriptionTC" prefWidth="227.20001220703125" text="Prescription" />
-            <TableColumn fx:id="downloadTC" prefWidth="237.5999755859375" text="Download " />
+          <TableColumn fx:id="consultsIDTC" prefWidth="278.3999938964844" text="Consults ID" />
+          <TableColumn fx:id="patientnameTC" prefWidth="227.20001220703125" text="Patient Name" />
+            <TableColumn fx:id="prescriptionfileTC" prefWidth="227.20001220703125" text="Prescription File" />
         </columns>
       </TableView>
       <Label layoutX="319.0" layoutY="32.0" text="View Prescription">

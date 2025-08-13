@@ -18,6 +18,6 @@
       <ComboBox fx:id="selectTimeSlotCB" layoutX="221.0" layoutY="262.0" prefWidth="150.0" />
       <Label layoutX="43.0" layoutY="266.0" text="Select TimeSlot" />
       <Button layoutX="443.0" layoutY="318.0" mnemonicParsing="false" onAction="#confirmOA" prefHeight="26.0" prefWidth="94.0" text="Confirm" />
-      <Label layoutX="32.0" layoutY="367.0" prefHeight="45.0" prefWidth="514.0" style="-fx-background-color: lavender;" />
+      <Label fx:id="alertL" layoutX="32.0" layoutY="367.0" prefHeight="45.0" prefWidth="514.0" style="-fx-background-color: lavender;" />
    </children>
 </AnchorPane>

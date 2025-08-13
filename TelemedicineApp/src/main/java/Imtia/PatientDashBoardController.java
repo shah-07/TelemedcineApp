@@ -58,7 +58,7 @@ public class PatientDashBoardController
 
     @javafx.fxml.FXML
     public void viewDoctorButtonOA(ActionEvent actionEvent) throws IOException {
-        Node node = FXMLLoader.load(getClass().getResource("/Imtia/PatientMakingAppointment .fxml"));
+        Node node = FXMLLoader.load(getClass().getResource("/Imtia/PatientCreateAppointment .fxml"));
         anchorPaneForPartialWindows.getChildren().setAll(node);
     }
 

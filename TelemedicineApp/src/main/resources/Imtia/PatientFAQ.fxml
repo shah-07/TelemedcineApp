@@ -27,6 +27,7 @@
       </Label>
       <Label layoutX="26.0" layoutY="334.0" text="Ask Question" />
       <TextField fx:id="askQuestionTF" layoutX="120.0" layoutY="330.0" prefHeight="67.0" prefWidth="487.0" />
-      <Label layoutX="127.0" layoutY="404.0" prefHeight="18.0" prefWidth="487.0" style="-fx-background-color: lavender;" text="Label" />
+      <Label fx:id="alertL" layoutX="127.0" layoutY="404.0" prefHeight="18.0" prefWidth="487.0" style="-fx-background-color: lavender;" text="Label" />
+      <Button layoutX="35.0" layoutY="379.0" mnemonicParsing="false" onAction="#sendOA" prefHeight="26.0" prefWidth="58.0" text="send" />
    </children>
 </AnchorPane>

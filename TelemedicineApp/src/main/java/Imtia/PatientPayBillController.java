@@ -33,7 +33,7 @@ public class PatientPayBillController
 
     }
     public void loadbill(){
-        payBillModels.add(new PatientPayBillModel("B001", "X-Ray",500,"Visa"));
+        payBillModels.add(new PatientPayBillModel("B001" ,"X-Ray",500,"Visa"));
         payBillModels.add(new PatientPayBillModel("B002", "ECG",1000,"Mastercard"));
 
         for (PatientPayBillModel patient : payBillModels){
