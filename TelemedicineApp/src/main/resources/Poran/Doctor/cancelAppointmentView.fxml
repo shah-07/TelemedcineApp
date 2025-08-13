@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.Doctor.CancelAppointmentController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.Doctor.CancelAppointmentController">
    <children>
       <Label layoutX="218.0" layoutY="35.0" text="Cancel Appointment">
          <font>
@@ -20,21 +20,24 @@
       <Label layoutX="43.0" layoutY="99.0" text="Choose Date:" />
       <Label layoutX="371.0" layoutY="83.0" text="From:" />
       <TextField fx:id="fromTimeTF" layoutX="412.0" layoutY="79.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Button layoutX="258.0" layoutY="154.0" mnemonicParsing="false" onAction="#loadAppointmentsButtonOA" text="Load Appointments" />
-      <TableView fx:id="pendingAppointmentsTableView" layoutX="6.0" layoutY="194.0" prefHeight="187.0" prefWidth="586.0">
+      <Button layoutX="258.0" layoutY="154.0" mnemonicParsing="false" onAction="#loadAppointmentsButtonOA" text="Load Appointments">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="appointmentsTV" layoutX="6.0" layoutY="194.0" prefHeight="187.0" prefWidth="586.0">
          <columns>
-            <TableColumn fx:id="nameTCOfCancelAppointments" prefWidth="211.0" text="Name" />
-            <TableColumn fx:id="ageTCOfCancelAppointments" prefWidth="53.0" text="Age" />
-            <TableColumn fx:id="genderTCOfCancelAppointments" prefWidth="88.0" text="Gender" />
-            <TableColumn fx:id="dateTCOfCancelAppointments" prefWidth="126.0" text="Date" />
-            <TableColumn fx:id="timeTCOfCancelAppointments" prefWidth="107.0" text="Time" />
+            <TableColumn fx:id="nameTC" prefWidth="211.0" text="Name" />
+            <TableColumn fx:id="ageTC" prefWidth="53.0" text="Age" />
+            <TableColumn fx:id="genderTC" prefWidth="88.0" text="Gender" />
+            <TableColumn fx:id="dateTC" prefWidth="126.0" text="Date" />
+            <TableColumn fx:id="timeTC" prefWidth="107.0" text="Time" />
          </columns>
       </TableView>
       <TextField fx:id="toTimeTF" layoutX="412.0" layoutY="114.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
       <Label layoutX="371.0" layoutY="118.0" text="To: " />
-      <Button fx:id="requestForCancellationButton" layoutX="384.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToWriteReasonAndCancelAppointmentButtonOA" prefHeight="48.0" prefWidth="208.0" text="Go To Wrtie Reason &amp; Cancel Appointment" textAlignment="CENTER" wrapText="true">
+      <Button layoutX="384.0" layoutY="389.0" mnemonicParsing="false" onAction="#cancelAppointmentButtonOA" prefHeight="48.0" prefWidth="208.0" text="Cancel Appointment " textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Button>
       <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="8.0" prefHeight="18.0" prefWidth="236.0" textAlignment="CENTER" textFill="RED" />
       <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="8.0" prefHeight="18.0" prefWidth="236.0" textAlignment="CENTER" textFill="#00ff00" />

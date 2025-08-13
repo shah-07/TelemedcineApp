@@ -18,8 +18,9 @@ public class DummyObjectCreator {
         LabTechnician lab2 = new LabTechnician("Ms. Samira Jahan", 10002, "234567",LocalDate.of(1998, 4, 24), "Cashier");
 
 
-        Appointment a1 = new Appointment("Poran", "Male", 152648, 20, 500, LocalDate.of(2025, 8, 20), LocalTime.of(10, 15));
-        Appointment a2 = new Appointment("NN", "Female", 252648, 20, 500, LocalDate.of(2025, 8, 18), LocalTime.of(10, 30));
+        Appointment a1 = new Appointment("Poran", "Male", "Headache",152648, 20, 500, LocalDate.of(2025, 8, 20), LocalTime.of(10, 15));
+        Appointment a2 = new Appointment("N. N.", "Female", "Pain in Stomach", 252648, 20, 500, LocalDate.of(2025, 8, 18), LocalTime.of(14, 30));
+        Appointment a3 = new Appointment("San", "Female", "Pain in hand", 3526489, 18, 500, LocalDate.now(), LocalTime.now().plusMinutes(30));
 
         // Write them to Doctor.bin
         FileOutputStream fos1 = new FileOutputStream("Doctor.bin");
@@ -43,6 +44,7 @@ public class DummyObjectCreator {
 
         oos3.writeObject(a1);
         oos3.writeObject(a2);
+        oos3.writeObject(a3);
         oos3.close();
 
     }
