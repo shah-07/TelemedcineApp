@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="553.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.TrackSystemUptimeAndMajorIssuesController">
    <children>
       <Label layoutX="209.0" layoutY="22.0" text="Syetem Uptime and Major Issues">

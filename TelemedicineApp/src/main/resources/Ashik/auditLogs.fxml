@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="535.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.AuditLogsController">
    <children>
       <Label layoutX="238.0" layoutY="13.0" text="Audit Logs Viewer">
