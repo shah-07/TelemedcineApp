@@ -18,9 +18,9 @@
          </font>
       </Label>
       <Label layoutX="37.0" layoutY="80.0" text="View Stats" />
-      <ComboBox layoutX="107.0" layoutY="76.0" prefWidth="150.0" />
+      <ComboBox fx:id="statsComboBox" layoutX="107.0" layoutY="76.0" prefWidth="150.0" />
       <Label layoutX="28.0" layoutY="129.0" text="Total Appointments" />
-      <TextField layoutX="157.0" layoutY="125.0" />
+      <TextField fx:id="totalAppointmentTextField" layoutX="157.0" layoutY="125.0" />
       <PieChart layoutX="40.0" layoutY="177.0" prefHeight="179.0" prefWidth="290.0" title="Daily appointments distribution" />
       <BarChart layoutX="343.0" layoutY="207.0" prefHeight="229.0" prefWidth="290.0" title="Weekly Comparison Chart ">
         <xAxis>

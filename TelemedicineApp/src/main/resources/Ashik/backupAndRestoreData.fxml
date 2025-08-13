@@ -14,16 +14,16 @@
          </font>
       </Label>
       <Label layoutX="47.0" layoutY="70.0" text="Last Backup " />
-      <TextField layoutX="141.0" layoutY="66.0" />
-      <Button layoutX="87.0" layoutY="121.0" mnemonicParsing="false" text="Start Backup " />
-      <Button layoutX="196.0" layoutY="121.0" mnemonicParsing="false" text="Restore Backup" />
+      <TextField fx:id="lastBackupTextField" layoutX="141.0" layoutY="66.0" />
+      <Button layoutX="87.0" layoutY="121.0" mnemonicParsing="false" onAction="#startBackupButton" text="Start Backup " />
+      <Button layoutX="196.0" layoutY="121.0" mnemonicParsing="false" onAction="#restoreBackupButton" text="Restore Backup" />
       <Label layoutX="71.0" layoutY="190.0" prefHeight="21.0" prefWidth="250.0" text="Are you sure you want to continue ?">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="104.0" layoutY="233.0" mnemonicParsing="false" text="Confirm" />
-      <Button layoutX="219.0" layoutY="233.0" mnemonicParsing="false" text="Cancel" />
+      <Button layoutX="104.0" layoutY="233.0" mnemonicParsing="false" onAction="#confirmButton" text="Confirm" />
+      <Button layoutX="219.0" layoutY="233.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancel" />
       <Label layoutX="104.0" layoutY="304.0" prefHeight="17.0" prefWidth="242.0" text="Successful / Error message " />
    </children>
 </AnchorPane>

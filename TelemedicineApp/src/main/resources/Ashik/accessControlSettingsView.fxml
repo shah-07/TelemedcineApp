@@ -15,7 +15,7 @@
          </font>
       </Label>
       <Label layoutX="47.0" layoutY="89.0" text="Select Role " />
-      <ComboBox layoutX="125.0" layoutY="85.0" prefWidth="150.0" promptText="select role " />
+      <ComboBox fx:id="roleComboBox" layoutX="125.0" layoutY="85.0" prefWidth="150.0" promptText="select role " />
       <Label layoutX="47.0" layoutY="136.0" text="Permissions" />
       <CheckBox layoutX="64.0" layoutY="163.0" mnemonicParsing="false" text="View Report" />
       <CheckBox layoutX="63.0" layoutY="257.0" mnemonicParsing="false" text="View Prescription " />
@@ -23,7 +23,7 @@
       <CheckBox layoutX="63.0" layoutY="212.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="150.0" text="Use Symptom Checker " />
       <CheckBox layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="Edit Report " />
       <CheckBox layoutX="63.0" layoutY="280.0" mnemonicParsing="false" text="Others" />
-      <Button layoutX="200.0" layoutY="324.0" mnemonicParsing="false" text="Save Changes" />
+      <Button layoutX="200.0" layoutY="324.0" mnemonicParsing="false" onAction="#saveChangesButton" text="Save Changes" />
       <Label layoutX="142.0" layoutY="376.0" prefHeight="35.0" prefWidth="329.0" text="Label : Successfull message " />
    </children>
 </AnchorPane>

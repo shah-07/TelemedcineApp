@@ -15,9 +15,9 @@
          </font>
       </Label>
       <Label layoutX="25.0" layoutY="52.0" text="Critical System Alerts" />
-      <ListView layoutX="66.0" layoutY="81.0" prefHeight="145.0" prefWidth="489.0" />
-      <Button layoutX="75.0" layoutY="246.0" mnemonicParsing="false" text="View Details" />
+      <ListView fx:id="systemAlertListView" layoutX="66.0" layoutY="81.0" prefHeight="145.0" prefWidth="489.0" />
+      <Button layoutX="75.0" layoutY="246.0" mnemonicParsing="false" onAction="#viewDetailsButton" text="View Details" />
       <Label layoutX="47.0" layoutY="395.0" text="Alert Details" />
-      <TextArea layoutX="142.0" layoutY="376.0" prefHeight="101.0" prefWidth="489.0" />
+      <TextArea fx:id="alertDetailsTextArea" layoutX="142.0" layoutY="376.0" prefHeight="101.0" prefWidth="489.0" />
    </children>
 </AnchorPane>

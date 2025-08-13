@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="417.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.CeoDashboardController">
+   <children>
+      <Label layoutX="41.0" layoutY="18.0" prefHeight="33.0" prefWidth="142.0" text="CEO Dashboard ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="59.0" text="Name" />
+      <TextField fx:id="nameTextField" layoutX="95.0" layoutY="55.0" />
+      <Button layoutX="23.0" layoutY="122.0" mnemonicParsing="false" onAction="#appointmentStatisticButton" text="Appointment Statistic" />
+      <Button layoutX="24.0" layoutY="157.0" mnemonicParsing="false" onAction="#activeUserButton" text="Active User " />
+      <Button layoutX="25.0" layoutY="192.0" mnemonicParsing="false" onAction="#revenueButton" text="Revenue Form Consultation" />
+      <Button layoutX="26.0" layoutY="227.0" mnemonicParsing="false" onAction="#doctorPerfomanceButton" text="Doctor's Performance Report " />
+      <Button layoutX="27.0" layoutY="262.0" mnemonicParsing="false" onAction="#systemandMajorIssuesButton" text="System and Major Issues'" />
+      <Button layoutX="29.0" layoutY="332.0" mnemonicParsing="false" onAction="#alertAndComplaintButton" text="Alert and Compalints" />
+      <Button layoutX="30.0" layoutY="367.0" mnemonicParsing="false" onAction="#auditButton" text="Audit Logs" />
+      <Button layoutX="28.0" layoutY="297.0" mnemonicParsing="false" onAction="#growthTrendButton" text="User Growth Trends" />
+      <Line endX="-29.0" endY="-157.0" layoutX="300.0" layoutY="157.0" startX="-29.0" startY="261.29290771484375" />
+   </children>
+</AnchorPane>
