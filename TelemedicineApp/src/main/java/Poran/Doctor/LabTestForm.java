@@ -12,10 +12,11 @@ public class LabTestForm implements Serializable {
     private String notes, diagnosis;
     private ArrayList<String> testList;
     private boolean completed = false;
-    private final LocalDate date = LocalDate.now();
-    private final LocalTime time = LocalTime.now();
+    private LocalDate date;
+    private LocalTime time;
 
-    public LabTestForm(String patientName, String doctorName, String gender,String diagnosis, ArrayList<String> testList, String notes, int age) {
+
+    public LabTestForm(String patientName, String doctorName, String gender, String diagnosis, ArrayList<String> testList, String notes, int age, LocalDate date, LocalTime time) {
         this.patientName = patientName;
         this.doctorName = doctorName;
         this.gender = gender;
@@ -23,6 +24,16 @@ public class LabTestForm implements Serializable {
         this.testList = new ArrayList<>(testList);
         this.notes = notes;
         this.age = age;
+        this.date = date;
+        this.time = time;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public void setTime(LocalTime time) {
+        this.time = time;
     }
 
     public String getPatientName() {
@@ -57,10 +68,6 @@ public class LabTestForm implements Serializable {
         this.completed = completed;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public ArrayList<String> getTestList() {
         return testList;
     }
@@ -87,5 +94,18 @@ public class LabTestForm implements Serializable {
 
     public String getGender() {
         return gender;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "Patient Name: " + patientName + '\n' +
+                "Doctor Name: " + doctorName + '\n' +
+                "Gender: " + gender + '\n' +
+                "Age: " + age +'\n' +
+                "Diagnosis: " + diagnosis + '\n' +
+                "Test List: " + testList + '\n'+
+                "Time: " + time + '\n'+
+                "Date: " + date +'\n';
     }
 }

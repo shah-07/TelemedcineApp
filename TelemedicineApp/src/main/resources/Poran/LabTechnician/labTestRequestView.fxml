@@ -19,21 +19,22 @@
       <DatePicker fx:id="chooseDateDP" layoutX="111.0" layoutY="77.0" prefHeight="26.0" prefWidth="150.0" />
       <Label layoutX="23.0" layoutY="81.0" text="Choose Date:" />
       <Label layoutX="364.0" layoutY="84.0" text="From:" />
-      <TextField fx:id="fromTime" layoutX="405.0" layoutY="80.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <TextField fx:id="fromTimeTF" layoutX="405.0" layoutY="80.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
       <Button layoutX="250.0" layoutY="170.0" mnemonicParsing="false" onAction="#loadTestButtonOA" text="Load Test Requests">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <TableView fx:id="testTV" layoutX="11.0" layoutY="204.0" prefHeight="218.0" prefWidth="586.0">
+      <TableView fx:id="testTV" layoutX="4.0" layoutY="204.0" prefHeight="192.0" prefWidth="593.0">
          <columns>
-            <TableColumn fx:id="nameTC" prefWidth="211.0" text="Name" />
-            <TableColumn fx:id="ageTV" prefWidth="53.0" text="Age" />
-            <TableColumn fx:id="dateTC" prefWidth="112.0" text="Date" />
-            <TableColumn fx:id="timeTC" prefWidth="95.0" text="Time" />
-            <TableColumn fx:id="diagnosisTC" prefWidth="114.0" text="Diagnosis" />
+            <TableColumn fx:id="doctorNameTC" prefWidth="104.0" text="Doctor Name" />
+            <TableColumn fx:id="patientNameTC" prefWidth="120.800048828125" text="Patient Name" />
+            <TableColumn fx:id="ageTV" prefWidth="55.199951171875" text="Age" />
+            <TableColumn fx:id="dateTC" prefWidth="104.00006103515625" text="Date" />
+            <TableColumn fx:id="timeTC" prefWidth="73.60003662109375" text="Time" />
+            <TableColumn fx:id="diagnosisTC" prefWidth="126.39996337890625" text="Diagnosis" />
          </columns>
       </TableView>
-      <TextField fx:id="toTime" layoutX="405.0" layoutY="115.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <TextField fx:id="toTimeTF" layoutX="405.0" layoutY="115.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
       <Label layoutX="364.0" layoutY="119.0" text="To: " />
       <Label layoutX="23.0" layoutY="111.0" text="Doctor's Name:" />
       <Label layoutX="22.0" layoutY="141.0" text="Pateint's Name:" />
@@ -41,5 +42,10 @@
       <TextField fx:id="patientNameTF" layoutX="110.0" layoutY="139.0" promptText="Optional" />
       <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="381.0" layoutY="7.0" prefHeight="17.0" prefWidth="213.0" textFill="RED" />
       <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="381.0" layoutY="7.0" prefHeight="17.0" prefWidth="213.0" textFill="RED" />
+      <Button layoutX="255.0" layoutY="400.0" mnemonicParsing="false" onAction="#showFullInfoButtonOA" prefHeight="46.0" prefWidth="113.0" text="Show Full Information" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

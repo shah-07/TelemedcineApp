@@ -47,6 +47,22 @@ public class DummyObjectCreator {
         oos3.writeObject(a3);
         oos3.close();
 
+        ArrayList<String> testList = new ArrayList<String>();
+        testList.add("CBC");
+        testList.add("CTR");
+
+        LabTestForm l1 = new LabTestForm("Rifat", "Rabi", "Male", "Fever", testList,"Nothing", 20, LocalDate.of(2025,8, 10), LocalTime.of(10,20));
+        LabTestForm l2 = new LabTestForm("Safin", "Kawsar", "Male", "Cold", testList,"Nothing", 20, LocalDate.of(2025,8, 7), LocalTime.of(13,15));
+
+        //Write them to LabTestForm.bin
+        FileOutputStream fos4 = new FileOutputStream("LabTestForm.bin");
+        ObjectOutputStream oos4 = new ObjectOutputStream(fos4);
+
+        oos4.writeObject(l1);
+        oos4.writeObject(l2);
+        oos4.close();
+
+
     }
 /*
     public void dummy(){
