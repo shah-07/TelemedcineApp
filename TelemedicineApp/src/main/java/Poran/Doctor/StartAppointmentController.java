@@ -74,7 +74,7 @@ public class StartAppointmentController
                     appt.getTimeOfAppointment()
             );
 
-            if (!apptDateTime.isBefore(now) && apptDateTime.isBefore(oneHourLater)) {
+            if ((!apptDateTime.isBefore(now) && apptDateTime.isBefore(oneHourLater)) && !appt.isSeen()) {
                 appointmentsTV.getItems().add(appt);
             }
         }

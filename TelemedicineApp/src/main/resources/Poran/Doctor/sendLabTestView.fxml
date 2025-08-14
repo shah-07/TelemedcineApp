@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.Doctor.SendLabTestController">
    <children>
       <Label layoutX="238.0" layoutY="71.0" text="Lab Test Form">
@@ -22,7 +21,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="146.0" layoutY="260.0" mnemonicParsing="false" onAction="#addTestsToTestList" prefHeight="66.0" prefWidth="105.0" text="Add Lab Tests to Lab Test List" textAlignment="CENTER" wrapText="true">
+      <Button layoutX="146.0" layoutY="304.0" mnemonicParsing="false" onAction="#addTestsToTestList" prefHeight="66.0" prefWidth="105.0" text="Add Lab Tests to Lab Test List" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -34,7 +33,9 @@
       <Label fx:id="showNameLabel" layoutX="74.0" layoutY="118.0" prefHeight="30.0" prefWidth="174.0" />
       <Label fx:id="showAgeLabel" layoutX="387.0" layoutY="117.0" prefHeight="30.0" prefWidth="174.0" />
       <Label fx:id="showGenderLabel" layoutX="78.0" layoutY="165.0" prefHeight="30.0" prefWidth="174.0" />
-      <Label layoutX="32.0" layoutY="223.0" prefHeight="18.0" prefWidth="65.0" text="Lab Tests: " />
-      <TextField fx:id="labTestTF" layoutX="117.0" layoutY="219.0" prefHeight="26.0" prefWidth="165.0" />
+      <Label layoutX="32.0" layoutY="267.0" prefHeight="18.0" prefWidth="65.0" text="Lab Tests: " />
+      <TextField fx:id="labTestTF" layoutX="117.0" layoutY="263.0" prefHeight="26.0" prefWidth="165.0" />
+      <Label layoutX="32.0" layoutY="229.0" prefHeight="18.0" prefWidth="65.0" text="Diagnosis: " />
+      <TextField fx:id="diagnosisTF" layoutX="117.0" layoutY="225.0" prefHeight="26.0" prefWidth="165.0" />
    </children>
 </AnchorPane>

@@ -9,33 +9,37 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.LabTechnician.LabTestRequestController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.LabTechnician.LabTestRequestController">
    <children>
-      <Label layoutX="221.0" layoutY="10.0" text="Lab Test Requests">
+      <Label layoutX="233.0" layoutY="39.0" text="Lab Test Requests">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <DatePicker fx:id="dateOfThePendingAppointmentDP" layoutX="111.0" layoutY="47.0" prefHeight="26.0" prefWidth="150.0" />
-      <Label layoutX="23.0" layoutY="51.0" text="Choose Date:" />
-      <Label layoutX="364.0" layoutY="54.0" text="From:" />
-      <TextField fx:id="fromDateOfPendAppointmentTF" layoutX="405.0" layoutY="50.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Button layoutX="250.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadPreviousAppointmentsButtonOA" text="Load Test Requests" />
-      <TableView fx:id="pendingAppointmentsTableView" layoutX="11.0" layoutY="174.0" prefHeight="218.0" prefWidth="586.0">
+      <DatePicker fx:id="chooseDateDP" layoutX="111.0" layoutY="77.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="23.0" layoutY="81.0" text="Choose Date:" />
+      <Label layoutX="364.0" layoutY="84.0" text="From:" />
+      <TextField fx:id="fromTime" layoutX="405.0" layoutY="80.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Button layoutX="250.0" layoutY="170.0" mnemonicParsing="false" onAction="#loadTestButtonOA" text="Load Test Requests">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="testTV" layoutX="11.0" layoutY="204.0" prefHeight="218.0" prefWidth="586.0">
          <columns>
-            <TableColumn fx:id="nameTCOfPendingAppointments" prefWidth="211.0" text="Name" />
-            <TableColumn fx:id="ageTCOfPendingAppointments" prefWidth="53.0" text="Age" />
-            <TableColumn fx:id="dateTCOfPendingAppointments" prefWidth="112.0" text="Date" />
-            <TableColumn fx:id="timeTCOfPendingAppointments" prefWidth="95.0" text="Time" />
-            <TableColumn fx:id="timeTCOfPendingAppointments1" prefWidth="114.0" text="Diagnosis" />
+            <TableColumn fx:id="nameTC" prefWidth="211.0" text="Name" />
+            <TableColumn fx:id="ageTV" prefWidth="53.0" text="Age" />
+            <TableColumn fx:id="dateTC" prefWidth="112.0" text="Date" />
+            <TableColumn fx:id="timeTC" prefWidth="95.0" text="Time" />
+            <TableColumn fx:id="diagnosisTC" prefWidth="114.0" text="Diagnosis" />
          </columns>
       </TableView>
-      <TextField fx:id="toDateOfPendAppointmentTF" layoutX="405.0" layoutY="85.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Label layoutX="364.0" layoutY="89.0" text="To: " />
-      <Label layoutX="23.0" layoutY="81.0" text="Doctor's Name:" />
-      <Label layoutX="22.0" layoutY="111.0" text="Pateint's Name:" />
-      <TextField layoutX="110.0" layoutY="77.0" promptText="Optional" />
-      <TextField layoutX="110.0" layoutY="109.0" promptText="Optional" />
+      <TextField fx:id="toTime" layoutX="405.0" layoutY="115.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Label layoutX="364.0" layoutY="119.0" text="To: " />
+      <Label layoutX="23.0" layoutY="111.0" text="Doctor's Name:" />
+      <Label layoutX="22.0" layoutY="141.0" text="Pateint's Name:" />
+      <TextField fx:id="doctorNameTF" layoutX="110.0" layoutY="107.0" promptText="Optional" />
+      <TextField fx:id="patientNameTF" layoutX="110.0" layoutY="139.0" promptText="Optional" />
+      <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="381.0" layoutY="7.0" prefHeight="17.0" prefWidth="213.0" textFill="RED" />
+      <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="381.0" layoutY="7.0" prefHeight="17.0" prefWidth="213.0" textFill="RED" />
    </children>
 </AnchorPane>

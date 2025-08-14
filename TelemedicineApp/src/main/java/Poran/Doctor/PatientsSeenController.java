@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
@@ -30,10 +31,25 @@ public class PatientsSeenController
     @javafx.fxml.FXML
     private Label successMessageLabel;
     @javafx.fxml.FXML
-    private Button loadPatientButton;
+    private AnchorPane anchorPane;
 
+    private String doctorName;
 
     ObservableList<Prescription> prescriptionList = FXCollections.observableArrayList();
+
+    private AnchorPane partialWindowAnchorPane;
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
+    public void setPartialWindowAnchorPane(AnchorPane partialWindowAnchorPane) {
+        this.partialWindowAnchorPane = partialWindowAnchorPane;
+    }
 
 
     @javafx.fxml.FXML
@@ -61,7 +77,9 @@ public class PatientsSeenController
         PrescriptionController nextController = loader.getController();
         nextController.setPrescriptionList(prescriptionList);
         nextController.setPrescriptionToEdit(selectedPrescription);
-        loadPatientButton.getScene().setRoot(root);
+        nextController.populateField();
+        partialWindowAnchorPane.getChildren().clear();
+        partialWindowAnchorPane.getChildren().add(root);
 
     }
 
@@ -75,10 +93,13 @@ public class PatientsSeenController
         }
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Poran/Doctor/sendLabTestView.fxml"));
         Parent root = loader.load();
-        PrescriptionController nextController = loader.getController();
+        SendLabTestController nextController = loader.getController();
         nextController.setPrescriptionList(prescriptionList);
         nextController.setPrescriptionToEdit(selectedPrescription);
-        loadPatientButton.getScene().setRoot(root);
+        nextController.populateFields();
+        nextController.setDoctorName(doctorName);
+        partialWindowAnchorPane.getChildren().clear();
+        partialWindowAnchorPane.getChildren().add(root);
     }
 
     @javafx.fxml.FXML

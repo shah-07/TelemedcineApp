@@ -31,7 +31,7 @@
       <Label fx:id="showNameLabel" layoutX="64.0" layoutY="108.0" prefHeight="30.0" prefWidth="174.0" />
       <Label fx:id="showAgeLabel" layoutX="377.0" layoutY="107.0" prefHeight="30.0" prefWidth="174.0" />
       <Label fx:id="showGenderLabel" layoutX="68.0" layoutY="155.0" prefHeight="30.0" prefWidth="174.0" />
-      <Label layoutX="22.0" layoutY="268.0" prefHeight="18.0" prefWidth="65.0" text="Medication: " />
+      <Label layoutX="22.0" layoutY="268.0" prefHeight="18.0" prefWidth="78.0" text="Medication: " />
       <TextField fx:id="medicineTF" layoutX="107.0" layoutY="264.0" prefHeight="26.0" prefWidth="165.0" />
       <TextField fx:id="diagnosisTF" layoutX="106.0" layoutY="212.0" prefHeight="26.0" prefWidth="166.0" />
       <Label layoutX="21.0" layoutY="216.0" prefHeight="18.0" prefWidth="78.0" text="Diagnosis: " />

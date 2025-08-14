@@ -11,7 +11,7 @@ public class Prescription implements Serializable {
     private int age;
     private LocalDate date;
     private LocalTime time;
-    private boolean prescribed;
+    private boolean prescribed = false;
 
     public Prescription(String name, String gender, int age, ArrayList<String> medicines, String diagnosis, LocalDate date, String notes) {
         this.name = name;

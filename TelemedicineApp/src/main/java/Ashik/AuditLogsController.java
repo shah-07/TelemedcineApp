@@ -1,6 +1,8 @@
 package Ashik;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
 
 public class AuditLogsController
 {
@@ -33,6 +35,4 @@ public class AuditLogsController
     public void filterButton(ActionEvent actionEvent) {
     }
 
-    public void filterButton(ActionEvent actionEvent) {
-    }
 }

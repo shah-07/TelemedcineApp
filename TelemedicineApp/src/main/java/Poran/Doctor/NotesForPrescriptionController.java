@@ -57,6 +57,11 @@ public class NotesForPrescriptionController
     @javafx.fxml.FXML
     public void addNotesToPrescriptionAndMarkPatientAsSeenButtonOA (ActionEvent actionEvent) {
 
+        if (medicineList == null) {
+            medicineList = new ArrayList<>();
+        }
+
+
         if (notesTA.getText().isEmpty()) {
             errorMessageLabel.setText("Please enter note");
             return;
@@ -81,7 +86,7 @@ public class NotesForPrescriptionController
                             notesTA.getText()
                             )
                     );
-                    GenericFileManager.writeAll(prescriptionList, "Prescriptions.bin");
+                    GenericFileManager.writeAll(prescriptionList, "Prescription.bin");
                     successMessageLabel.setText("Patient seen and Notes saved");
                 }
 

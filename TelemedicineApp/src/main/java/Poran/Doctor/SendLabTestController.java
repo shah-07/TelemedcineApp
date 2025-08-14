@@ -30,6 +30,8 @@ public class SendLabTestController
     private ObservableList<LabTestForm> labTestList = FXCollections.observableArrayList();
     private Prescription prescriptionToEdit;
     private ArrayList<String> testList;
+    @javafx.fxml.FXML
+    private TextField diagnosisTF;
 
 
     public Prescription getPrescriptionToEdit() {
@@ -47,15 +49,28 @@ public class SendLabTestController
     public void setPrescriptionList(ObservableList<Prescription> prescriptionList) {
         this.prescriptionList = prescriptionList;
     }
+    private String doctorName;
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        testList = new ArrayList<>();
+
+    }
+
+    public void populateFields(){
         showAgeLabel.setText(Integer.toString(prescriptionToEdit.getAge()));
         showNameLabel.setText(prescriptionToEdit.getName());
         showGenderLabel.setText(prescriptionToEdit.getGender());
         notesLabel.setText(prescriptionToEdit.getNotes());
-        testList = new ArrayList<>();
-
     }
 
     @javafx.fxml.FXML
@@ -71,9 +86,16 @@ public class SendLabTestController
     @javafx.fxml.FXML
     public void sendTestRequestButtonOA(ActionEvent actionEvent) {
 
+        if (diagnosisTF.getText().isEmpty() || testList.isEmpty()){
+            errorMessageLabel.setText("Please enter diagnosis and tests");
+            return;
+        }
+
         labTestList.add( new LabTestForm(
                 prescriptionToEdit.getName(),
                 prescriptionToEdit.getGender(),
+                doctorName,
+                diagnosisTF.getText(),
                 testList,
                 prescriptionToEdit.getNotes(),
                 prescriptionToEdit.getAge()

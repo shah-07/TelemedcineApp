@@ -52,12 +52,15 @@ public class PrescriptionController
         this.prescriptionList = prescriptionList;
     }
 
-    @javafx.fxml.FXML
-    public void initialize() {
+    public void populateField(){
         showAgeLabel.setText(Integer.toString(prescriptionToEdit.getAge()));
         showNameLabel.setText(prescriptionToEdit.getName());
         showGenderLabel.setText(prescriptionToEdit.getGender());
         notesLabel.setText(prescriptionToEdit.getNotes());
+    }
+
+    @javafx.fxml.FXML
+    public void initialize() {
 
         medicineList = new ArrayList<>();
 
