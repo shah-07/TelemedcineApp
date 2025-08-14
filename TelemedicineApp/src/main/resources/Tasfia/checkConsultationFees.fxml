@@ -16,11 +16,11 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TableView layoutX="97.0" layoutY="212.0" prefHeight="200.0" prefWidth="485.0">
+      <TableView fx:id="consultationFeeTableView" layoutX="97.0" layoutY="212.0" prefHeight="200.0" prefWidth="485.0">
         <columns>
-          <TableColumn prefWidth="175.0" text="Doctor list" />
-            <TableColumn prefWidth="145.0" text="Doctor fee" />
-            <TableColumn prefWidth="164.0" text="Doctor details" />
+          <TableColumn fx:id="doctorListTableColumn" prefWidth="175.0" text="Doctor list" />
+            <TableColumn fx:id="doctorFeeTableColumn" prefWidth="145.0" text="Doctor fee" />
+            <TableColumn fx:id="doctorDetailsTableColumn" prefWidth="164.0" text="Doctor details" />
         </columns>
       </TableView>
       <Label layoutX="31.0" layoutY="72.0" prefHeight="17.0" prefWidth="91.0" text="Doctor name">
@@ -38,8 +38,8 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <TextField layoutX="122.0" layoutY="70.0" />
-      <TextArea layoutX="448.0" layoutY="66.0" prefHeight="52.0" prefWidth="200.0" />
-      <TextField layoutX="128.0" layoutY="116.0" />
+      <TextField fx:id="doctorNameTextField" layoutX="122.0" layoutY="70.0" />
+      <TextArea fx:id="doctorDetailsTextArea" layoutX="448.0" layoutY="66.0" prefHeight="52.0" prefWidth="200.0" />
+      <TextField fx:id="doctorFeeTextField" layoutX="128.0" layoutY="116.0" />
    </children>
 </AnchorPane>

@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="476.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tasfia.ViewHealthArticleController">
    <children>
       <Label layoutX="211.0" layoutY="24.0" prefHeight="35.0" prefWidth="254.0" text="Health Articles or FAQs">
@@ -17,15 +16,15 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="56.0" layoutY="91.0" promptText="Search Article" />
-      <TableView layoutX="107.0" layoutY="246.0" prefHeight="200.0" prefWidth="463.0">
+      <TextField fx:id="searchTextField" layoutX="56.0" layoutY="91.0" promptText="Search Article" />
+      <TableView fx:id="listOfArticleTableView" layoutX="107.0" layoutY="246.0" prefHeight="200.0" prefWidth="463.0">
         <columns>
-          <TableColumn prefWidth="462.0" text="Display list of articles" />
+          <TableColumn fx:id="listOfArticleTableCol" prefWidth="462.0" text="Display list of articles" />
           <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
         </columns>
       </TableView>
-      <Button layoutX="318.0" layoutY="162.0" mnemonicParsing="false" text="Read More" />
-      <TextArea layoutX="318.0" layoutY="86.0" prefHeight="60.0" prefWidth="200.0" promptText="Show Short Description" />
-      <Button layoutX="318.0" layoutY="203.0" mnemonicParsing="false" text="Share / Bookmark" />
+      <Button layoutX="318.0" layoutY="162.0" mnemonicParsing="false" onAction="#readMoreButtonOnAction" text="Read More" />
+      <TextArea fx:id="shortDescriptionTextArea" layoutX="318.0" layoutY="86.0" prefHeight="60.0" prefWidth="200.0" promptText="Show Short Description" />
+      <Button layoutX="318.0" layoutY="203.0" mnemonicParsing="false" onAction="#shareButtonOnAction" text="Share / Bookmark" />
    </children>
 </AnchorPane>

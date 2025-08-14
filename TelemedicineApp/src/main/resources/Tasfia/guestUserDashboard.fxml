@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tasfia.GuestUserDashboardController">
+<AnchorPane prefHeight="504.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tasfia.GuestUserDashboardController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="doctorProfileImage" fitHeight="71.0" fitWidth="164.0" layoutX="30.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -16,56 +17,20 @@
          </image>
       </ImageView>
       <Label layoutX="635.0" layoutY="23.0" prefHeight="29.0" prefWidth="71.0" text="Guest Mode" textFill="#d01111" />
-      <Line endX="-51.0" endY="230.0" layoutX="244.0" layoutY="157.0" startX="-51.0" startY="-144.0" strokeWidth="4.0" />
-      <Label layoutX="373.0" layoutY="118.0" prefHeight="95.0" prefWidth="183.0" text="Welcome ">
+      <Line endX="-51.0" endY="347.0" layoutX="244.0" layoutY="157.0" startX="-51.0" startY="-165.0" strokeWidth="4.0" />
+      <Label fx:id="welcomeLabel" layoutX="339.0" layoutY="184.0" prefHeight="95.0" prefWidth="246.0" text="Welcome ">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="29.0" layoutY="128.0" text="DashBoard">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="31.0" layoutY="183.0" text="Our Services">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="27.0" layoutY="213.0" text="Symptom Checker">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="33.0" layoutY="157.0" text="Doctor List">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="28.0" layoutY="287.0" text="Consultation Fees">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="27.0" layoutY="320.0" text="Privacy Policy">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="26.0" layoutY="260.0" text="Search Doctor">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="78.0" layoutY="362.0" text="Share This App">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="33.0" layoutY="236.0" text="FAQ's">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
+      <Button fx:id="privacyPolicyButton" layoutX="22.0" layoutY="374.0" mnemonicParsing="false" onAction="#privacyPolicyButtonOnAction" text="Privacy Policy" />
+      <Button fx:id="consultationFessButton" layoutX="24.0" layoutY="336.0" mnemonicParsing="false" onAction="#consultationFeesButtonOnAction" text="Consultation fees" />
+      <Button fx:id="searchDoctorButton" layoutX="27.0" layoutY="298.0" mnemonicParsing="false" onAction="#searchDoctorButtonOnAction" text="Search Doctor" />
+      <Button fx:id="faqButton" layoutX="29.0" layoutY="260.0" mnemonicParsing="false" onAction="#faqButtonOnAction" text="FAQ'S" />
+      <Button fx:id="symptomsCheckButton" layoutX="16.0" layoutY="219.0" mnemonicParsing="false" onAction="#symptomsCheckButtonOnAction" text="Symptom Checker" />
+      <Button fx:id="servicesButton" layoutX="25.0" layoutY="181.0" mnemonicParsing="false" onAction="#servicesButtonOnAction" text="Our Services" />
+      <Button fx:id="doctorListButton" layoutX="29.0" layoutY="148.0" mnemonicParsing="false" onAction="#doctorListButtonOnAction" text="Doctor List" />
+      <Button fx:id="dashBoardButton" layoutX="29.0" layoutY="113.0" mnemonicParsing="false" onAction="#dashBoardButtonOnAction" text="DashBoard" />
+      <Button fx:id="shareThisAppButton" layoutX="30.0" layoutY="453.0" mnemonicParsing="false" onAction="#shareThisAppButtonOnAction" text="Share This App" />
    </children>
 </AnchorPane>
