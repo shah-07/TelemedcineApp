@@ -20,7 +20,6 @@ public class MainApplicationClass extends Application {
         //a.createDummyObjects();
     }
 
-    public static void main(String[] args) {
-        launch();
+    public static void main(String[] args) {launch();
     }
 }
