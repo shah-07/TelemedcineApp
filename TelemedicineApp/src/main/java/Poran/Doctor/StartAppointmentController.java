@@ -62,7 +62,7 @@ public class StartAppointmentController
         errorMessageLabel.setText("");
 
         appointmentsTV.getItems().clear();
-        appointmentList = AppointmentFileManager.readAll();
+        appointmentList = GenericFileManager.readAll(Appointment.class, "Appointment.bin");
 
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime oneHourLater = now.plusHours(1);
@@ -70,8 +70,8 @@ public class StartAppointmentController
         // Filter: within the next 1 hour
         for (Appointment appt : appointmentList) {
             LocalDateTime apptDateTime = LocalDateTime.of(
-                    appt.getDateOfAppointment(),
-                    appt.getTimeOfAppointment()
+                    appt.getAppointmentDate(),
+                    appt.getAppointmentTime()
             );
 
             if ((!apptDateTime.isBefore(now) && apptDateTime.isBefore(oneHourLater)) && !appt.isSeen()) {

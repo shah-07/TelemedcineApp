@@ -76,12 +76,12 @@ public class CancelAppointmentController
         }
 
         appointmentsTV.getItems().clear();
-        appointmentList = AppointmentFileManager.readAll();
+        appointmentList = GenericFileManager.readAll(Appointment.class, "Appointment.bin");
 
         for (Appointment a : appointmentList) {
-            if (a.getDateOfAppointment().equals(date) &&
-                    !a.getTimeOfAppointment().isBefore(fromTime) &&
-                    !a.getTimeOfAppointment().isAfter(toTime)) {
+            if (a.getAppointmentDate().equals(date) &&
+                    !a.getAppointmentTime().isBefore(fromTime) &&
+                    !a.getAppointmentTime().isAfter(toTime)) {
                 appointmentsTV.getItems().add(a);
             }
         }
@@ -94,17 +94,19 @@ public class CancelAppointmentController
         errorMessageLabel.setText("");
 
         Appointment selectedAppointment = appointmentsTV.getSelectionModel().getSelectedItem();
-        if (selectedAppointment != null) {
-            appointmentList.remove(selectedAppointment);
-            appointmentsTV.getItems().remove(selectedAppointment); // optional
-            AppointmentFileManager.writeAll(appointmentList);
+        if (selectedAppointment == null) {
+            errorMessageLabel.setText("Please select an appointment to cancel");
+            return;
+        }
 
-            Alert a = new Alert(Alert.AlertType.INFORMATION);
-            a.setHeaderText("Success");
-            a.setContentText("Successfully cancelled appointment");
-            a.showAndWait();
-        } else {
-            errorMessageLabel.setText("Please select an Appointment");
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION, "Press confirm to cancel the appointment");
+        a.setHeaderText("Success");
+        if (a.showAndWait().isPresent()) {
+            appointmentList.remove(selectedAppointment);
+            appointmentsTV.getItems().remove(selectedAppointment);
+            successMessageLabel.setText("Appointment cancel successfully");
+            GenericFileManager.writeAll(appointmentList, "Appointment.bin");
+            return;
         }
     }
 }

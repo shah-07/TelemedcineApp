@@ -82,12 +82,12 @@ public class RescheduleAppointmentController
         }
 
         appointmentsTV.getItems().clear();
-        appointmentList = AppointmentFileManager.readAll();
+        appointmentList = GenericFileManager.readAll(Appointment.class, "Appointment.bin");
 
         for (Appointment a : appointmentList) {
-            if (a.getDateOfAppointment().equals(date) &&
-                    !a.getTimeOfAppointment().isBefore(fromTime) &&
-                    !a.getTimeOfAppointment().isAfter(toTime)) {
+            if (a.getAppointmentDate().equals(date) &&
+                    !a.getAppointmentTime().isBefore(fromTime) &&
+                    !a.getAppointmentTime().isAfter(toTime)) {
                 appointmentsTV.getItems().add(a);
             }
 
@@ -121,12 +121,12 @@ public class RescheduleAppointmentController
 
         for (Appointment a: appointmentList){
             if (a.equals(selectedAppointment)){
-                a.setTimeOfAppointment(LocalTime.parse(newTimeTF.getText()));
-                a.setDateOfAppointment(newDateDP.getValue());
+                a.setAppointmentTime(LocalTime.parse(newTimeTF.getText()));
+                a.setAppointmentDate(newDateDP.getValue());
             }
         }
 
-        AppointmentFileManager.writeAll(appointmentList);
+        GenericFileManager.writeAll(appointmentList, "Appointment.bin");
 
         appointmentsTV.refresh();
         appointmentsTV.getItems().clear();
