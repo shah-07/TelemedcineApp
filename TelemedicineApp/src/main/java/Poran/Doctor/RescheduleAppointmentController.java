@@ -4,118 +4,139 @@ import Imtia.Appointment;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class RescheduleAppointmentController {
+public class RescheduleAppointmentController
+{
     @javafx.fxml.FXML
-    private TableColumn<Appointment, LocalDate> dateTCOfCancelAppointments;
-    @javafx.fxml.FXML
-    private TableColumn<Appointment, String> genderTCOfCancelAppointments;
-    @javafx.fxml.FXML
-    private TextField toTimeTF;
-    @javafx.fxml.FXML
-    private TextField fromTimeTF;
-    @javafx.fxml.FXML
-    private TableView<Appointment> appointmentsTableView;
-    @javafx.fxml.FXML
-    private TableColumn<Appointment, Integer> ageTCOfCancelAppointments;
-    @javafx.fxml.FXML
-    private TableColumn<Appointment, String> nameTCOfCancelAppointments;
-    @javafx.fxml.FXML
-    private TableColumn<Appointment, LocalTime> timeTCOfCancelAppointments;
+    private DatePicker newDateDP;
     @javafx.fxml.FXML
     private DatePicker chooseDateDP;
     @javafx.fxml.FXML
-    private AnchorPane anchorPane;
+    private TextField newTimeTF;
     @javafx.fxml.FXML
     private Label errorMessageLabel;
     @javafx.fxml.FXML
+    private TextField toTimeTF;
+    @javafx.fxml.FXML
     private Label successMessageLabel;
+    @javafx.fxml.FXML
+    private TextField fromTimeTF;
+    @javafx.fxml.FXML
+    private TableView<Appointment> appointmentsTV;
+    @javafx.fxml.FXML
+    private TableColumn<Appointment, String> genderTC;
+    @javafx.fxml.FXML
+    private TableColumn<Appointment, String> nameTC;
+    @javafx.fxml.FXML
+    private TableColumn<Appointment, Integer> ageTC;
+    @javafx.fxml.FXML
+    private TableColumn<Appointment, LocalDate> dateTC;
+    @javafx.fxml.FXML
+    private TableColumn<Appointment, LocalTime> timeTC;
 
-    private ObservableList<Appointment> appointmentList = FXCollections.observableArrayList();
+    ObservableList<Appointment> appointmentList = FXCollections.observableArrayList();
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        dateTCOfCancelAppointments.setCellValueFactory(new PropertyValueFactory<>("dateOfAppointment"));
-        genderTCOfCancelAppointments.setCellValueFactory(new PropertyValueFactory<>("gender"));
-        ageTCOfCancelAppointments.setCellValueFactory(new PropertyValueFactory<>("age"));
-        nameTCOfCancelAppointments.setCellValueFactory(new PropertyValueFactory<>("name"));
-        timeTCOfCancelAppointments.setCellValueFactory(new PropertyValueFactory<>("timeOfAppointment"));
-        appointmentsTableView.setItems(appointmentList);
+        ageTC.setCellValueFactory(new PropertyValueFactory<>("age"));
+        nameTC.setCellValueFactory(new PropertyValueFactory<>("name"));
+        genderTC.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("dateOfAppointment"));
+        timeTC.setCellValueFactory(new PropertyValueFactory<>("timeOfAppointment"));
 
-    }
+        appointmentsTV.setItems(appointmentList);
 
-    @javafx.fxml.FXML
-    public void requestForReschedulingOfAppointmentButtonOA(ActionEvent actionEvent) throws IOException {
-
-        Appointment selectedAppointment = appointmentsTableView.getSelectionModel().getSelectedItem();
-
-        if (selectedAppointment != null) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Poran/Doctor/reschedulingAppointmentView2.fxml"));
-                Node node = loader.load();
-                ReschedulingAppointmentController2 nextController = loader.getController();
-                nextController.setAppointmentToReschedule(selectedAppointment);
-                nextController.setParentController(this);
-                anchorPane.getChildren().setAll(node);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            errorMessageLabel.setText("Please select an appointment first");
-        }
-
-    }
-
-    public void refreshAppointments() {
-        appointmentList.clear();
-        loadAppointmentsButtonOA(null);
     }
 
 
     @javafx.fxml.FXML
     public void loadAppointmentsButtonOA(ActionEvent actionEvent) {
 
-        appointmentList.clear();
-        appointmentsTableView.getItems().clear();
-        boolean found = false;
+        successMessageLabel.setText("");
+        errorMessageLabel.setText("");
+
+        if(chooseDateDP.getValue() == null || fromTimeTF.getText().isEmpty() || toTimeTF.getText().isEmpty()){
+            errorMessageLabel.setText("Please select a date and time");
+            return;
+        }
+
+        LocalDate date = chooseDateDP.getValue();
         LocalTime fromTime = LocalTime.parse(fromTimeTF.getText());
         LocalTime toTime = LocalTime.parse(toTimeTF.getText());
 
-        try {
-            FileInputStream fis = new FileInputStream("Appointment.bin");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-
-            while (true) {
-                Appointment s = (Appointment) ois.readObject();
-                if (chooseDateDP.getValue().equals(s.getDateOfAppointment()) && ((s.getTimeOfAppointment().equals(fromTime) || s.getTimeOfAppointment().isAfter(fromTime)) && (s.getTimeOfAppointment().equals(toTime) || s.getTimeOfAppointment().isBefore(toTime)))) {
-                    appointmentList.add(s);
-                    found = true;
-                }
-            }
-        } catch (EOFException eof) {
-            if (found) {
-                successMessageLabel.setText("Appointment Loaded");
-            } else {
-                errorMessageLabel.setText("No appointments to show");
-            }
-        } catch (Exception e) {
-            e.printStackTrace(); // Helpful for debugging
-            errorMessageLabel.setText("Error reading appointment file.");
+        if(date.isBefore(LocalDate.now())){
+            errorMessageLabel.setText("Previous date cannot be selected");
+            return;
         }
 
+        if (date.isEqual(LocalDate.now()) && fromTime.isBefore(LocalTime.now())){
+            errorMessageLabel.setText("Previous time cannot be selected");
+            return;
+        }
+
+        appointmentsTV.getItems().clear();
+        appointmentList = GenericFileManager.readAll(Appointment.class, "Appointment.bin");
+
+        for (Appointment a : appointmentList) {
+            if (a.getAppointmentDate().equals(date) &&
+                    !a.getAppointmentTime().isBefore(fromTime) &&
+                    !a.getAppointmentTime().isAfter(toTime)) {
+                appointmentsTV.getItems().add(a);
+            }
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void rescheduleAppointmentButtonOA(ActionEvent actionEvent) {
+
+        successMessageLabel.setText("");
+        errorMessageLabel.setText("");
+
+        Appointment selectedAppointment = appointmentsTV.getSelectionModel().getSelectedItem();
+        if (selectedAppointment == null) {
+            errorMessageLabel.setText("Please select an appointment to reschedule");
+            return;
+        }
+
+        if (newDateDP.getValue() == null || newTimeTF.getText().isEmpty()) {
+            errorMessageLabel.setText("Please enter new date and time");
+            return;
+        }
+
+        LocalDate newDate = newDateDP.getValue();
+        LocalTime newTime = LocalTime.parse(newTimeTF.getText());
+
+        if (newDate.isBefore(LocalDate.now()) || (newDate.isEqual(LocalDate.now()) && newTime.isBefore(LocalTime.now()))) {
+            errorMessageLabel.setText("New date/time cannot be in the past");
+            return;
+        }
+
+        for (Appointment a: appointmentList){
+            if (a.equals(selectedAppointment)){
+                a.setAppointmentTime(LocalTime.parse(newTimeTF.getText()));
+                a.setAppointmentDate(newDateDP.getValue());
+            }
+        }
+
+        GenericFileManager.writeAll(appointmentList, "Appointment.bin");
+
+        appointmentsTV.refresh();
+        appointmentsTV.getItems().clear();
+        successMessageLabel.setText("Appointment successfully rescheduled");
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setHeaderText("Success");
+        a.setContentText("Successfully rescheduled appointment");
+        a.showAndWait();
 
     }
+
+
 }

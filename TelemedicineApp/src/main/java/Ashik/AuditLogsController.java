@@ -1,48 +1,24 @@
 package Ashik;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-
-import java.io.FileWriter;
-import java.io.IOException;
-import java.time.LocalDate;
-import java.util.stream.Collectors;
-
 
 public class AuditLogsController
 {
     @javafx.fxml.FXML
-    private ComboBox <String > typeComboBox;
+    private ComboBox userComboBox;
     @javafx.fxml.FXML
-    private TableColumn <AuditLog, LocalDate> dateCol;
+    private ComboBox typeComboBox;
     @javafx.fxml.FXML
-    private TableColumn <AuditLog,String> actionTypeCol;
+    private TableColumn dateCol;
     @javafx.fxml.FXML
-    private TableColumn <AuditLog, String > userCol;
+    private TableColumn actionTypeCol;
     @javafx.fxml.FXML
-    private TableColumn <AuditLog, String > descriptionCol;
+    private TableColumn userCol;
     @javafx.fxml.FXML
-    private TableView < AuditLog> auditLogsTableView;
-    @javafx.fxml.FXML
-    private DatePicker toDateDP;
-    @javafx.fxml.FXML
-    private DatePicker fromDateDP;
-    @javafx.fxml.FXML
-    private Label downloadLabel;
+    private TableColumn descriptionCol;
 
     @javafx.fxml.FXML
     public void initialize() {
-        dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
-        userCol.setCellValueFactory(new PropertyValueFactory(" user"));
-        actionTypeCol.setCellValueFactory(new PropertyValueFactory<>("actionType"));
-        descriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
-
-        typeComboBox.getItems().addAll("Login" , "Error", "Transaction");
-
     }
 
     @javafx.fxml.FXML
@@ -57,4 +33,6 @@ public class AuditLogsController
     public void filterButton(ActionEvent actionEvent) {
     }
 
+    public void filterButton(ActionEvent actionEvent) {
+    }
 }

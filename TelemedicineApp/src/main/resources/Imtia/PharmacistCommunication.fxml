@@ -11,7 +11,7 @@
       <Button layoutX="57.0" layoutY="132.0" mnemonicParsing="false" onAction="#videoCallOA" prefHeight="26.0" prefWidth="98.0" text="Video Call" />
       <TableView fx:id="chatCompleteTV" layoutX="47.0" layoutY="200.0" prefHeight="200.0" prefWidth="534.0">
         <columns>
-          <TableColumn fx:id="patientTC" prefWidth="260.8000183105469" text="Patient/Doctor" />
+          <TableColumn fx:id="patientTC" prefWidth="260.8000183105469" text="Patient" />
           <TableColumn fx:id="isCompleteTC" prefWidth="272.8000183105469" text="Is Complete?" />
         </columns>
       </TableView>

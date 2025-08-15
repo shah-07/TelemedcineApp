@@ -1,37 +1,73 @@
 package Imtia;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Objects;
 
-public class Appointment implements Serializable {
+public class Appointment {
     private final String name, gender;
-    private final int id;
-    private int age, bill;
-    private LocalDate dateOfAppointment;
-    private LocalTime timeOfAppointment;
+    private String reason;
+    private int age, bill, id;
+    private LocalDate appointmentDate;
+    private LocalTime appointmentTime;
+    private boolean seen = false, prescribed = false, completed = false;
 
-    public Appointment(String name, String gender, int id, int age, int bill, LocalDate dateOfAppointment, LocalTime timeOfAppointment) {
+    public Appointment(String name,String gender,String reason,int id ,int age, int bill, LocalDate appointmentDate, LocalTime appointmentTime) {
         this.name = name;
         this.gender = gender;
+        this.reason = reason;
         this.id = id;
         this.age = age;
         this.bill = bill;
-        this.dateOfAppointment = dateOfAppointment;
-        this.timeOfAppointment = timeOfAppointment;
+        this.appointmentDate = appointmentDate;
+        this.appointmentTime = appointmentTime;
     }
 
     public String getGender() {
         return gender;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public boolean isSeen() {
+        return seen;
+    }
+
+    public void setSeen(boolean seen) {
+        this.seen = seen;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
+    public boolean isPrescribed() {
+        return prescribed;
+    }
+
+    public void setPrescribed(boolean prescribed) {
+        this.prescribed = prescribed;
+    }
+
     public String getName() {
         return name;
     }
 
-    public int getId() {
-        return id;
+    public String getReason() {
+        return reason;
     }
 
     public int getAge() {
@@ -50,37 +86,19 @@ public class Appointment implements Serializable {
         this.bill = bill;
     }
 
-    public LocalDate getDateOfAppointment() {
-        return dateOfAppointment;
+    public LocalDate getAppointmentDate() {
+        return appointmentDate;
     }
 
-    public void setDateOfAppointment(LocalDate dateOfAppointment) {
-        this.dateOfAppointment = dateOfAppointment;
+    public void setAppointmentDate(LocalDate appointmentDate) {
+        this.appointmentDate = appointmentDate;
     }
 
-    public LocalTime getTimeOfAppointment() {
-        return timeOfAppointment;
+    public LocalTime getAppointmentTime() {
+        return appointmentTime;
     }
 
-    public void setTimeOfAppointment(LocalTime timeOfAppointment) {
-        this.timeOfAppointment = timeOfAppointment;
+    public void setAppointmentTime(LocalTime appointmentTime) {
+        this.appointmentTime = appointmentTime;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Appointment other = (Appointment) obj;
-        return age == other.age &&
-                Objects.equals(name, other.name) &&
-                Objects.equals(gender, other.gender) &&
-                Objects.equals(dateOfAppointment, other.dateOfAppointment) &&
-                Objects.equals(timeOfAppointment, other.timeOfAppointment);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, gender, age, dateOfAppointment, timeOfAppointment);
-    }
-
 }

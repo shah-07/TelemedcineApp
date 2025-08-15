@@ -7,24 +7,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.Doctor.StartAppointmentController">
    <children>
-      <TableView layoutX="10.0" layoutY="67.0" prefHeight="200.0" prefWidth="580.0">
+      <TableView fx:id="appointmentsTV" layoutX="10.0" layoutY="122.0" prefHeight="200.0" prefWidth="580.0">
         <columns>
-          <TableColumn prefWidth="140.0" text="Name" />
-          <TableColumn prefWidth="56.0" text="Age" />
-            <TableColumn prefWidth="76.0" text="Gender" />
-            <TableColumn prefWidth="97.0" text="Date" />
-            <TableColumn prefWidth="85.0" text="Time" />
-            <TableColumn prefWidth="125.0" text="Reason" />
+          <TableColumn fx:id="nameTC" prefWidth="140.0" text="Name" />
+          <TableColumn fx:id="ageTC" prefWidth="56.0" text="Age" />
+            <TableColumn fx:id="genderTC" prefWidth="76.0" text="Gender" />
+            <TableColumn fx:id="dateTC" prefWidth="97.0" text="Date" />
+            <TableColumn fx:id="timeTC" prefWidth="85.0" text="Time" />
+            <TableColumn fx:id="reasonTC" prefWidth="125.0" text="Reason" />
         </columns>
       </TableView>
-      <Label layoutX="204.0" layoutY="14.0" text="Start An Appointment">
+      <Label layoutX="223.0" layoutY="40.0" text="Start An Appointment">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="456.0" layoutY="280.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="130.0" text="Start Appointment" />
+      <Button fx:id="startAppointmentButton" layoutX="456.0" layoutY="334.0" mnemonicParsing="false" onAction="#startAppointmentButtonOA" prefHeight="54.0" prefWidth="133.0" text="Start Appointment &amp; Take Notes" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="411.0" layoutY="7.0" prefHeight="18.0" prefWidth="186.0" textFill="RED" />
+      <Button layoutX="294.0" layoutY="74.0" mnemonicParsing="false" onAction="#loadButtonOA" prefHeight="30.0" prefWidth="52.0" text="Load">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="411.0" layoutY="7.0" prefHeight="18.0" prefWidth="186.0" textFill="#00ff09" />
    </children>
 </AnchorPane>

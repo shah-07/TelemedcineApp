@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PharmacistConfirmPrescriptionController">
+   <children>
+      <Label layoutX="58.0" layoutY="75.0" text="Enter Time" />
+      <Label layoutX="58.0" layoutY="117.0" text="Enter Date" />
+      <TextField fx:id="timeTF" layoutX="137.0" layoutY="71.0" />
+      <DatePicker fx:id="dateDP" layoutX="130.0" layoutY="113.0" />
+      <TableView fx:id="confirmPrescriptionTV" layoutX="35.0" layoutY="161.0" prefHeight="128.0" prefWidth="362.0">
+        <columns>
+          <TableColumn fx:id="timeTC" prefWidth="122.39998626708984" text="Time" />
+          <TableColumn fx:id="dateTC" prefWidth="121.5999755859375" text="Date" />
+            <TableColumn fx:id="nameTC" prefWidth="115.20001220703125" text="name" />
+        </columns>
+      </TableView>
+      <Button layoutX="230.0" layoutY="309.0" mnemonicParsing="false" onAction="#confirmOA" prefHeight="26.0" prefWidth="130.0" text="Confirm" />
+      <Label layoutX="58.0" layoutY="38.0" text="Enter Name" />
+      <TextField fx:id="nameTF" layoutX="137.0" layoutY="34.0" />
+   </children>
+</AnchorPane>

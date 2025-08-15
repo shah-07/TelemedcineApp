@@ -8,17 +8,17 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientOrderMedicineController">
    <children>
-      <Button layoutX="69.0" layoutY="52.0" mnemonicParsing="false" onAction="#uploadPrescriptionOA" style="-fx-background-color: lavender; -fx-border-color: black;" text="Upload Prescription" />
       <Label layoutX="69.0" layoutY="115.0" text="Input Medicine Name" />
       <TextField fx:id="inputMedicineNameTF" layoutX="202.0" layoutY="111.0" prefHeight="26.0" prefWidth="350.0" />
       <Label layoutX="69.0" layoutY="177.0" text="Address" />
       <TextField fx:id="addressTF" layoutX="194.0" layoutY="159.0" prefHeight="54.0" prefWidth="350.0" />
       <Label layoutX="69.0" layoutY="245.0" text="Phone Number" />
       <TextField fx:id="phoneNumberTF" layoutX="202.0" layoutY="241.0" prefHeight="26.0" prefWidth="350.0" />
-      <Button layoutX="527.0" layoutY="294.0" mnemonicParsing="false" onAction="#oderOA" prefHeight="26.0" prefWidth="73.0" text="Order">
+      <Button layoutX="478.0" layoutY="310.0" mnemonicParsing="false" onAction="#oderOA" prefHeight="26.0" prefWidth="73.0" text="Order">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Label fx:id="alertL" layoutX="202.0" layoutY="363.0" prefHeight="18.0" prefWidth="81.0" />
    </children>
 </AnchorPane>

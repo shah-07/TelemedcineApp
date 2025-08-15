@@ -4,9 +4,9 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientHealthCampaignInfoController">
+<AnchorPane prefHeight="450.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientHealthCampaignInfoController">
    <children>
-      <TableView fx:id="healthTV" layoutX="48.0" layoutY="104.0" prefHeight="200.0" prefWidth="702.0">
+      <TableView fx:id="healthTV" layoutX="24.0" layoutY="99.0" prefHeight="200.0" prefWidth="687.0">
         <columns>
           <TableColumn fx:id="newHealthTC" prefWidth="368.79998779296875" text="New  health campaign" />
           <TableColumn fx:id="dateTC" prefWidth="332.800048828125" text="Date" />
