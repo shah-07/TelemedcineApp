@@ -23,18 +23,7 @@ public class PatientBookTestController {
 
     @javafx.fxml.FXML
     public void confirmOA(ActionEvent actionEvent) {
-        String selectedTestType = testTypeCB.getValue();
-        String selectedTimeSlot = selectTimeSlotCB.getValue();
-        // Validate selections
-        if (selectedTestType == null || selectedTimeSlot == null) {
-            showAlert("Error", "Please select both test type and time slot");
-            return;
-        }
 
-        PatientBookTestModel booking = new PatientBookTestModel(selectedTestType, selectedTimeSlot);
-
-        showAlert("Success", "Booking confirmed for " +
-                booking.getTestType() + " at " + booking.getTimeSlot());
     }
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
