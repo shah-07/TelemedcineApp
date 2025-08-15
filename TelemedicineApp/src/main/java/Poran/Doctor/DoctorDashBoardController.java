@@ -47,9 +47,14 @@ public class DoctorDashBoardController {
     private Label appointmentTextLabel;
     @javafx.fxml.FXML
     private Label appointmentNumberLabel;
+    @javafx.fxml.FXML
+    private Button generatePrescriptionButton;
+
+
 
     ObservableList<Appointment> appointmentList = GenericFileManager.readAll(Appointment.class, "Appointment.bin");
     int appointmentNumber = 0;
+
     @javafx.fxml.FXML
     public void initialize() {
 
@@ -64,6 +69,7 @@ public class DoctorDashBoardController {
         setupHoverEffect(patientsSeenButton);
         setupHoverEffect(rescheduleAppointmentButton);
         setupHoverEffect(logOutButton);
+        setupHoverEffect(generatePrescriptionButton);
 
     }
     private void appointmentNum(){
@@ -167,5 +173,12 @@ public class DoctorDashBoardController {
     public void logOutButtonOA(ActionEvent actionEvent) throws IOException {
         Node node = FXMLLoader.load(getClass().getResource("/mainpackage.telemedicineapp/loginView.fxml"));
         dashBoardAnchorPane.getChildren().setAll(node);
+    }
+
+    @javafx.fxml.FXML
+    public void generatePrescriptionButtonOA (ActionEvent actionEvent) throws IOException{
+    Node node = FXMLLoader.load(getClass().getResource("/Poran/Doctor/generatePrescriptionView.fxml"));
+    anchorPaneForPartialWindows.getChildren().setAll(node);
+
     }
 }

@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class PrescriptionController
@@ -83,6 +85,8 @@ public class PrescriptionController
                 if (a.showAndWait().isPresent()){
                 prescriptionToEdit.setPrescribed(true);
                 prescriptionToEdit.setDiagnosis(diagnosisTF.getText());
+                prescriptionToEdit.setTime(LocalTime.now());
+                prescriptionToEdit.setDate(LocalDate.now());
                 prescriptionToEdit.setMedicines(medicineList);
                 }
             }

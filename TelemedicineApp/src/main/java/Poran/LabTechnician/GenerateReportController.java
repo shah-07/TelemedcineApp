@@ -127,7 +127,6 @@ public class GenerateReportController
                 document.add(new Paragraph("Technician: " + test.getTechnicianName()));
 
                 document.close();
-                System.out.println("PDF Generated Successfully!");
             } catch (Exception e) {
                 e.printStackTrace();
             }

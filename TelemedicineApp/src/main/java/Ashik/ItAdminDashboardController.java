@@ -1,6 +1,7 @@
 package Ashik;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextField;
 
 public class ItAdminDashboardController
 {
@@ -43,6 +44,4 @@ public class ItAdminDashboardController
     public void accessControllerButton(ActionEvent actionEvent) {
     }
 
-    public void createProfileButton(ActionEvent actionEvent) {
-    }
 }
