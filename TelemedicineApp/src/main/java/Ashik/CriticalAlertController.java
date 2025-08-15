@@ -1,8 +1,6 @@
 package Ashik;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
 
 public class CriticalAlertController
 {
@@ -19,5 +17,6 @@ public class CriticalAlertController
     public void viewDetailsButton(ActionEvent actionEvent) {
     }
 
-
+    public void viewDetailsButton(ActionEvent actionEvent) {
+    }
 }

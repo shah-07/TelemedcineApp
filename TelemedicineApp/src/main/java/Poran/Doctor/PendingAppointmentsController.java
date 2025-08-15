@@ -33,9 +33,6 @@ public class PendingAppointmentsController
     public void initialize() {
     }
 
-    @Deprecated
-    public void loadPendingAppointmentsOA(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void loadPendingAppointmentsButtonOA(ActionEvent actionEvent) {

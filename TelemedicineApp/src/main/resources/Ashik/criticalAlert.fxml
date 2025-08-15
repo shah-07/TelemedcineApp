@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="491.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.CriticalAlertController">
+<AnchorPane prefHeight="506.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.CriticalAlertController">
    <children>
       <Label layoutX="188.0" layoutY="18.0" text="CEO Dashboard - Critical Alert">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="52.0" text="Critical System Alerts" />
-      <ListView fx:id="systemAlertListView" layoutX="66.0" layoutY="81.0" prefHeight="145.0" prefWidth="489.0" />
-      <Button layoutX="75.0" layoutY="246.0" mnemonicParsing="false" onAction="#viewDetailsButton" text="View Details" />
-      <Label layoutX="47.0" layoutY="395.0" text="Alert Details" />
-      <TextArea fx:id="alertDetailsTextArea" layoutX="142.0" layoutY="376.0" prefHeight="101.0" prefWidth="489.0" />
+      <Button layoutX="170.0" layoutY="310.0" mnemonicParsing="false" onAction="#viewDetailsButtonOnAction" text="View Details" />
+      <Label layoutX="31.0" layoutY="405.0" text="Alert Details">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextArea fx:id="alertDetailsTextArea" layoutX="124.0" layoutY="368.0" prefHeight="101.0" prefWidth="489.0" />
+      <Label layoutX="34.0" layoutY="79.0" text="Alert Date" />
+      <Button layoutX="344.0" layoutY="75.0" mnemonicParsing="false" onAction="#searchButtonOnAction" text="Search " />
+      <DatePicker fx:id="alertDateDP" layoutX="101.0" layoutY="75.0" promptText="Select a date " />
+      <TableView fx:id="criticalAlertTableView" layoutX="43.0" layoutY="128.0" prefHeight="165.0" prefWidth="589.0">
+        <columns>
+          <TableColumn fx:id="dateCol" prefWidth="105.0" text="Date " />
+          <TableColumn fx:id="alertTypeCol" prefWidth="209.0" text="Alert Type " />
+            <TableColumn fx:id="descriptionSummaryCol" prefWidth="274.0" text="Description Summary " />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

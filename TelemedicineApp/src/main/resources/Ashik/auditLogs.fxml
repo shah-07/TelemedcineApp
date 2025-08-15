@@ -20,10 +20,10 @@
       <Label layoutX="44.0" layoutY="101.0" text="To" />
       <Label layoutX="372.0" layoutY="65.0" text="Type" />
       <Button layoutX="398.0" layoutY="118.0" mnemonicParsing="false" onAction="#filterButton" text="Filter Logs" />
-      <DatePicker layoutX="80.0" layoutY="59.0" />
-      <DatePicker layoutX="80.0" layoutY="96.0" />
+      <DatePicker fx:id="fromDateDP" layoutX="80.0" layoutY="59.0" />
+      <DatePicker fx:id="toDateDP" layoutX="80.0" layoutY="96.0" />
       <ComboBox fx:id="typeComboBox" layoutX="422.0" layoutY="60.0" prefWidth="150.0" />
-      <TableView layoutX="37.0" layoutY="204.0" prefHeight="172.0" prefWidth="622.0">
+      <TableView fx:id="auditLogsTableView" layoutX="37.0" layoutY="204.0" prefHeight="172.0" prefWidth="622.0">
         <columns>
           <TableColumn fx:id="dateCol" prefWidth="106.0" text="Date" />
           <TableColumn fx:id="userCol" prefWidth="109.0" text="User" />
@@ -33,7 +33,6 @@
       </TableView>
       <Button layoutX="70.0" layoutY="434.0" mnemonicParsing="false" onAction="#csvButton" text="Download CSV" />
       <Button layoutX="209.0" layoutY="431.0" mnemonicParsing="false" onAction="#pdfButton" text="Download PDF" />
-      <Label layoutX="105.0" layoutY="478.0" prefHeight="38.0" prefWidth="366.0" text="Label" />
-      <ComboBox fx:id="userComboBox" layoutX="70.0" layoutY="137.0" prefWidth="150.0" promptText="User" />
+      <Label fx:id="downloadLabel" layoutX="148.0" layoutY="476.0" prefHeight="30.0" prefWidth="339.0" text="Label" />
    </children>
 </AnchorPane>

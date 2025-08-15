@@ -75,7 +75,7 @@ public class NotesForPrescriptionController
             for (Appointment a : appointmentList) {
                 if (a.equals(appointmentToMarkAsSeen)) {
                     a.setSeen(true);
-                    AppointmentFileManager.writeAll(appointmentList);
+                    GenericFileManager.writeAll(appointmentList, "Appointment.bin");
                     prescriptionList.add( new Prescription(
                             a.getName(),
                             a.getGender(),

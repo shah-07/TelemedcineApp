@@ -1,7 +1,6 @@
 package Ashik;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.TextField;
 
 public class CeoDashboardController
 {
@@ -44,4 +43,6 @@ public class CeoDashboardController
     public void activeUserButton(ActionEvent actionEvent) {
     }
 
+    public void appointmentStatisticButton(ActionEvent actionEvent) {
+    }
 }
