@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="417.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tasfia.GetPrivacyInfoController">
    <children>
       <Label layoutX="236.0" layoutY="14.0" prefHeight="35.0" prefWidth="139.0" text="Privacy Info">
@@ -14,7 +13,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="236.0" layoutY="108.0" mnemonicParsing="false" text="Tap Privacy Policy" />
-      <TextArea layoutX="197.0" layoutY="171.0" prefHeight="89.0" prefWidth="207.0" promptText="See full privacy document" />
+      <Button layoutX="236.0" layoutY="108.0" mnemonicParsing="false" onAction="#privacyPolicyButtonOnAction" text="Tap Privacy Policy" />
+      <TextArea fx:id="privacyDocTextArea" layoutX="197.0" layoutY="171.0" prefHeight="89.0" prefWidth="207.0" promptText="See full privacy document" />
    </children>
 </AnchorPane>

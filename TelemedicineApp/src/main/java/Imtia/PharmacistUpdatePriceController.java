@@ -30,30 +30,7 @@ public class PharmacistUpdatePriceController
 
     @javafx.fxml.FXML
     public void saveOA(ActionEvent actionEvent) {
-        String medName = medicineTF.getText().trim();
-        String priceText = updatedPriceTF.getText().trim();
 
-        if (medName.isEmpty() || priceText.isEmpty()) {
-            successL.setText("Please enter medicine name and price.");
-            return;
-        }
-
-        double newPrice = Double.parseDouble(priceText); // No try-catch
-
-        boolean found = false;
-        for (PharmacistUpdatePriceControllerModel med : medicines) {
-            if (med.getName().equalsIgnoreCase(medName)) {
-                med.setPrice(newPrice);
-                found = true;
-                break;
-            }
-        }
-
-        if (found) {
-            successL.setText("Updated successfully!");
-        } else {
-            successL.setText("Medicine not found.");
-        }
 
     }
 

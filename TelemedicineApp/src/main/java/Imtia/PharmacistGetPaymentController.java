@@ -37,21 +37,11 @@ public class PharmacistGetPaymentController
         );
 
         pendingBillTV.setItems(billList);
-        alertL.setText("");
+
     }
 
     @javafx.fxml.FXML
     public void sendOA(ActionEvent actionEvent) {
-        PharmacistGetPaymentModel selected = pendingBillTV.getSelectionModel().getSelectedItem();
 
-        if (selected != null) {
-            if (!selected.isPaid()) {
-                alertL.setText("Not paid yet: " + selected.getPatientName());
-            } else {
-                alertL.setText("Payment received from: " + selected.getPatientName());
-            }
-        } else {
-            alertL.setText("Please select a patient from the table.");
-        }
     }
 }

@@ -7,24 +7,29 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="437.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.ItAdminDashboardController">
+<AnchorPane prefHeight="468.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.ItAdminDashboardController">
    <children>
       <Label layoutX="32.0" layoutY="20.0" text=" Admin Dashboard ">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="22.0" layoutY="123.0" mnemonicParsing="false" onAction="#createProfileButton" text="Create Profile" />
-      <Button layoutX="21.0" layoutY="159.0" mnemonicParsing="false" onAction="#accountStatusButton" text="User Account Status " />
-      <Button layoutX="20.0" layoutY="268.0" mnemonicParsing="false" onAction="#systemPerformanceButton" text="System Performance " />
-      <Button layoutX="20.0" layoutY="306.0" mnemonicParsing="false" onAction="#resetPasswordButton" text="Reset User Password " />
-      <Button layoutX="21.0" layoutY="343.0" mnemonicParsing="false" onAction="#systemDataButton" text="Backup and Restore System Data " />
-      <Button layoutX="21.0" layoutY="195.0" mnemonicParsing="false" onAction="#faqButton" text="Reply FAQ" />
-      <Button layoutX="20.0" layoutY="231.0" mnemonicParsing="false" onAction="#accessControllerButton" text="Access Control" />
-      <Button layoutX="21.0" layoutY="380.0" mnemonicParsing="false" onAction="#systemLogsButton" text="Export System Logs " />
+      <Button fx:id="createProfileButton" layoutX="23.0" layoutY="120.0" mnemonicParsing="false" onAction="#createProfileButtonOnAction" text="Create Profile" />
+      <Button fx:id="userAccountStatusButton" layoutX="22.0" layoutY="154.0" mnemonicParsing="false" onAction="#userAccountStatusButtonOnAction" text="User Account Status " />
+      <Button fx:id="systemPerformanceButton" layoutX="22.0" layoutY="258.0" mnemonicParsing="false" onAction="#systemPerformanceButtonOnAction" text="System Performance " />
+      <Button fx:id="resetPasswordButton" layoutX="22.0" layoutY="293.0" mnemonicParsing="false" onAction="#resetPasswordButtonOnAction" text="Reset User Password " />
+      <Button fx:id="backupAndRestoreSystemDataButton" layoutX="22.0" layoutY="327.0" mnemonicParsing="false" onAction="#backupAndRestoreSystemDataButtonOnAction" text="Backup and Restore System Data " />
+      <Button fx:id="replyFAQButton" layoutX="22.0" layoutY="189.0" mnemonicParsing="false" onAction="#replyFAQButtonOnAction" text="Reply FAQ" />
+      <Button fx:id="accessControllerButton" layoutX="22.0" layoutY="224.0" mnemonicParsing="false" onAction="#accessControllerButtonOnAction" text="Access Control" />
+      <Button fx:id="exportSystemLogsButton" layoutX="22.0" layoutY="361.0" mnemonicParsing="false" onAction="#exportSystemLogsButtonOnAction" text="Export System Logs " />
       <Label layoutX="26.0" layoutY="73.0" prefHeight="17.0" prefWidth="41.0" text="Name " />
       <TextField fx:id="nameTextField" layoutX="82.0" layoutY="67.0" />
-      <Line endX="-25.0" endY="-136.0" layoutX="308.0" layoutY="136.0" startX="-25.0" startY="301.0" />
+      <Line endX="-25.0" endY="-136.0" layoutX="308.0" layoutY="136.0" startX="-25.0" startY="332.0" />
+      <Label fx:id="welcomeLabel" layoutX="360.0" layoutY="50.0" prefHeight="38.0" prefWidth="241.0" text="WELCOME IT ADMIN">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="logOutButton" layoutX="127.0" layoutY="412.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="25.0" prefWidth="65.0" text="Log out" />
    </children>
 </AnchorPane>

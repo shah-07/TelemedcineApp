@@ -9,6 +9,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.util.ArrayList;
+
 public class PharmacistConfirmPrescriptionController
 {
     @javafx.fxml.FXML
@@ -29,6 +31,7 @@ public class PharmacistConfirmPrescriptionController
 
     private ObservableList<PharmacistConfirmPrescriptionModel> dataList;
 
+
     @javafx.fxml.FXML
     public void initialize() {
 
@@ -47,19 +50,5 @@ public class PharmacistConfirmPrescriptionController
     @javafx.fxml.FXML
     public void confirmOA(ActionEvent actionEvent) {
 
-        String date = (dateDP.getValue() != null) ? dateDP.getValue().toString() : "";
-        String time = timeTF.getText();
-        String name = nameTF.getText();
-
-        if (!name.isEmpty() && !date.isEmpty() && !time.isEmpty()) {
-
-            dataList.add(new PharmacistConfirmPrescriptionModel(date, time,name));
-
-
-
-            timeTF.clear();
-            dateDP.setValue(null);
-            nameTF.clear();
-        }
     }
 }

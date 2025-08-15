@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="469.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.UserSOverview">
+<AnchorPane prefHeight="469.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.UserSOverviewController">
    <children>
       <Label layoutX="237.0" layoutY="14.0" text="User's Overview">
          <font>
@@ -16,12 +15,12 @@
       </Label>
       <Label layoutX="38.0" layoutY="62.0" text="Username " />
       <Label layoutX="38.0" layoutY="100.0" text="Password" />
-      <TextField layoutX="120.0" layoutY="58.0" />
-      <TextField layoutX="120.0" layoutY="96.0" />
-      <Button layoutX="143.0" layoutY="141.0" mnemonicParsing="false" text="Login" />
+      <TextField fx:id="usernameTextField" layoutX="120.0" layoutY="58.0" />
+      <TextField fx:id="passwordTextField" layoutX="120.0" layoutY="96.0" />
+      <Button layoutX="143.0" layoutY="141.0" mnemonicParsing="false" onAction="#loginButtonOnAction" text="Login" />
       <Label layoutX="53.0" layoutY="262.0" text="Active doctor " />
       <Label layoutX="49.0" layoutY="306.0" text="Active Patient" />
-      <TextField layoutX="127.0" layoutY="258.0" />
-      <TextField layoutX="127.0" layoutY="302.0" />
+      <TextField fx:id="activeDoctorTextField" layoutX="127.0" layoutY="258.0" />
+      <TextField fx:id="activePatientTextField" layoutX="127.0" layoutY="302.0" />
    </children>
 </AnchorPane>

@@ -24,28 +24,11 @@ public class PharmacistManageInventoryController
 
     @javafx.fxml.FXML
     public void initialize() {
-        successL.setText("Updated");
+        successL.setText("");
     }
 
     @javafx.fxml.FXML
     public void updateOA(ActionEvent actionEvent) {
-        if (medicineNameTF.getText().equals("") ||
-                medicineQuantityTF.getText().equals("") ||
-                expTF.getText().equals("")) {
 
-            successL.setText("Fill all fields");
-        }
-        else {
-            PharmacistManageInventoryModel med = new PharmacistManageInventoryModel(
-                    medicineNameTF.getText(),
-                    Integer.parseInt(medicineQuantityTF.getText()),
-                    expTF.getText()
-            );
-
-            successL.setText("Stock Updated");
-            medicineNameTF.setText("");
-            medicineQuantityTF.setText("");
-            expTF.setText("");
-        }
     }
 }
