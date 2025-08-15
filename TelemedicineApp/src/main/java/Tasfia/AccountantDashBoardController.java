@@ -1,71 +1,88 @@
 package Tasfia;
 
-public class AccountantDashBoardController
-{
-    @javafx.fxml.FXML
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+
+public class AccountantDashBoardController {
+
+    @FXML
     private ImageView doctorProfileImage;
-    @javafx.fxml.FXML
+    @FXML
     private Label loginSuccessLabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label nameLabel;
-    @javafx.fxml.FXML
+    @FXML
     private Button paymentButton;
-    @javafx.fxml.FXML
+    @FXML
     private Button refundRequestButton;
-    @javafx.fxml.FXML
+    @FXML
     private Button transactionDataButton;
-    @javafx.fxml.FXML
+    @FXML
     private Button feeManagerButton;
-    @javafx.fxml.FXML
+    @FXML
     private Button logOutButton;
-    @javafx.fxml.FXML
+    @FXML
     private Button doctorPayoutButton;
-    @javafx.fxml.FXML
+    @FXML
     private Button generateReportButton;
-    @javafx.fxml.FXML
+    @FXML
     private Button paymentHistoryButton;
-    @javafx.fxml.FXML
+    @FXML
     private Button generateInvoiceButton;
-    @javafx.fxml.FXML
+    @FXML
     private Label welcomeLabel;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        welcomeLabel.setText("Welcome, Accountant!");
+        nameLabel.setText("Accountant Name");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void paymentButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Payment button clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void feeManagerButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Fee Manager button clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void generateInvoiceButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Generate Invoice button clicked");
     }
 
-    @javafx.fxml.FXML
-    public void payemtHistoryButtonOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void payemtHistoryButtonOnAction(ActionEvent actionEvent) {  // spelling as you requested
+        System.out.println("Payemt History button clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void refundRequestButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Refund Request button clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void transactionDataButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Transaction Data button clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void logOutButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Log Out button clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void doctorPayoutButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Doctor Payout button clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void generateReportButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Generate Report button clicked");
     }
 }

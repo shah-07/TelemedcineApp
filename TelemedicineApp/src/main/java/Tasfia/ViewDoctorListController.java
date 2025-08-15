@@ -47,10 +47,10 @@ public class ViewDoctorListController {
 
         // Sample data
         doctorList = FXCollections.observableArrayList(
-                new Doctor("Dr. Alice", "Cardiologist", "Expert in heart diseases."),
-                new Doctor("Dr. Bob", "Dermatologist", "Skin specialist."),
-                new Doctor("Dr. Charlie", "General Physician", "Covers general health issues."),
-                new Doctor("Dr. Diana", "ENT", "Ear, Nose, Throat specialist.")
+                new Doctor("Dr. Rakin Abser", "Cardiologist", "Expert in heart diseases."),
+                new Doctor("Dr. Boshir", "Dermatologist", "Skin specialist."),
+                new Doctor("Dr. Chonchol", "General Physician", "Covers general health issues."),
+                new Doctor("Dr. Dipok", "ENT", "Ear, Nose, Throat specialist.")
         );
 
         doctorListTableView.setItems(doctorList);

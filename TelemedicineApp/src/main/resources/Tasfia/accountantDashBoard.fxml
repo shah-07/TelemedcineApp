@@ -28,13 +28,13 @@
          </font>
       </Label>
       <Label fx:id="nameLabel" layoutX="51.0" layoutY="104.0" text="Mr.abc" />
-      <Button fx:id="generateInvoiceButton" layoutX="11.0" layoutY="196.0" mnemonicParsing="false" onAction="#generateInvoiceButtonOnAction" prefHeight="25.0" prefWidth="117.0" text="Generate Invoice" />
+      <Button fx:id="generateInvoiceButton" layoutX="20.0" layoutY="188.0" mnemonicParsing="false" onAction="#generateInvoiceButtonOnAction" prefHeight="25.0" prefWidth="117.0" text="Generate Invoice" />
       <Button fx:id="doctorPayoutButton" layoutX="23.0" layoutY="269.0" mnemonicParsing="false" onAction="#doctorPayoutButtonOnAction" text="Doctor Payout" />
       <Button fx:id="generateReportButton" layoutX="18.0" layoutY="306.0" mnemonicParsing="false" onAction="#generateReportButtonOnAction" text="Generate Report" />
       <Button fx:id="refundRequestButton" layoutX="20.0" layoutY="343.0" mnemonicParsing="false" onAction="#refundRequestButtonOnAction" prefHeight="25.0" prefWidth="117.0" text="Refund Requests" />
       <Button fx:id="transactionDataButton" layoutX="26.0" layoutY="376.0" mnemonicParsing="false" onAction="#transactionDataButtonOnAction" text="Transaction Data" />
       <Button fx:id="feeManagerButton" layoutX="16.0" layoutY="411.0" mnemonicParsing="false" onAction="#feeManagerButtonOnAction" text="Doctor Fee Manager" />
-      <Button fx:id="paymentHistoryButton" layoutX="11.0" layoutY="159.0" mnemonicParsing="false" onAction="#payemtHistoryButtonOnAction" prefHeight="25.0" prefWidth="117.0" text="Payment History" />
+      <Button fx:id="paymentHistoryButton" layoutX="11.0" layoutY="159.0" mnemonicParsing="false" onAction="#paymentButtonOnAction" prefHeight="25.0" prefWidth="117.0" text="Payment History" />
       <Button fx:id="paymentButton" layoutX="27.0" layoutY="232.0" mnemonicParsing="false" onAction="#paymentButtonOnAction" prefHeight="25.0" prefWidth="85.0" text="Payment" />
       <Button fx:id="logOutButton" layoutX="53.0" layoutY="455.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" text="Log Out" />
    </children>
