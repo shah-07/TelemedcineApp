@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="497.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.AccessControlSettingsViewController">
    <children>
       <Label layoutX="190.0" layoutY="23.0" text="Access Control Settings ">
@@ -16,15 +15,15 @@
          </font>
       </Label>
       <Label layoutX="47.0" layoutY="89.0" text="Select Role " />
-      <ComboBox layoutX="125.0" layoutY="85.0" prefWidth="150.0" promptText="select role " />
+      <ComboBox fx:id="roleComboBox" layoutX="125.0" layoutY="85.0" prefWidth="150.0" promptText="select role " />
       <Label layoutX="47.0" layoutY="136.0" text="Permissions" />
-      <CheckBox layoutX="64.0" layoutY="163.0" mnemonicParsing="false" text="View Report" />
-      <CheckBox layoutX="63.0" layoutY="257.0" mnemonicParsing="false" text="View Prescription " />
-      <CheckBox layoutX="64.0" layoutY="187.0" mnemonicParsing="false" text="Access Patient Information " />
-      <CheckBox layoutX="63.0" layoutY="212.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="150.0" text="Use Symptom Checker " />
-      <CheckBox layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="Edit Report " />
-      <CheckBox layoutX="63.0" layoutY="280.0" mnemonicParsing="false" text="Others" />
-      <Button layoutX="200.0" layoutY="324.0" mnemonicParsing="false" text="Save Changes" />
-      <Label layoutX="142.0" layoutY="376.0" prefHeight="35.0" prefWidth="329.0" text="Label : Successfull message " />
+      <CheckBox fx:id="viewReportCheckBox" layoutX="64.0" layoutY="163.0" mnemonicParsing="false" text="View Report" />
+      <CheckBox fx:id="viewPrescriptionCheckBox" layoutX="63.0" layoutY="257.0" mnemonicParsing="false" text="View Prescription " />
+      <CheckBox fx:id="accessPatientInformationCheckBox" layoutX="64.0" layoutY="187.0" mnemonicParsing="false" text="Access Patient Information " />
+      <CheckBox fx:id="symptomCheckerCheckBox" layoutX="63.0" layoutY="212.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="150.0" text="Use Symptom Checker " />
+      <CheckBox fx:id="editReportCheckBox" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="Edit Report " />
+      <CheckBox fx:id="othersCheckBox" layoutX="63.0" layoutY="280.0" mnemonicParsing="false" text="Others" />
+      <Button layoutX="200.0" layoutY="324.0" mnemonicParsing="false" onAction="#saveChangesButton" text="Save Changes" />
+      <Label fx:id="successfulLabel" layoutX="180.0" layoutY="387.0" prefHeight="35.0" prefWidth="308.0" text="Label" />
    </children>
 </AnchorPane>

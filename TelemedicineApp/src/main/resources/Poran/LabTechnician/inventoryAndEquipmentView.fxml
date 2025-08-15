@@ -16,11 +16,14 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="21.0" layoutY="71.0" text="Name: " />
-      <TextField fx:id="nameTF" layoutX="59.0" layoutY="79.0" prefHeight="26.0" prefWidth="138.0" />
-      <ComboBox fx:id="typeCB" layoutX="424.0" layoutY="79.0" prefWidth="150.0" />
-      <Label layoutX="392.0" layoutY="83.0" text="Type: " />
-      <Button layoutX="244.0" layoutY="116.0" mnemonicParsing="false" onAction="#searchButtonOA" prefHeight="38.0" prefWidth="111.0" text="Search" />
+      <Label layoutX="21.0" layoutY="80.0" text="Name: " />
+      <TextField fx:id="nameTF" layoutX="59.0" layoutY="76.0" prefHeight="26.0" prefWidth="138.0" />
+      <ComboBox fx:id="typeCB" layoutX="428.0" layoutY="76.0" prefWidth="150.0" />
+      <Label layoutX="396.0" layoutY="80.0" text="Type: " />
+      <Button layoutX="244.0" layoutY="116.0" mnemonicParsing="false" onAction="#searchButtonOA" prefHeight="38.0" prefWidth="111.0" text="Search">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
       <TableView fx:id="inventoryTV" layoutX="9.0" layoutY="166.0" prefHeight="142.0" prefWidth="582.0">
         <columns>
           <TableColumn fx:id="nameTC" prefWidth="245.5999755859375" text="Name" />
@@ -34,8 +37,11 @@
       <ComboBox fx:id="statusCB" layoutX="197.0" layoutY="349.0" prefWidth="150.0" />
       <Label layoutX="392.0" layoutY="320.0" text="Conditon:" />
       <ComboBox fx:id="conditionCB" layoutX="390.0" layoutY="346.0" prefWidth="150.0" />
-      <Button layoutX="471.0" layoutY="394.0" mnemonicParsing="false" onAction="#saveButtonOA" prefHeight="46.0" prefWidth="111.0" text="Save" />
-      <Label fx:id="successMessageLabel" layoutX="376.0" layoutY="8.0" prefHeight="18.0" prefWidth="222.0" textFill="#0aff2b" />
-      <Label fx:id="errorMessageLabel" layoutX="376.0" layoutY="9.0" prefHeight="18.0" prefWidth="222.0" textFill="#ff250a" />
+      <Button layoutX="473.0" layoutY="381.0" mnemonicParsing="false" onAction="#updateItemButtonOA" prefHeight="62.0" prefWidth="111.0" text="Update Item" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Label fx:id="successMessageLabel" layoutX="375.0" layoutY="6.0" prefHeight="18.0" prefWidth="222.0" textFill="#0aff2b" />
+      <Label fx:id="errorMessageLabel" layoutX="375.0" layoutY="6.0" prefHeight="18.0" prefWidth="222.0" textFill="#ff250a" />
    </children>
 </AnchorPane>

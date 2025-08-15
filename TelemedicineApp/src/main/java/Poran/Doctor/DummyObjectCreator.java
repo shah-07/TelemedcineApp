@@ -18,8 +18,9 @@ public class DummyObjectCreator {
         LabTechnician lab2 = new LabTechnician("Ms. Samira Jahan", 10002, "234567",LocalDate.of(1998, 4, 24), "Cashier");
 
 
-        Appointment a1 = new Appointment("Poran", "Male", 152648, 20, 500, LocalDate.of(2025, 8, 20), LocalTime.of(10, 15));
-        Appointment a2 = new Appointment("NN", "Female", 252648, 20, 500, LocalDate.of(2025, 8, 18), LocalTime.of(10, 30));
+        Appointment a1 = new Appointment("Poran", "Male", "Headache",152648, 20, 500, LocalDate.of(2025, 8, 20), LocalTime.of(10, 15));
+        Appointment a2 = new Appointment("N. N.", "Female", "Pain in Stomach", 252648, 20, 500, LocalDate.of(2025, 8, 18), LocalTime.of(14, 30));
+        Appointment a3 = new Appointment("San", "Female", "Pain in hand", 3526489, 18, 500, LocalDate.now(), LocalTime.now().plusMinutes(30));
 
         // Write them to Doctor.bin
         FileOutputStream fos1 = new FileOutputStream("Doctor.bin");
@@ -43,7 +44,24 @@ public class DummyObjectCreator {
 
         oos3.writeObject(a1);
         oos3.writeObject(a2);
+        oos3.writeObject(a3);
         oos3.close();
+
+        ArrayList<String> testList = new ArrayList<String>();
+        testList.add("CBC");
+        testList.add("CTR");
+
+        LabTestForm l1 = new LabTestForm("Rifat", "Rabi", "Male", "Fever", testList,"Nothing", 20, LocalDate.of(2025,8, 10), LocalTime.of(10,20));
+        LabTestForm l2 = new LabTestForm("Safin", "Kawsar", "Male", "Cold", testList,"Nothing", 20, LocalDate.of(2025,8, 7), LocalTime.of(13,15));
+
+        //Write them to LabTestForm.bin
+        FileOutputStream fos4 = new FileOutputStream("LabTestForm.bin");
+        ObjectOutputStream oos4 = new ObjectOutputStream(fos4);
+
+        oos4.writeObject(l1);
+        oos4.writeObject(l2);
+        oos4.close();
+
 
     }
 /*

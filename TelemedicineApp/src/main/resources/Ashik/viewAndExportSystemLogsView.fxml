@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="517.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.ViewAndExportSystemLogsViewController">
    <children>
       <Label layoutX="198.0" layoutY="20.0" text="View and Export System ">
@@ -21,21 +20,21 @@
       <Label layoutX="30.0" layoutY="68.0" text="From " />
       <Label layoutX="41.0" layoutY="99.0" text="To" />
       <Label layoutX="11.0" layoutY="165.0" text="Username" />
-      <DatePicker layoutX="70.0" layoutY="61.0" promptText="Starting date" />
-      <DatePicker layoutX="70.0" layoutY="95.0" promptText="Ending date" />
-      <TextField layoutX="70.0" layoutY="160.0" promptText="Enter username " />
-      <ComboBox layoutX="70.0" layoutY="127.0" prefWidth="150.0" promptText="type'" />
-      <Button layoutX="327.0" layoutY="152.0" mnemonicParsing="false" text="Apply Filter" />
-      <TableView layoutX="35.0" layoutY="205.0" prefHeight="200.0" prefWidth="597.0">
+      <DatePicker fx:id="startingDateDP" layoutX="70.0" layoutY="61.0" promptText="Starting date" />
+      <DatePicker fx:id="endingDateDP" layoutX="70.0" layoutY="95.0" promptText="Ending date" />
+      <TextField fx:id="usernameTextField" layoutX="70.0" layoutY="160.0" promptText="Enter username " />
+      <ComboBox fx:id="typeComboBox" layoutX="70.0" layoutY="127.0" prefWidth="150.0" promptText="type" />
+      <Button layoutX="327.0" layoutY="152.0" mnemonicParsing="false" onAction="#applyFilterButtonOnAction" text="Apply Filter" />
+      <TableView fx:id="exportSystemTableView" layoutX="35.0" layoutY="205.0" prefHeight="200.0" prefWidth="597.0">
         <columns>
-          <TableColumn prefWidth="107.0" text="Date " />
-          <TableColumn prefWidth="116.0" text="User " />
-            <TableColumn prefWidth="111.0" text="Action Type " />
-            <TableColumn prefWidth="262.0" text="Description " />
+          <TableColumn fx:id="dateCol" prefWidth="107.0" text="Date " />
+          <TableColumn fx:id="userCol" prefWidth="116.0" text="User " />
+            <TableColumn fx:id="actiontypeCol" prefWidth="111.0" text="Action Type " />
+            <TableColumn fx:id="descriptionCol" prefWidth="262.0" text="Description " />
         </columns>
       </TableView>
-      <Button layoutX="55.0" layoutY="428.0" mnemonicParsing="false" text="Export CSV" />
-      <Button layoutX="145.0" layoutY="428.0" mnemonicParsing="false" text="Export PDF" />
-      <Label layoutX="258.0" layoutY="470.0" prefHeight="25.0" prefWidth="273.0" text="Successful / Error message" />
+      <Button layoutX="55.0" layoutY="428.0" mnemonicParsing="false" onAction="#exportCsvButtonOnAction" text="Export CSV" />
+      <Button layoutX="145.0" layoutY="428.0" mnemonicParsing="false" onAction="#exportPdfButtonOnAction" text="Export PDF" />
+      <Label fx:id="successfulLabel" layoutX="221.0" layoutY="470.0" prefHeight="30.0" prefWidth="343.0" text="Label" />
    </children>
 </AnchorPane>

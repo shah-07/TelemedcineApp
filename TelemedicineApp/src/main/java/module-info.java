@@ -1,6 +1,7 @@
 module mainpackage.telemedicineapp {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jdk.httpserver;
 
 
     opens mainpackage.telemedicineapp to javafx.fxml;

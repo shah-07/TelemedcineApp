@@ -16,7 +16,7 @@
       <TextField fx:id="enterTimeTF" layoutX="131.0" layoutY="96.0" />
       <TextField fx:id="patientNameTF" layoutX="167.0" layoutY="129.0" />
       <TextField fx:id="patientIdTF" layoutX="154.0" layoutY="173.0" />
-      <Button layoutX="374.0" layoutY="186.0" mnemonicParsing="false" onAction="#takeOrderOA" prefHeight="58.0" prefWidth="216.0" text="Take Order" />
+      <Button layoutX="374.0" layoutY="186.0" mnemonicParsing="false" onAction="#deliveryOrderOA" prefHeight="58.0" prefWidth="216.0" text="Delivery Order" />
       <Label fx:id="successL" layoutX="104.0" layoutY="337.0" prefHeight="88.0" prefWidth="247.0" style="-fx-background-color: lavender;" />
    </children>
 </AnchorPane>

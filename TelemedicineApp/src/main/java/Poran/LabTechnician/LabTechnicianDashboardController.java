@@ -99,7 +99,7 @@ public class LabTechnicianDashboardController
     @javafx.fxml.FXML
     public void generateReportButtonOA(ActionEvent actionEvent) throws IOException{
 
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/generateReportView.fxml"));
+        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/addInventoryItemView.fxml"));
         anchorPaneForPartialWindow.getChildren().setAll(node);
 
     }

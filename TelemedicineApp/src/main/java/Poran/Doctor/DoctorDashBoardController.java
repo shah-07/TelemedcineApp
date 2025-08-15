@@ -3,6 +3,7 @@ package Poran.Doctor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -76,8 +77,26 @@ public class DoctorDashBoardController {
         );
     }
 
-    public void setDoctorNameAndID (String name, String specialized){
-        doctorNameLabel.setText(name);
+    private String doctorName, specialized;
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
+    public String getSpecialized() {
+        return specialized;
+    }
+
+    public void setSpecialized(String specialized) {
+        this.specialized = specialized;
+    }
+
+    public void populateFields (){
+        doctorNameLabel.setText(doctorName);
         doctorIdLabel.setText(specialized);
     }
 
@@ -108,8 +127,13 @@ public class DoctorDashBoardController {
 
     @javafx.fxml.FXML
     public void patientsSeenButtonOA(ActionEvent actionEvent) throws IOException{
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/Doctor/patientsSeenView.fxml"));
-        anchorPaneForPartialWindows.getChildren().setAll(node);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Poran/Doctor/patientsSeenView.fxml"));
+        Parent root = loader.load();
+        PatientsSeenController controller = loader.getController();
+        controller.setPartialWindowAnchorPane(anchorPaneForPartialWindows);
+        controller.setDoctorName(doctorName);
+        anchorPaneForPartialWindows.getChildren().clear();
+        anchorPaneForPartialWindows.getChildren().add(root);
     }
 
     @javafx.fxml.FXML

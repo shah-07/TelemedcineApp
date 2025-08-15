@@ -5,6 +5,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.time.LocalDate;
+
 public class PharmacistReceiveOrderController
 {
     @javafx.fxml.FXML
@@ -20,9 +22,13 @@ public class PharmacistReceiveOrderController
 
     @javafx.fxml.FXML
     public void initialize() {
+        successL.setText("");
     }
 
+    @Deprecated
+
     @javafx.fxml.FXML
-    public void takeOrderOA(ActionEvent actionEvent) {
+    public void deliveryOrderOA(ActionEvent actionEvent) {
+
     }
 }

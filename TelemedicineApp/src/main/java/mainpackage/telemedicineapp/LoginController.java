@@ -65,7 +65,9 @@ public class LoginController
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/Poran/Doctor/doctorDashBoardView.fxml"));
                     Node node = loader.load();
                     DoctorDashBoardController nextController = loader.getController();
-                    nextController.setDoctorNameAndID(foundDoctor.getName(), foundDoctor.getSpecialized());
+                    nextController.setDoctorName(foundDoctor.getName());
+                    nextController.setSpecialized(foundDoctor.getSpecialized());
+                    nextController.populateFields();
                     loginAnchor.getChildren().setAll(node);
                 }
 

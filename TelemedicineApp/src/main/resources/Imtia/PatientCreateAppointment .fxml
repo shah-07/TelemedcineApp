@@ -8,13 +8,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imtia.PatientCreateAppointmentController">
    <children>
-      <Button layoutX="283.0" layoutY="42.0" mnemonicParsing="false" onAction="#viewDoctorOA" prefHeight="26.0" prefWidth="186.0" text="View Doctor ">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
       <Label layoutX="37.0" layoutY="116.0" text="Name " />
       <Label layoutX="37.0" layoutY="152.0" text="Date" />
       <Label layoutX="34.0" layoutY="225.0" text="Age " />
@@ -30,5 +25,7 @@
       </Button>
       <Label layoutX="35.0" layoutY="263.0" text="Gender" />
       <ComboBox fx:id="genderCB" layoutX="86.0" layoutY="259.0" prefWidth="150.0" />
+      <Label layoutX="272.0" layoutY="51.0" text="Doctor's Name " />
+      <ComboBox fx:id="doctorNameCB" layoutX="369.0" layoutY="47.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

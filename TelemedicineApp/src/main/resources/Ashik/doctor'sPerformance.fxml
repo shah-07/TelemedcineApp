@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="504.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.DoctorSPerformanceController">
    <children>
       <Label layoutX="194.0" layoutY="21.0" text="Review Doctor's Performance ">
@@ -19,18 +18,18 @@
       </Label>
       <Label layoutX="37.0" layoutY="67.0" text="Frorm " />
       <Label layoutX="37.0" layoutY="102.0" text="To " />
-      <DatePicker layoutX="88.0" layoutY="63.0" />
-      <DatePicker layoutX="73.0" layoutY="98.0" />
-      <Button layoutX="114.0" layoutY="145.0" mnemonicParsing="false" text="Search Report" />
-      <TableView layoutX="14.0" layoutY="202.0" prefHeight="200.0" prefWidth="659.0">
+      <DatePicker fx:id="fromDateDP" layoutX="88.0" layoutY="63.0" />
+      <DatePicker fx:id="toDateDP" layoutX="73.0" layoutY="98.0" />
+      <Button layoutX="114.0" layoutY="145.0" mnemonicParsing="false" onAction="#searchReportButton" text="Search Report" />
+      <TableView fx:id="doctorsPerformanceTableView" layoutX="14.0" layoutY="202.0" prefHeight="200.0" prefWidth="659.0">
         <columns>
-          <TableColumn prefWidth="196.0" text="Doctor's Name " />
-          <TableColumn prefWidth="121.0" text="Avg. Rating" />
-            <TableColumn prefWidth="200.0" text="Feedback Count " />
-            <TableColumn prefWidth="141.0" text="Consultation Fee" />
+          <TableColumn fx:id="doctorsNameCol" prefWidth="196.0" text="Doctor's Name " />
+          <TableColumn fx:id="avgRatingCol" prefWidth="121.0" text="Avg. Rating" />
+            <TableColumn fx:id="feedbackCountCol" prefWidth="200.0" text="Feedback Count " />
+            <TableColumn fx:id="consultationFeeCol" prefWidth="141.0" text="Consultation Fee" />
         </columns>
       </TableView>
       <Label layoutX="58.0" layoutY="450.0" text="Status" />
-      <TextField layoutX="107.0" layoutY="446.0" />
+      <TextField fx:id="statusTextField" layoutX="107.0" layoutY="446.0" />
    </children>
 </AnchorPane>

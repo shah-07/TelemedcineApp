@@ -11,30 +11,37 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.LabTechnician.CompletedTestTypeView">
    <children>
-      <Label layoutX="216.0" layoutY="2.0" text="Lab Test Requests">
+      <Label layoutX="216.0" layoutY="39.0" text="Lab Test Requests">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <DatePicker fx:id="chooseDateDP" layoutX="106.0" layoutY="39.0" prefHeight="26.0" prefWidth="150.0" />
-      <Label layoutX="18.0" layoutY="43.0" text="Choose Date:" />
-      <Label layoutX="359.0" layoutY="46.0" text="From:" />
-      <TextField fx:id="fromTimeTF" layoutX="400.0" layoutY="42.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Button layoutX="245.0" layoutY="132.0" mnemonicParsing="false" onAction="#labTestRequestsButtonOA" text="Load Test Requests" />
-      <TableView fx:id="labTestRequestsTV" layoutX="6.0" layoutY="173.0" prefHeight="218.0" prefWidth="586.0">
+      <DatePicker fx:id="chooseDateDP" layoutX="106.0" layoutY="76.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="18.0" layoutY="80.0" text="Choose Date:" />
+      <Label layoutX="359.0" layoutY="83.0" text="From:" />
+      <TextField fx:id="fromTimeTF" layoutX="400.0" layoutY="79.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Button layoutX="245.0" layoutY="169.0" mnemonicParsing="false" onAction="#labTestRequestsButtonOA" text="Load Test Requests">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="labTestRequestsTV" layoutX="6.0" layoutY="206.0" prefHeight="184.0" prefWidth="586.0">
          <columns>
-            <TableColumn fx:id="idTC" prefWidth="82.39996337890625" text="ID" />
             <TableColumn fx:id="nameTC" prefWidth="160.0" text="Name" />
             <TableColumn fx:id="dateTC" prefWidth="103.20001220703125" text="Date" />
-            <TableColumn fx:id="timeTC" prefWidth="87.20001220703125" text="Time" />
-            <TableColumn fx:id="testTypeTC" prefWidth="155.199951171875" text="Test Type" />
+            <TableColumn fx:id="timeTC" prefWidth="114.39996337890625" text="Time" />
+            <TableColumn fx:id="testTypeTC" prefWidth="208.0" text="Test Type" />
          </columns>
       </TableView>
-      <TextField fx:id="toDateOfPendAppointmentTF" layoutX="400.0" layoutY="77.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Label layoutX="359.0" layoutY="81.0" text="To: " />
-      <Label layoutX="18.0" layoutY="73.0" text="Patient's Name:" />
-      <Label layoutX="17.0" layoutY="103.0" text="Test Type: " />
-      <TextField fx:id="patientsNameTF" layoutX="105.0" layoutY="69.0" promptText="Optional" />
-      <TextField fx:id="testTypeTF" layoutX="105.0" layoutY="101.0" promptText="Optional" />
+      <TextField fx:id="toTimeTF" layoutX="400.0" layoutY="114.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Label layoutX="359.0" layoutY="118.0" text="To: " />
+      <Label layoutX="18.0" layoutY="110.0" text="Patient's Name:" />
+      <TextField fx:id="patientsNameTF" layoutX="105.0" layoutY="106.0" promptText="Optional" />
+      <Button layoutX="257.0" layoutY="396.0" mnemonicParsing="false" onAction="#markAsCompletedButtonOA" prefHeight="42.0" prefWidth="100.0" text="Mark As Completed" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="388.0" layoutY="8.0" prefHeight="18.0" prefWidth="207.0" textFill="RED" />
+      <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="388.0" layoutY="8.0" prefHeight="18.0" prefWidth="207.0" textFill="#00ff23" />
    </children>
 </AnchorPane>
