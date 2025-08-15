@@ -1,6 +1,6 @@
 package Poran.Doctor;
 
-import Imtia.CreateAppointmentModel;
+import Imtia.Appointment;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
@@ -13,13 +13,13 @@ import java.time.LocalTime;
 public class PendingAppointmentsController
 {
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, String> nameTCOfPendingAppointments;
+    private TableColumn<Appointment, String> nameTCOfPendingAppointments;
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, LocalTime> timeTCOfPendingAppointments;
+    private TableColumn<Appointment, LocalTime> timeTCOfPendingAppointments;
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, Integer> ageTCOfPendingAppointments;
+    private TableColumn<Appointment, Integer> ageTCOfPendingAppointments;
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, LocalDate> dateTCOfPendingAppointments;
+    private TableColumn<Appointment, LocalDate> dateTCOfPendingAppointments;
     @javafx.fxml.FXML
     private DatePicker dateOfThePendingAppointmentDP;
     @javafx.fxml.FXML
@@ -27,7 +27,7 @@ public class PendingAppointmentsController
     @javafx.fxml.FXML
     private TextField toDateOfPendAppointmentTF;
     @javafx.fxml.FXML
-    private TableView<CreateAppointmentModel> pendingAppointmentsTableView;
+    private TableView<Appointment> pendingAppointmentsTableView;
 
     @javafx.fxml.FXML
     public void initialize() {

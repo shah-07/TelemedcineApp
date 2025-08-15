@@ -6,7 +6,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="536.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ashik.RevenueGeneratedController">
    <children>
       <Label layoutX="252.0" layoutY="29.0" prefHeight="28.0" prefWidth="179.0" text="Consultation Revenue Summary" />

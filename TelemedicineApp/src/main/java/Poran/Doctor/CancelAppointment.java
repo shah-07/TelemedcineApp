@@ -1,6 +1,6 @@
 package Poran.Doctor;
 
-import Imtia.CreateAppointmentModel;
+import Imtia.Appointment;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -14,17 +14,17 @@ import java.time.LocalTime;
 public class CancelAppointment
 {
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, LocalDate> dateTCOfCancelAppointments;
+    private TableColumn<Appointment, LocalDate> dateTCOfCancelAppointments;
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, String> genderTCOfCancelAppointments;
+    private TableColumn<Appointment, String> genderTCOfCancelAppointments;
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, Integer> ageTCOfCancelAppointments;
+    private TableColumn<Appointment, Integer> ageTCOfCancelAppointments;
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, String> nameTCOfCancelAppointments;
+    private TableColumn<Appointment, String> nameTCOfCancelAppointments;
     @javafx.fxml.FXML
-    private TableColumn<CreateAppointmentModel, LocalTime> timeTCOfCancelAppointments;
+    private TableColumn<Appointment, LocalTime> timeTCOfCancelAppointments;
     @javafx.fxml.FXML
-    private TableView<CreateAppointmentModel> pendingAppointmentsTableView;
+    private TableView<Appointment> pendingAppointmentsTableView;
     @javafx.fxml.FXML
     private DatePicker chooseDateDP;
     @javafx.fxml.FXML

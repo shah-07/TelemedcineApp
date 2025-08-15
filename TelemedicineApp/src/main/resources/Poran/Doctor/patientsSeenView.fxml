@@ -7,23 +7,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.Doctor.PatientsSeenController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.Doctor.PatientsSeenController">
    <children>
-      <Button layoutX="255.0" layoutY="74.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" text="Load Patient" />
-      <Label layoutX="241.0" layoutY="23.0" text="Patients Seen">
+      <Button layoutX="268.0" layoutY="89.0" mnemonicParsing="false" onAction="#loadPatientButtonOA" prefHeight="30.0" prefWidth="92.0" text="Load Patient">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="255.0" layoutY="40.0" text="Patients Seen">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TableView layoutX="10.0" layoutY="121.0" prefHeight="200.0" prefWidth="581.0">
+      <TableView fx:id="patientsTV" layoutX="10.0" layoutY="136.0" prefHeight="200.0" prefWidth="581.0">
         <columns>
-          <TableColumn prefWidth="170.0" text="Name" />
-          <TableColumn prefWidth="61.0" text="Age" />
-            <TableColumn prefWidth="84.0" text="Gender" />
-            <TableColumn prefWidth="265.0" text="Notes" />
+          <TableColumn fx:id="nameTC" prefWidth="170.0" text="Name" />
+          <TableColumn fx:id="ageTC" prefWidth="61.0" text="Age" />
+            <TableColumn fx:id="genderTC" prefWidth="84.0" text="Gender" />
+            <TableColumn fx:id="notesTC" prefWidth="265.0" text="Notes" />
         </columns>
       </TableView>
-      <Button layoutX="14.0" layoutY="332.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="169.0" text="Prescribe Medications" />
-      <Button layoutX="416.0" layoutY="332.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="169.0" text="Refer To Lab" />
+      <Button layoutX="20.0" layoutY="368.0" mnemonicParsing="false" onAction="#prescribeMedicineOA" prefHeight="42.0" prefWidth="169.0" text="Prescribe Medications">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="413.0" layoutY="368.0" mnemonicParsing="false" onAction="#referToLabOA" prefHeight="42.0" prefWidth="169.0" text="Refer To Lab">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="402.0" layoutY="6.0" prefHeight="18.0" prefWidth="190.0" textFill="RED" />
+      <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="402.0" layoutY="6.0" prefHeight="18.0" prefWidth="190.0" textFill="#00ff26" />
    </children>
 </AnchorPane>

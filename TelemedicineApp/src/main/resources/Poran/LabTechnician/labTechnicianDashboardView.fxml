@@ -6,68 +6,94 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="417.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.LabTechnician.LabTechnicianDashboardController">
+<AnchorPane fx:id="dashBoardAnchorPane" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.LabTechnician.LabTechnicianDashboardController">
    <children>
       <ImageView fx:id="doctorProfileImage" fitHeight="71.0" fitWidth="81.0" layoutX="34.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../java/Image/Presentation1.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="doctorNameLabel" layoutX="38.0" layoutY="85.0" prefHeight="31.0" prefWidth="84.0" text="MR. X">
+      <Label fx:id="technicianNameLabel" layoutX="21.0" layoutY="84.0" prefHeight="20.0" prefWidth="128.0" text="MR. X">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <VBox layoutX="28.0" layoutY="147.0" prefHeight="246.0" prefWidth="174.0">
+      <VBox layoutX="14.0" layoutY="147.0" prefHeight="290.0" prefWidth="174.0">
          <children>
-            <Button fx:id="dashBoardButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="28.0" prefWidth="158.0" style="-fx-text-fill: black; -fx-background-color: transparent;" text="⧈ DashBoard" textFill="#2e2929">
+            <Button fx:id="dashBoardButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#dashBoardButtonOA" prefHeight="28.0" prefWidth="158.0" style="-fx-text-fill: black; -fx-background-color: transparent;" text="⧈ DashBoard" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="pendingAppointmentsButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⏳ Lab Test Requests" textFill="#2e2929">
+            <Button fx:id="labTestRequestButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#labTestRequestButtonOA" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⏳ Lab Test Requests" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="appointmentHistoryButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📜 Completed Lab Tests" textFill="#2e2929">
+            <Button fx:id="completedLabTestsButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#completedLabTestsButtonOA" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📜 Completed Lab Tests" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="cancelAppointmentButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="154.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⬆ Upload Reports" textFill="#2e2929">
+            <Button fx:id="uploadReportsButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#uploadReportsButtonOA" prefHeight="31.0" prefWidth="154.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⬆ Upload Reports" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="rescheduleAppointmentButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📦 Inventory &amp; Equipments" textFill="#2e2929">
+            <Button fx:id="inventoryAndEquipmentsButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#inventoryAndEquipmentsButtonOA" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📦 Inventory &amp; Equipments" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="startAnAppointmentButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="132.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: null; -fx-text-fill: black;" text="✏ Mange Booking" textFill="#2e2929">
+            <Button fx:id="manageBookingButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="132.0" mnemonicParsing="false" onAction="#manageBookingButtonOA" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: null; -fx-text-fill: black;" text="✏ Mange Booking" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="patientsSeenButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⚠ Report Issue" textFill="#2e2929">
+            <Button fx:id="reportIssueButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#reportIssueButtonOA" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⚠ Report Issue" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="labReportsButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="225.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📊 Generate Report" textFill="#2e2929">
+            <Button fx:id="generateReportButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="225.0" mnemonicParsing="false" onAction="#generateReportButtonOA" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📊 Generate Report" textFill="#2e2929">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="logOutButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="225.0" mnemonicParsing="false" onAction="#logOutButtonOA" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="⏻ Log Out" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
          </children>
       </VBox>
-      <Label fx:id="doctorIdLabel" layoutX="37.0" layoutY="104.0" prefHeight="31.0" prefWidth="84.0" text="1234">
+      <Label fx:id="technicianPositionLabel" layoutX="21.0" layoutY="106.0" prefHeight="20.0" prefWidth="150.0" text="XYZ">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
+      <Line endX="14.79998779296875" endY="340.9999694824219" layoutX="168.0" layoutY="108.0" startX="14.79998779296875" startY="-108.99999237060547" stroke="#765d5d" strokeWidth="3.0" />
+      <AnchorPane fx:id="anchorPaneForPartialWindow" layoutX="190.0" layoutY="1.0" prefHeight="450.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="welcomeLabel" layoutX="187.0" layoutY="122.0" text="Welcome! ">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label fx:id="haveAGreatDayLabel" layoutX="156.0" layoutY="207.0" text="Have a Great Day!">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" layoutX="426.0" layoutY="4.0" prefHeight="27.0" prefWidth="174.0" text="Login Successful" textAlignment="CENTER" textFill="#00ff00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -3,6 +3,7 @@ package Poran.Doctor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -10,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class DoctorProfileController {
+public class DoctorDashBoardController {
 
     @javafx.fxml.FXML
     private ImageView doctorProfileImage;
@@ -39,6 +40,12 @@ public class DoctorProfileController {
     @javafx.fxml.FXML
     private AnchorPane anchorPaneForPartialWindows;
     @javafx.fxml.FXML
+    private Button logOutButton;
+    @javafx.fxml.FXML
+    private Label welcomeDoctorLabel;
+    @javafx.fxml.FXML
+    private Label appointmentTextLabel;
+    @javafx.fxml.FXML
     private Label appointmentNumberLabel;
 
     @javafx.fxml.FXML
@@ -52,6 +59,8 @@ public class DoctorProfileController {
         setupHoverEffect(startAnAppointmentButton);
         setupHoverEffect(patientsSeenButton);
         setupHoverEffect(rescheduleAppointmentButton);
+        setupHoverEffect(logOutButton);
+
     }
 
     private void setupHoverEffect(Button button) {
@@ -66,6 +75,29 @@ public class DoctorProfileController {
         button.setOnMouseExited(e ->
                 button.setStyle("-fx-background-color: transparent; -fx-text-fill: black;")
         );
+    }
+
+    private String doctorName, specialized;
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
+    public String getSpecialized() {
+        return specialized;
+    }
+
+    public void setSpecialized(String specialized) {
+        this.specialized = specialized;
+    }
+
+    public void populateFields (){
+        doctorNameLabel.setText(doctorName);
+        doctorIdLabel.setText(specialized);
     }
 
     @javafx.fxml.FXML
@@ -95,8 +127,13 @@ public class DoctorProfileController {
 
     @javafx.fxml.FXML
     public void patientsSeenButtonOA(ActionEvent actionEvent) throws IOException{
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/Doctor/patientsSeenView.fxml"));
-        anchorPaneForPartialWindows.getChildren().setAll(node);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Poran/Doctor/patientsSeenView.fxml"));
+        Parent root = loader.load();
+        PatientsSeenController controller = loader.getController();
+        controller.setPartialWindowAnchorPane(anchorPaneForPartialWindows);
+        controller.setDoctorName(doctorName);
+        anchorPaneForPartialWindows.getChildren().clear();
+        anchorPaneForPartialWindows.getChildren().add(root);
     }
 
     @javafx.fxml.FXML
@@ -112,8 +149,14 @@ public class DoctorProfileController {
     }
 
     @javafx.fxml.FXML
-    public void dashBoardButtonOA(ActionEvent actionEvent) throws IOException{
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/Doctor/doctorDashBoardView.fxml"));
-        anchorPaneForPartialWindows.getChildren().setAll(node);
+    public void dashBoardButtonOA(ActionEvent actionEvent){
+
+        anchorPaneForPartialWindows.getChildren().setAll(welcomeDoctorLabel, appointmentTextLabel, appointmentNumberLabel);
+    }
+
+    @javafx.fxml.FXML
+    public void logOutButtonOA(ActionEvent actionEvent) throws IOException {
+        Node node = FXMLLoader.load(getClass().getResource("/mainpackage.telemedicineapp/loginView.fxml"));
+        dashBoardAnchorPane.getChildren().setAll(node);
     }
 }
