@@ -1,23 +1,14 @@
 package Imtia;
 
 public class PatientPayBillModel {
-    private String billId,pendingbillName;
+    private String pendingbillName;
     private double amount;
     private String paymentmethod;
 
-    public PatientPayBillModel(String billId, String pendingbillName, double amount, String paymentmethod) {
-        this.billId = billId;
+    public PatientPayBillModel(String pendingbillName, double amount, String paymentmethod) {
         this.pendingbillName = pendingbillName;
         this.amount = amount;
         this.paymentmethod = paymentmethod;
-    }
-
-    public String getBillId() {
-        return billId;
-    }
-
-    public void setBillId(String billId) {
-        this.billId = billId;
     }
 
     public String getPendingbillName() {
@@ -47,8 +38,7 @@ public class PatientPayBillModel {
     @Override
     public String toString() {
         return "PatientPayBillModel{" +
-                "billId='" + billId + '\'' +
-                ", pendingbillName='" + pendingbillName + '\'' +
+                "pendingbillName='" + pendingbillName + '\'' +
                 ", amount=" + amount +
                 ", paymentmethod='" + paymentmethod + '\'' +
                 '}';

@@ -23,20 +23,6 @@ public class ConsultNow
 
     @javafx.fxml.FXML
     public void consultTypeOA(ActionEvent actionEvent) {
-        String doctorType = typeOfDoctorCB.getValue();
-        String consultationType = consultTypeCB.getValue();
-
-        if (doctorType == null || consultationType == null) {
-            showAlert("Selection Required",
-                    "Please select both:\n• Type of doctor\n• Consultation method");
-            return;
-        }
-
-        ConsultNowModel consultation = new ConsultNowModel(doctorType, consultationType);
-
-        showAlert("On Call",
-                "You are now on a " + consultation.getConsultationType() +
-                        " with a " + consultation.getDoctorType() + ".");
 
     }
 

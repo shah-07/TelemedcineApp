@@ -33,8 +33,8 @@ public class PatientPayBillController
 
     }
     public void loadbill(){
-        payBillModels.add(new PatientPayBillModel("B001" ,"X-Ray",500,"Visa"));
-        payBillModels.add(new PatientPayBillModel("B002", "ECG",1000,"Mastercard"));
+        payBillModels.add(new PatientPayBillModel("X-ray",500,"Visa"));
+        payBillModels.add(new PatientPayBillModel("ECG",1000,"Mastercard"));
 
         for (PatientPayBillModel patient : payBillModels){
             paymentMethodCB.getItems().add(patient.getPaymentmethod());
@@ -45,19 +45,6 @@ public class PatientPayBillController
 
     @javafx.fxml.FXML
     public void paymentOA(ActionEvent actionEvent) {
-        PatientPayBillModel selectedBill = paybillTV.getSelectionModel().getSelectedItem();
-        if (selectedBill == null) {
-            showAlert("Please select a bill to pay.");
-            return;
-        }
-        String paymentMethod = paymentMethodCB.getValue();
-        if (paymentMethod == null) {
-            showAlert("Please select a payment method.");
-            return;
-        }
-        double amount = selectedBill.getAmount();
-        amountTF.setText(String.valueOf(amount));
-        showAlert("Payment of " + amount + " using " + paymentMethod + " was successful.");
 
     }
     private void showAlert(String message) {
