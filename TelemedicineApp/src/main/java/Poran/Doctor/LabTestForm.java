@@ -9,7 +9,7 @@ public class LabTestForm implements Serializable {
 
     private final String patientName, doctorName, gender;
     private int age;
-    private String notes, diagnosis;
+    private String notes, diagnosis, result, technicianName = null;
     private ArrayList<String> testList;
     private boolean completed = false;
     private LocalDate date;
@@ -30,6 +30,22 @@ public class LabTestForm implements Serializable {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public String getTechnicianName() {
+        return technicianName;
+    }
+
+    public void setTechnicianName(String technicianName) {
+        this.technicianName = technicianName;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
     }
 
     public void setTime(LocalTime time) {

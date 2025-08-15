@@ -16,23 +16,26 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <DatePicker fx:id="dateOfThePendingAppointmentDP" layoutX="108.0" layoutY="116.0" prefHeight="26.0" prefWidth="121.0" />
+      <DatePicker fx:id="dateDP" layoutX="108.0" layoutY="116.0" prefHeight="26.0" prefWidth="159.0" />
       <Label layoutX="33.0" layoutY="120.0" text="Choose Date:" />
       <Label layoutX="361.0" layoutY="104.0" text="From:" />
       <TextField fx:id="fromTimeTF" layoutX="402.0" layoutY="100.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
-      <Button layoutX="248.0" layoutY="175.0" mnemonicParsing="false" onAction="#loadPreviousAppointmentsButtonOA" text="Load Appointments" />
-      <TableView fx:id="pendingAppointmentsTableView" layoutX="8.0" layoutY="210.0" prefHeight="218.0" prefWidth="586.0">
+      <Button layoutX="248.0" layoutY="165.0" mnemonicParsing="false" onAction="#loadAppointmentButtonOA" prefHeight="42.0" prefWidth="130.0" text="Load Appointments">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="appointmentTV" layoutX="8.0" layoutY="216.0" prefHeight="218.0" prefWidth="586.0">
          <columns>
-            <TableColumn fx:id="nameTCOfPendingAppointments" prefWidth="211.0" text="Name" />
-            <TableColumn fx:id="ageTCOfPendingAppointments" prefWidth="53.0" text="Age" />
-            <TableColumn fx:id="dateTCOfPendingAppointments" prefWidth="112.0" text="Date" />
-            <TableColumn fx:id="timeTCOfPendingAppointments" prefWidth="95.0" text="Time" />
-            <TableColumn fx:id="diagnosisTCOfPendingAppointments" prefWidth="114.0" text="Diagnosis" />
+            <TableColumn fx:id="nameTC" prefWidth="211.0" text="Name" />
+            <TableColumn fx:id="ageTC" prefWidth="53.0" text="Age" />
+            <TableColumn fx:id="dateTC" prefWidth="112.0" text="Date" />
+            <TableColumn fx:id="timeTC" prefWidth="95.0" text="Time" />
+            <TableColumn fx:id="diagnosisTC" prefWidth="114.0" text="Diagnosis" />
          </columns>
       </TableView>
       <TextField fx:id="toTimeTF" layoutX="402.0" layoutY="135.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
       <Label layoutX="361.0" layoutY="139.0" text="To: " />
-      <Label fx:id="successMeassageLabel" alignment="CENTER_RIGHT" layoutX="360.0" layoutY="5.0" prefHeight="18.0" prefWidth="236.0" textAlignment="CENTER" textFill="#00ff32" />
-      <Label fx:id="errorMeassageLabel" alignment="CENTER_RIGHT" layoutX="360.0" layoutY="5.0" prefHeight="18.0" prefWidth="236.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="360.0" layoutY="5.0" prefHeight="18.0" prefWidth="236.0" textAlignment="CENTER" textFill="#00ff32" />
+      <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="360.0" layoutY="5.0" prefHeight="18.0" prefWidth="236.0" textAlignment="CENTER" textFill="RED" />
    </children>
 </AnchorPane>

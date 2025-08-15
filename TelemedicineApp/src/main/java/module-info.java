@@ -1,6 +1,11 @@
 module mainpackage.telemedicineapp {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jnanoid;
+    requires org.apache.commons.lang3;
+    requires java.desktop;
+    requires kernel;
+    requires layout;
 
 
     opens mainpackage.telemedicineapp to javafx.fxml;

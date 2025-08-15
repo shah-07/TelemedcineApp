@@ -44,8 +44,8 @@ public class StartAppointmentController
     @javafx.fxml.FXML
     public void initialize() {
 
-        timeTC.setCellValueFactory(new PropertyValueFactory<>("timeOfAppointment"));
-        dateTC.setCellValueFactory(new PropertyValueFactory<>("dateOfAppointment"));
+        timeTC.setCellValueFactory(new PropertyValueFactory<>("appointmentTime"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("appointmentDate"));
         ageTC.setCellValueFactory(new PropertyValueFactory<>("age"));
         nameTC.setCellValueFactory(new PropertyValueFactory<>("name"));
         genderTC.setCellValueFactory(new PropertyValueFactory<>("gender"));
@@ -103,6 +103,8 @@ public class StartAppointmentController
         stage.setTitle("Edit Appointment Seen Status");
         stage.setScene(new Scene(root));
         stage.show();
+
+        appointmentsTV.getItems().clear();
 
     }
 }

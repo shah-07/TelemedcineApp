@@ -26,7 +26,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label fx:id="notesLabel" alignment="TOP_LEFT" layoutX="399.0" layoutY="171.0" prefHeight="103.0" prefWidth="150.0" />
+      <Label fx:id="notesLabel" alignment="TOP_LEFT" layoutX="399.0" layoutY="171.0" prefHeight="103.0" prefWidth="150.0" wrapText="true" />
       <Label layoutX="351.0" layoutY="171.0" text="Notes: " />
       <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="340.0" layoutY="15.0" prefHeight="18.0" prefWidth="261.0" textFill="#00ff2e" />
       <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="340.0" layoutY="15.0" prefHeight="18.0" prefWidth="261.0" textFill="RED" />

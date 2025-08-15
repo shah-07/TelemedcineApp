@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Poran.LabTechnician.GenerateReportController">
+   <children>
+      <Label layoutX="219.0" layoutY="32.0" text="Completed Test Reports">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="chooseDateDP" layoutX="109.0" layoutY="69.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="21.0" layoutY="73.0" text="Choose Date:" />
+      <Label layoutX="362.0" layoutY="76.0" text="From:" />
+      <TextField fx:id="fromTimeTF" layoutX="403.0" layoutY="72.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Button layoutX="253.0" layoutY="128.0" mnemonicParsing="false" onAction="#loadTestsButtonOA" prefHeight="30.0" prefWidth="94.0" text="Load Tests" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="labTestRequestsTV" layoutX="7.0" layoutY="168.0" prefHeight="170.0" prefWidth="586.0">
+         <columns>
+            <TableColumn fx:id="nameTC" prefWidth="146.39996337890625" text="Name" />
+            <TableColumn fx:id="dateTC" prefWidth="95.99993896484375" text="Date" />
+            <TableColumn fx:id="timeTC" prefWidth="98.39996337890625" text="Time" />
+            <TableColumn fx:id="testTypeTC" prefWidth="134.4000244140625" text="Test Type" />
+            <TableColumn fx:id="resultTC" prefWidth="112.0" text="Result" />
+         </columns>
+      </TableView>
+      <TextField fx:id="toTimeTF" layoutX="403.0" layoutY="102.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />
+      <Label layoutX="362.0" layoutY="106.0" text="To: " />
+      <Label fx:id="errorMessageLabel" alignment="CENTER_RIGHT" layoutX="391.0" layoutY="1.0" prefHeight="18.0" prefWidth="207.0" textFill="RED" />
+      <Label fx:id="successMessageLabel" alignment="CENTER_RIGHT" layoutX="391.0" layoutY="1.0" prefHeight="18.0" prefWidth="207.0" textFill="#00ff23" />
+      <Button layoutX="256.0" layoutY="343.0" mnemonicParsing="false" onAction="#saveAsPdfButtonOA" prefHeight="49.0" prefWidth="94.0" text="Save As PDF" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

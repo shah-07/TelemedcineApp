@@ -16,7 +16,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <DatePicker fx:id="chooseDateDP" layoutX="118.0" layoutY="95.0" prefHeight="26.0" prefWidth="121.0" />
+      <DatePicker fx:id="chooseDateDP" layoutX="118.0" layoutY="95.0" prefHeight="26.0" prefWidth="159.0" />
       <Label layoutX="43.0" layoutY="99.0" text="Choose Date:" />
       <Label layoutX="371.0" layoutY="83.0" text="From:" />
       <TextField fx:id="fromTimeTF" layoutX="412.0" layoutY="79.0" prefHeight="26.0" prefWidth="159.0" promptText="From time (24 hrs format)" />

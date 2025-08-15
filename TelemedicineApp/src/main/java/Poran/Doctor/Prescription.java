@@ -13,13 +13,14 @@ public class Prescription implements Serializable {
     private LocalTime time;
     private boolean prescribed = false;
 
-    public Prescription(String name, String gender, int age, ArrayList<String> medicines, String diagnosis, LocalDate date, String notes) {
+    public Prescription(String name, String gender, int age, ArrayList<String> medicines, String diagnosis, LocalDate date, LocalTime time, String notes) {
         this.name = name;
         this.gender = gender;
         this.age = age;
         this.medicines = new ArrayList<String>(medicines);
         this.diagnosis = diagnosis;
         this.date = date;
+        this.time = time;
         this.notes = notes;
     }
 

@@ -48,8 +48,8 @@ public class RescheduleAppointmentController
         ageTC.setCellValueFactory(new PropertyValueFactory<>("age"));
         nameTC.setCellValueFactory(new PropertyValueFactory<>("name"));
         genderTC.setCellValueFactory(new PropertyValueFactory<>("gender"));
-        dateTC.setCellValueFactory(new PropertyValueFactory<>("dateOfAppointment"));
-        timeTC.setCellValueFactory(new PropertyValueFactory<>("timeOfAppointment"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("appointmentDate"));
+        timeTC.setCellValueFactory(new PropertyValueFactory<>("appointmentTime"));
 
         appointmentsTV.setItems(appointmentList);
 
@@ -85,12 +85,19 @@ public class RescheduleAppointmentController
         appointmentList = GenericFileManager.readAll(Appointment.class, "Appointment.bin");
 
         for (Appointment a : appointmentList) {
-            if (a.getAppointmentDate().equals(date) &&
+            if ((a.getAppointmentDate().equals(date) &&
                     !a.getAppointmentTime().isBefore(fromTime) &&
-                    !a.getAppointmentTime().isAfter(toTime)) {
+                    !a.getAppointmentTime().isAfter(toTime)) && !a.isSeen()) {
                 appointmentsTV.getItems().add(a);
             }
 
+        }
+
+        if(appointmentsTV.getItems().isEmpty()){
+            errorMessageLabel.setText("No appointments to show");
+        }
+        else{
+            successMessageLabel.setText("Appointments loaded");
         }
     }
 

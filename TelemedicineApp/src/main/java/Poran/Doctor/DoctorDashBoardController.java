@@ -1,5 +1,7 @@
 package Poran.Doctor;
 
+import Imtia.Appointment;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -21,8 +23,6 @@ public class DoctorDashBoardController {
     private Button rescheduleAppointmentButton;
     @javafx.fxml.FXML
     private Button dashBoardButton;
-    @javafx.fxml.FXML
-    private Button labReportsButton;
     @javafx.fxml.FXML
     private Label doctorNameLabel;
     @javafx.fxml.FXML
@@ -48,13 +48,17 @@ public class DoctorDashBoardController {
     @javafx.fxml.FXML
     private Label appointmentNumberLabel;
 
+    ObservableList<Appointment> appointmentList = GenericFileManager.readAll(Appointment.class, "Appointment.bin");
+    int appointmentNumber = 0;
     @javafx.fxml.FXML
     public void initialize() {
 
+        appointmentNumber = 0;
+        appointmentNum();
+        appointmentNumberLabel.setText(Integer.toString(appointmentNumber));
         setupHoverEffect(dashBoardButton);
         setupHoverEffect(appointmentHistoryButton);
         setupHoverEffect(cancelAppointmentButton);
-        setupHoverEffect(labReportsButton);
         setupHoverEffect(pendingAppointmentsButton);
         setupHoverEffect(startAnAppointmentButton);
         setupHoverEffect(patientsSeenButton);
@@ -62,7 +66,13 @@ public class DoctorDashBoardController {
         setupHoverEffect(logOutButton);
 
     }
-
+    private void appointmentNum(){
+        for (Appointment a: appointmentList){
+            if(!a.isSeen()){
+                appointmentNumber++;
+            }
+        }
+    }
     private void setupHoverEffect(Button button) {
         if (button == null) return; // in case any button wasn't properly injected
 
@@ -142,16 +152,15 @@ public class DoctorDashBoardController {
         anchorPaneForPartialWindows.getChildren().setAll(node);
     }
 
-    @javafx.fxml.FXML
-    public void labReportsButtonOA(ActionEvent actionEvent) throws IOException{
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/labReportsView.fxml"));
-        anchorPaneForPartialWindows.getChildren().setAll(node);
-    }
 
     @javafx.fxml.FXML
     public void dashBoardButtonOA(ActionEvent actionEvent){
 
-        anchorPaneForPartialWindows.getChildren().setAll(welcomeDoctorLabel, appointmentTextLabel, appointmentNumberLabel);
+        appointmentNumber = 0;
+        appointmentNum();
+        appointmentNumberLabel.setText(Integer.toString(appointmentNumber));
+
+        anchorPaneForPartialWindows.getChildren().setAll(welcomeDoctorLabel, appointmentTextLabel, appointmentNumberLabel );
     }
 
     @javafx.fxml.FXML

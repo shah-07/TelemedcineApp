@@ -3,6 +3,7 @@ package Poran.LabTechnician;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -37,27 +38,49 @@ public class LabTechnicianDashboardController
     @javafx.fxml.FXML
     private Label technicianNameLabel;
     @javafx.fxml.FXML
-    private Button uploadReportsButton;
-    @javafx.fxml.FXML
     private Button generateReportButton;
     @javafx.fxml.FXML
     private Button reportIssueButton;
     @javafx.fxml.FXML
     private Label technicianPositionLabel;
+    @javafx.fxml.FXML
+    private Button markTestsAsSeenButton;
+    @javafx.fxml.FXML
+    private Button addItemButton;
 
     @javafx.fxml.FXML
     public void initialize() {
 
         setupHoverEffect(dashBoardButton);
         setupHoverEffect(labTestRequestButton);
-        setupHoverEffect(uploadReportsButton);
+        setupHoverEffect(manageBookingButton);
         setupHoverEffect(generateReportButton);
         setupHoverEffect(reportIssueButton);
         setupHoverEffect(completedLabTestsButton);
         setupHoverEffect(inventoryAndEquipmentsButton);
         setupHoverEffect(manageBookingButton);
         setupHoverEffect(logOutButton);
+        setupHoverEffect(addItemButton);
+        setupHoverEffect(markTestsAsSeenButton);
 
+    }
+
+    private String technicianName, technicianPosition;
+
+    public String getTechnicianName() {
+        return technicianName;
+    }
+
+    public void setTechnicianName(String technicianName) {
+        this.technicianName = technicianName;
+    }
+
+    public String getTechnicianPosition() {
+        return technicianPosition;
+    }
+
+    public void setTechnicianPosition(String technicianPosition) {
+        this.technicianPosition = technicianPosition;
     }
 
     private void setupHoverEffect(Button button) {
@@ -75,9 +98,9 @@ public class LabTechnicianDashboardController
     }
 
 
-    public void setTechnicianNameAndPosition (String str, String str2){
-        technicianNameLabel.setText(str);
-        technicianPositionLabel.setText(str2);
+    public void populateFields (){
+        technicianNameLabel.setText(technicianName);
+        technicianPositionLabel.setText(technicianPosition);
     }
 
     @javafx.fxml.FXML
@@ -91,7 +114,7 @@ public class LabTechnicianDashboardController
     @javafx.fxml.FXML
     public void completedLabTestsButtonOA(ActionEvent actionEvent) throws IOException{
 
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/completedTestTypeView.fxml"));
+        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/completedTestsView.fxml"));
         anchorPaneForPartialWindow.getChildren().setAll(node);
 
     }
@@ -99,7 +122,7 @@ public class LabTechnicianDashboardController
     @javafx.fxml.FXML
     public void generateReportButtonOA(ActionEvent actionEvent) throws IOException{
 
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/addInventoryItemView.fxml"));
+        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/generateReportView.fxml"));
         anchorPaneForPartialWindow.getChildren().setAll(node);
 
     }
@@ -127,13 +150,6 @@ public class LabTechnicianDashboardController
 
     }
 
-    @javafx.fxml.FXML
-    public void uploadReportsButtonOA(ActionEvent actionEvent) throws IOException{
-
-        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/uploadReportsView.fxml"));
-        anchorPaneForPartialWindow.getChildren().setAll(node);
-
-    }
 
     @javafx.fxml.FXML
     public void labTestRequestButtonOA(ActionEvent actionEvent) throws IOException{
@@ -148,6 +164,26 @@ public class LabTechnicianDashboardController
 
         Node node = FXMLLoader.load(getClass().getResource("/mainpackage.telemedicineapp/loginView.fxml"));
         dashBoardAnchorPane.getChildren().setAll(node);
+
+    }
+
+    @javafx.fxml.FXML
+    public void addItemButtonOA(ActionEvent actionEvent) throws IOException{
+
+        Node node = FXMLLoader.load(getClass().getResource("/Poran/LabTechnician/addInventoryItemView.fxml"));
+        anchorPaneForPartialWindow.getChildren().setAll(node);
+
+    }
+
+    @javafx.fxml.FXML
+    public void markTestsAsSeenButtonOA(ActionEvent actionEvent) throws IOException{
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Poran/LabTechnician/markAsCompleteView.fxml"));
+        Parent root = loader.load();
+        MarkAsCompleteController nextController = loader.getController();
+        nextController.setTechnicianName(technicianName);
+        anchorPaneForPartialWindow.getChildren().clear();
+        anchorPaneForPartialWindow.getChildren().add(root);
 
     }
 }
