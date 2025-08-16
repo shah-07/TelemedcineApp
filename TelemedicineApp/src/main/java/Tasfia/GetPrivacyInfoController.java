@@ -19,6 +19,10 @@ public class GetPrivacyInfoController {
 
     @FXML
     public void initialize() {
+<<<<<<< HEAD
+    }
+}
+=======
         // Optional: show a default message
         privacyDocTextArea.setText("Click the 'Privacy Policy' button to view details.");
     }
@@ -29,3 +33,4 @@ public class GetPrivacyInfoController {
         privacyDocTextArea.setText(privacyPolicyText);
     }
 }
+>>>>>>> origin/master
