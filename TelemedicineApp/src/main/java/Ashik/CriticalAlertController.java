@@ -2,6 +2,9 @@ package Ashik;
 
 import javafx.event.ActionEvent;
 
+import javax.swing.text.html.ListView;
+import java.awt.*;
+
 public class CriticalAlertController
 {
     @javafx.fxml.FXML
@@ -17,6 +20,4 @@ public class CriticalAlertController
     public void viewDetailsButton(ActionEvent actionEvent) {
     }
 
-    public void viewDetailsButton(ActionEvent actionEvent) {
-    }
 }

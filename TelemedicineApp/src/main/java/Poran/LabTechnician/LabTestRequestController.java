@@ -56,6 +56,7 @@ public class LabTestRequestController
         ageTV.setCellValueFactory(new PropertyValueFactory<>("age"));
         dateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
         timeTC.setCellValueFactory(new PropertyValueFactory<>("time"));
+        diagnosisTC.setCellValueFactory(new PropertyValueFactory<>("diagnosis"));
 
     }
 

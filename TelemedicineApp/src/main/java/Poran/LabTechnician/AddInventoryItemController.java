@@ -8,7 +8,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class addInventoryItemController
+public class AddInventoryItemController
 {
     @javafx.fxml.FXML
     private Label successMessageButtonLabel;

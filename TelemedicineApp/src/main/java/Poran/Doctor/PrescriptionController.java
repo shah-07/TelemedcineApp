@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class PrescriptionController
@@ -83,6 +85,8 @@ public class PrescriptionController
                 if (a.showAndWait().isPresent()){
                 prescriptionToEdit.setPrescribed(true);
                 prescriptionToEdit.setDiagnosis(diagnosisTF.getText());
+                prescriptionToEdit.setTime(LocalTime.now());
+                prescriptionToEdit.setDate(LocalDate.now());
                 prescriptionToEdit.setMedicines(medicineList);
                 }
             }
@@ -92,15 +96,27 @@ public class PrescriptionController
         successMessageLabel.setText("Prescribed medicine successfully");
         medicineList.clear();
 
+        showGenderLabel.setText(""); showAgeLabel.setText("");
+        showNameLabel.setText(""); notesLabel.setText("");
+        diagnosisTF.clear(); medicineTF.clear();
+
     }
 
     @javafx.fxml.FXML
     public void addMedicineToMedicineList(ActionEvent actionEvent) {
 
+        errorMessageLabel.setText("");
+        successMessageLabel.setText("");
+
+        if(medicineTF.getText().isEmpty()){
+            errorMessageLabel.setText("Please enter a medicine to add");
+            return;
+        }
+
         successMessageLabel.setText("");
         medicineList.add(medicineTF.getText());
         medicineTF.clear();
-        successMessageLabel.setText("Medicine added to medicne List");
+        successMessageLabel.setText("Medicine added to medicine List");
 
     }
 }

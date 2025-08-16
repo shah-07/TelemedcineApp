@@ -1,6 +1,8 @@
 package Ashik;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
 
 public class DoctorSPerformanceController
 {
@@ -23,6 +25,4 @@ public class DoctorSPerformanceController
     public void searchReportButton(ActionEvent actionEvent) {
     }
 
-    public void searchReportButton(ActionEvent actionEvent) {
-    }
 }

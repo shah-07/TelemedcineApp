@@ -79,6 +79,14 @@ public class SendLabTestController
     public void addTestsToTestList(ActionEvent actionEvent) {
 
         successMessageLabel.setText("");
+        errorMessageLabel.setText("");
+
+        if(labTestTF.getText().isEmpty()){
+            errorMessageLabel.setText("Please enter a test name to add");
+            return;
+        }
+
+        successMessageLabel.setText("");
         testList.add(labTestTF.getText());
         labTestTF.clear();
         successMessageLabel.setText("Test added to test List");
@@ -106,6 +114,12 @@ public class SendLabTestController
                     )
         );
         GenericFileManager.writeAll(labTestList, "LabTestForm.bin");
+        diagnosisTF.clear();
+        labTestTF.clear();
+        showNameLabel.setText("");
+        showAgeLabel.setText("");
+        showGenderLabel.setText("");
+        notesLabel.setText("");
     }
 
 

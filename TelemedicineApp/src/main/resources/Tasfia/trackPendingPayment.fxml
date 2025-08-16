@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="431.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tasfia.TrackPendingPaymentController">
    <children>
       <Label layoutX="248.0" layoutY="14.0" prefHeight="35.0" prefWidth="196.0" text="Track Payments">
@@ -17,15 +16,15 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <ComboBox layoutX="403.0" layoutY="84.0" prefWidth="150.0" promptText="Payment Status" />
-      <TextField layoutX="74.0" layoutY="84.0" promptText="Patient Name" />
-      <Button layoutX="248.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Search" />
-      <TableView layoutX="49.0" layoutY="198.0" prefHeight="200.0" prefWidth="479.0">
+      <ComboBox fx:id="paymentStatusComboBox" layoutX="403.0" layoutY="84.0" prefWidth="150.0" promptText="Payment Status" />
+      <TextField fx:id="patientNameTextField" layoutX="74.0" layoutY="84.0" promptText="Patient Name" />
+      <Button layoutX="248.0" layoutY="140.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="25.0" prefWidth="142.0" text="Search" />
+      <TableView fx:id="trackPaymentTableView" layoutX="49.0" layoutY="198.0" prefHeight="200.0" prefWidth="479.0">
         <columns>
-          <TableColumn prefWidth="93.0" text="Patient Name" />
-          <TableColumn prefWidth="108.0" text="Date" />
-            <TableColumn prefWidth="108.0" text="Amount" />
-            <TableColumn prefWidth="169.0" text="stutas" />
+          <TableColumn fx:id="patientNameTableCol" prefWidth="93.0" text="Patient Name" />
+          <TableColumn fx:id="dateTableCol" prefWidth="108.0" text="Date" />
+            <TableColumn fx:id="amountTableCol" prefWidth="108.0" text="Amount" />
+            <TableColumn fx:id="statusTableCol" prefWidth="169.0" text="status" />
         </columns>
       </TableView>
    </children>

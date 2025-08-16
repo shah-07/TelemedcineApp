@@ -43,8 +43,8 @@ public class CancelAppointmentController
         ageTC.setCellValueFactory(new PropertyValueFactory<>("age"));
         nameTC.setCellValueFactory(new PropertyValueFactory<>("name"));
         genderTC.setCellValueFactory(new PropertyValueFactory<>("gender"));
-        dateTC.setCellValueFactory(new PropertyValueFactory<>("dateOfAppointment"));
-        timeTC.setCellValueFactory(new PropertyValueFactory<>("timeOfAppointment"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("appointmentDate"));
+        timeTC.setCellValueFactory(new PropertyValueFactory<>("appointmentTime"));
 
         appointmentsTV.setItems(appointmentList);
 
@@ -85,6 +85,9 @@ public class CancelAppointmentController
                 appointmentsTV.getItems().add(a);
             }
         }
+        if(appointmentsTV.getItems().isEmpty()){
+            errorMessageLabel.setText("No appointments to show");
+        }
     }
 
     @javafx.fxml.FXML
@@ -99,14 +102,13 @@ public class CancelAppointmentController
             return;
         }
 
-        Alert a = new Alert(Alert.AlertType.CONFIRMATION, "Press confirm to cancel the appointment");
-        a.setHeaderText("Success");
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION, "Press OK to cancel the appointment");
+        a.setHeaderText("Confirmation");
         if (a.showAndWait().isPresent()) {
             appointmentList.remove(selectedAppointment);
             appointmentsTV.getItems().remove(selectedAppointment);
             successMessageLabel.setText("Appointment cancel successfully");
             GenericFileManager.writeAll(appointmentList, "Appointment.bin");
-            return;
         }
     }
 }

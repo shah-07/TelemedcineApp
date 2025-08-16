@@ -108,16 +108,19 @@ public class LoginController
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/Poran/LabTechnician/labTechnicianDashboardView.fxml"));
                     Node node = loader.load();
                     LabTechnicianDashboardController nextController = loader.getController();
-                    nextController.setTechnicianNameAndPosition (foundTechnician.getName(), foundTechnician.getPosition());
+                    nextController.setTechnicianName(foundTechnician.getName());
+                    nextController.setTechnicianPosition(foundTechnician.getPosition());
+                    nextController.populateFields();
                     loginAnchor.getChildren().setAll(node);
                 }
 
                 catch (Exception e) {
                     //;
                 }
-
-
             }
+        }
+        else{
+            errorMessageLabel.setText("User ID and Password Doesn't match");
         }
 
 

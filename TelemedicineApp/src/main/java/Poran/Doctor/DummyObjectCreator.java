@@ -11,6 +11,10 @@ import java.util.ArrayList;
 public class DummyObjectCreator {
     public void createDummyObjects() throws IOException {
 
+        ArrayList<String> medicineList = new ArrayList<>();
+        medicineList.add("Napa");
+        medicineList.add("Histacin");
+
         Doctor doc1 = new Doctor("Dr. Alice Smith", 1001, "123456", LocalDate.of(1980, 5, 14), "Cardiologist");
         Doctor doc2 = new Doctor("Dr. Bob Johnson", 1002, "234567", LocalDate.of(1975, 9, 22),"Neurologist");
 
@@ -21,6 +25,15 @@ public class DummyObjectCreator {
         Appointment a1 = new Appointment("Poran", "Male", "Headache",152648, 20, 500, LocalDate.of(2025, 8, 20), LocalTime.of(10, 15));
         Appointment a2 = new Appointment("N. N.", "Female", "Pain in Stomach", 252648, 20, 500, LocalDate.of(2025, 8, 18), LocalTime.of(14, 30));
         Appointment a3 = new Appointment("San", "Female", "Pain in hand", 3526489, 18, 500, LocalDate.now(), LocalTime.now().plusMinutes(30));
+
+        Prescription p1 = new Prescription("Poran","Male", 20, medicineList, "Fever", LocalDate.of(2025, 8, 20), LocalTime.of(10, 15), "Nothing");
+        //Write them to Prescription.bin
+        FileOutputStream fos5 = new FileOutputStream("Prescription.bin");
+        ObjectOutputStream oos5 = new ObjectOutputStream(fos5);
+
+        oos5.writeObject(p1);
+
+        oos5.close();
 
         // Write them to Doctor.bin
         FileOutputStream fos1 = new FileOutputStream("Doctor.bin");

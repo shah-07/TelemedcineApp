@@ -58,7 +58,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="labReportsButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="225.0" mnemonicParsing="false" onAction="#labReportsButtonOA" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📋 Lab Reports" textFill="#2e2929">
+            <Button fx:id="generatePrescriptionButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#generatePrescriptionButtonOA" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: null; -fx-text-fill: black;" text="📊 Generate Prescription" textFill="#2e2929">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

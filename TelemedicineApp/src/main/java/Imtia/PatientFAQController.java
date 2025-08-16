@@ -44,14 +44,6 @@ public class PatientFAQController
 
     @javafx.fxml.FXML
     public void sendOA(ActionEvent actionEvent) {
-        String userQuestion = askQuestionTF.getText().trim();
 
-        if (!userQuestion.isEmpty()) {
-            alertL.setText(
-                    "Your issue has been submitted. Ticket ID: #" + (1000 + (int)(Math.random() * 9000))
-            );
-        } else {
-            alertL.setText("Please enter a question first.");
-        }
     }
 }

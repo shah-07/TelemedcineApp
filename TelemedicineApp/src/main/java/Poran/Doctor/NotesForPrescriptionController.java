@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class NotesForPrescriptionController
@@ -57,6 +58,9 @@ public class NotesForPrescriptionController
     @javafx.fxml.FXML
     public void addNotesToPrescriptionAndMarkPatientAsSeenButtonOA (ActionEvent actionEvent) {
 
+        errorMessageLabel.setText("");
+        successMessageLabel.setText("");
+
         if (medicineList == null) {
             medicineList = new ArrayList<>();
         }
@@ -83,15 +87,15 @@ public class NotesForPrescriptionController
                             medicineList,
                             "TBA",
                             LocalDate.now(),
+                            LocalTime.now(),
                             notesTA.getText()
                             )
                     );
                     GenericFileManager.writeAll(prescriptionList, "Prescription.bin");
                     successMessageLabel.setText("Patient seen and Notes saved");
                 }
-
             }
         }
-
+        notesTA.clear();
     }
 }

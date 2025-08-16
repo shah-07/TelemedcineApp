@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tasfia.GenerateInvoiceController">
    <children>
       <Label layoutX="208.0" layoutY="14.0" prefHeight="41.0" prefWidth="204.0" text="Generate Invoice">
@@ -16,11 +15,11 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="59.0" layoutY="86.0" promptText="Enter Doctor Name" />
-      <DatePicker layoutX="319.0" layoutY="74.0" promptText="Start Date" />
-      <DatePicker layoutX="319.0" layoutY="119.0" promptText="End Date" />
-      <TextArea layoutX="157.0" layoutY="177.0" prefHeight="71.0" prefWidth="210.0" promptText="show invoice preview" />
-      <Button layoutX="61.0" layoutY="132.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Generate or Preview Invoice" />
-      <Button layoutX="208.0" layoutY="282.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Download PDF" />
+      <TextField fx:id="doctorNameTextField" layoutX="61.0" layoutY="74.0" promptText="Enter Doctor Name" />
+      <DatePicker fx:id="startDateDatePicker" layoutX="319.0" layoutY="74.0" promptText="Start Date" />
+      <DatePicker fx:id="endDateDatePicker" layoutX="319.0" layoutY="119.0" promptText="End Date" />
+      <TextArea fx:id="showInvoiceTextArea" layoutX="157.0" layoutY="177.0" prefHeight="71.0" prefWidth="210.0" promptText="show invoice preview" />
+      <Button layoutX="61.0" layoutY="119.0" mnemonicParsing="false" onAction="#generateButtonOnAction" prefHeight="25.0" prefWidth="167.0" text="Generate or Preview Invoice" />
+      <Button layoutX="208.0" layoutY="282.0" mnemonicParsing="false" onAction="#downloadPdfButtonOnAction" prefHeight="25.0" prefWidth="117.0" text="Download PDF" />
    </children>
 </AnchorPane>

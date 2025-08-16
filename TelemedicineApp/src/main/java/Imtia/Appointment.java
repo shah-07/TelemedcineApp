@@ -1,9 +1,10 @@
 package Imtia;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Appointment {
+public class Appointment implements Serializable {
     private final String name, gender;
     private String reason;
     private int age, bill, id;
