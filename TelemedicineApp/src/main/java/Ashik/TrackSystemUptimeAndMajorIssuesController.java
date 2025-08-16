@@ -32,11 +32,9 @@ public class TrackSystemUptimeAndMajorIssuesController {
 
     @FXML
     public void initialize() {
-        // Initialize table columns
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
         issueSummaryCol.setCellValueFactory(new PropertyValueFactory<>("issueSummary"));
         detailsCol.setCellValueFactory(new PropertyValueFactory<>("details"));
-
 
         issuesList.add(new TrackSystemUptimeAndMajorIssues(LocalDate.of(2025, 8, 10), "Server Down", "Server was down for 2 hours"));
         issuesList.add(new TrackSystemUptimeAndMajorIssues(LocalDate.of(2025, 8, 12), "Database Lag", "Database response was slow"));

@@ -56,20 +56,15 @@ public class RevenueGeneratedController {
         revenueSummaryTA.setText("Total revenue generated from consultations: $" + totalRevenue + "\nGraph representation can be shown here.");
     }
 
-    // Dummy CEO authentication
     private boolean authenticateCEO(String username, String password) {
-        // In real app, validate from DB
         return username.equals("ceo") && password.equals("ceo123");
     }
 
-    // Dummy login check
     private boolean isLoggedIn() {
         return usernameTextField.getText().equals("ceo") && passwordTextField.getText().equals("ceo123");
     }
 
-    // Dummy revenue calculation
     private double calculateTotalRevenue() {
-        // In real app, fetch from DB and sum fees
-        return 12500.75; // Example revenue
+        return 12500.75;
     }
 }

@@ -35,12 +35,11 @@ public class ReplyFAQSViewController {
 
     @FXML
     public void initialize() {
-        // Table column bindings
         questionCol.setCellValueFactory(new PropertyValueFactory<>("question"));
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
         statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // Dummy FAQ data
+
         faqList = FXCollections.observableArrayList(
                 new ReplyFAQSView("What are your clinic hours?", LocalDate.of(2025, 8, 10), "Pending", null),
                 new ReplyFAQSView("Do you offer home visits?", LocalDate.of(2025, 8, 12), "Answered", "Yes, with prior appointment."),
@@ -49,7 +48,7 @@ public class ReplyFAQSViewController {
 
         FAQTableView.setItems(faqList);
 
-        // Select question from table
+
         FAQTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSel, newSel) -> {
             if (newSel != null) {
                 selectedQuestionTA.setText(newSel.getQuestion());
@@ -69,7 +68,6 @@ public class ReplyFAQSViewController {
             return;
         }
 
-        // Filter list by date range
         ObservableList<ReplyFAQSView> filtered = FXCollections.observableArrayList(
                 faqList.stream()
                         .filter(faq -> !faq.getDate().isBefore(fromDate) && !faq.getDate().isAfter(toDate))

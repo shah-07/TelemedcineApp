@@ -21,7 +21,7 @@ public class ManageUserAccountViewController {
     @FXML
     private Label statusMessageLabel;
 
-    private ObservableList<ManageUserAccountView> userList;
+    private ObservableList <ManageUserAccountView> userList;
 
     @FXML
     public void initialize() {

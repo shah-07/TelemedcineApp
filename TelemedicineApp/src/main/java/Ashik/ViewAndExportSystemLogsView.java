@@ -19,31 +19,24 @@ public class ViewAndExportSystemLogsView implements Serializable {
     public LocalDate getDate() {
         return date;
     }
-
     public void setDate(LocalDate date) {
         this.date = date;
     }
-
     public String getActionType() {
         return actionType;
     }
-
     public void setActionType(String actionType) {
         this.actionType = actionType;
     }
-
     public String getUser() {
         return user;
     }
-
     public void setUser(String user) {
         this.user = user;
     }
-
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }

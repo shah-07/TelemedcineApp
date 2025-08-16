@@ -52,12 +52,10 @@ public class UserSOverviewController {
         System.out.println("Login successful!! Active user counts displayed.");
     }
 
-    // Dummy CEO authentication
     private boolean authenticateCEO(String username, String password) {
         return username.equals("ceo") && password.equals("ceo123");
     }
 
-    // Dummy fetch methods (replace with DB logic)
     private int fetchActiveDoctorsCount() {
         return 15; // Example value
     }

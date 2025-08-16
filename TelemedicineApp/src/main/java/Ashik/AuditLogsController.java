@@ -85,7 +85,6 @@ public class AuditLogsController {
 
     @FXML
     public void pdfButton(ActionEvent actionEvent) {
-        // Simulate PDF export (real implementation would use a PDF library)
         showAlert(Alert.AlertType.INFORMATION, "PDF Export", "PDF export feature is not implemented in this demo.");
     }
 

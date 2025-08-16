@@ -37,16 +37,13 @@ public class ViewAndExportSystemLogsViewController {
 
     @FXML
     public void initialize() {
-        // Setup table columns
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
         actiontypeCol.setCellValueFactory(new PropertyValueFactory<>("actionType"));
         userCol.setCellValueFactory(new PropertyValueFactory<>("user"));
         descriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
 
-        // Type options
         typeComboBox.setItems(FXCollections.observableArrayList("Login", "Error", "Transaction"));
 
-        // Dummy logs
         allLogs = FXCollections.observableArrayList(
                 new ViewAndExportSystemLogsView(LocalDate.now().minusDays(1), "Login", "ceo", "CEO logged in"),
                 new ViewAndExportSystemLogsView(LocalDate.now(), "Transaction", "doctor1", "Consultation completed"),
@@ -76,13 +73,11 @@ public class ViewAndExportSystemLogsViewController {
 
     @FXML
     public void exportCsvButtonOnAction(ActionEvent actionEvent) {
-        // Dummy CSV export simulation
         successfulLabel.setText("CSV file generated successfully (simulation)");
     }
 
     @FXML
     public void exportPdfButtonOnAction(ActionEvent actionEvent) {
-        // Dummy PDF export simulation
         successfulLabel.setText("PDF file generated successfully (simulation)");
     }
 }

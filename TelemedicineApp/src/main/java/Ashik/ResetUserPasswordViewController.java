@@ -56,14 +56,11 @@ public class ResetUserPasswordViewController {
         return email.contains("@") && email.contains(".");
     }
 
-    // Dummy DB update method
     private boolean updatePasswordInDatabase(String email, String newPassword) {
-        // In real app, connect to DB and update password for matching email
-        // For demo, let's assume user exists if email ends with "@mail.com"
         return email.endsWith("@mail.com");
     }
 
-    // Dummy notification
+
     private void sendPasswordResetNotification(String email) {
         System.out.println("Notification sent to " + email + " about password reset.");
     }
