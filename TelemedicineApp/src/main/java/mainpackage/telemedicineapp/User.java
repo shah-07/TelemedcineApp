@@ -34,18 +34,4 @@ public abstract class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    /*
-    public static boolean verifyLogin(String enteredId, String enteredPassword) {
-        int id = Integer.parseInt(enteredId);
-        return database.getPassword.equals(enteredPassword) && database.getId() == id;
-    }
-
-    public static User login(String enteredId, String enteredPassword) {
-        if (verifyLogin(enteredId, enteredPassword)) {
-            return user.get(Integer.parseInt(enteredId));
-        } else {
-            return null;
-        }
-    }*/
 }
